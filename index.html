@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boodschappenlijst</title>
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --card: rgba(255,255,255,0.86);
+      --text: #162033;
+      --muted: #667089;
+      --line: rgba(22, 32, 51, 0.08);
+      --blue: #0a69ff;
+      --blue-dark: #0057dd;
+      --red: #e54545;
+      --green: #20a15f;
+      --shadow: 0 18px 40px rgba(10, 24, 56, 0.10);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(10,105,255,0.08), transparent 35%),
+        linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100%;
+    }
+
+    body {
+      padding: 18px;
+    }
+
+    .app {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0a69ff 0%, #3e8cff 100%);
+      color: white;
+      padding: 24px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -80px auto;
+      width: 220px;
+      height: 220px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 50%;
+      filter: blur(8px);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: rgba(255,255,255,0.86);
+      max-width: 470px;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 14px 16px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .stat-value {
+      margin-top: 6px;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      margin: 18px 0 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .btn {
+      height: 54px;
+      padding: 0 18px;
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+      box-shadow: 0 10px 24px rgba(10, 24, 56, 0.08);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      flex: 1 1 220px;
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .btn-zegel {
+      background: #fff7e6;
+      color: #8a5b00;
+      border: 1px solid rgba(138, 91, 0, 0.12);
+    }
+
+    .panel,
+    .item {
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.6);
+      box-shadow: var(--shadow);
+    }
+
+    .empty {
+      margin-top: 16px;
+      padding: 38px 22px;
+      border-radius: var(--radius-xl);
+      text-align: center;
+    }
+
+    .empty-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #eef4ff 0%, #dde9ff 100%);
+      font-size: 34px;
+    }
+
+    .empty h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .empty p {
+      margin: 10px auto 0;
+      max-width: 420px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .item {
+      border-radius: var(--radius-xl);
+      padding: 14px;
+      display: grid;
+      grid-template-columns: auto 92px 1fr auto;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .check {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: white;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      color: transparent;
+      box-shadow: 0 6px 18px rgba(10,24,56,0.06);
+    }
+
+    .check.checked {
+      background: var(--green);
+      color: white;
+      border-color: transparent;
+    }
+
+    .thumb {
+      width: 92px;
+      height: 92px;
+      object-fit: contain;
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: inset 0 0 0 1px rgba(10,24,56,0.05);
+    }
+
+    .item-main {
+      min-width: 0;
+    }
+
+    .item-title {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .item-title.checked {
+      color: #9aa3b6;
+      text-decoration: line-through;
+    }
+
+    .item-sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .qty-wrap {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+    }
+
+    .qty-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eef3ff;
+      color: var(--blue);
+      font-size: 24px;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+    }
+
+    .qty-btn:disabled {
+      opacity: 0.38;
+      cursor: default;
+    }
+
+    .qty-value {
+      min-width: 42px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      box-shadow: 0 8px 20px rgba(10,24,56,0.05);
+    }
+
+    .danger {
+      color: var(--red);
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 17, 30, 0.42);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 14px;
+      z-index: 50;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .sheet {
+      width: 100%;
+      max-width: 760px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 30px 30px 22px 22px;
+      padding: 14px 14px 18px;
+      box-shadow: 0 20px 50px rgba(10,24,56,0.22);
+      max-height: 95vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sheet-scroll {
+      overflow-y: auto;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .sheet-handle {
+      width: 54px;
+      height: 5px;
+      border-radius: 999px;
+      background: #d8deea;
+      margin: 4px auto 14px;
+    }
+
+    .sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .sheet-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .sheet-close {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: #f1f4fa;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .search-wrap {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px 0 44px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      font: inherit;
+      font-size: 16px;
+      background: white;
+      outline: none;
+      box-shadow: 0 4px 12px rgba(10,24,56,0.04);
+    }
+
+    .search-input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(10,105,255,0.12);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .category-bar {
+      display: none;
+    }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 4px 0 12px;
+    }
+
+    .cat-grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 14px 6px 12px;
+      background: #f4f7fc;
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      text-align: center;
+      transition: all 0.15s ease;
+    }
+
+    .cat-grid-item:active {
+      transform: scale(0.96);
+      background: #e8edf6;
+    }
+
+    .cat-grid-item .cat-emoji {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .cat-grid-item .cat-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .cat-grid-item .cat-count {
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .cat-grid-item.fav-item {
+      background: #fff0f0;
+      border-color: #ffcccc;
+    }
+
+    .back-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0 10px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      height: 34px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: #eef2f9;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      border: 1.5px solid var(--line);
+      transition: all 0.15s ease;
+    }
+
+    .back-btn:active {
+      transform: scale(0.96);
+    }
+
+    .back-bar .back-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .picker-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .picker-item {
+      width: 100%;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 10px 12px;
+      display: grid;
+      grid-template-columns: 56px 1fr auto auto;
+      gap: 10px;
+      align-items: center;
+      text-align: left;
+      box-shadow: 0 10px 24px rgba(10,24,56,0.04);
+      cursor: pointer;
+    }
+
+    .picker-item img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .picker-title {
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .picker-sub {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #edf3ff;
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .picker-status {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .cat-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--muted);
+      padding: 12px 4px 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .fav-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #f8f9fc;
+      border: none;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      transition: transform 0.15s ease;
+      padding: 0;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .fav-btn:active {
+      transform: scale(1.2);
+    }
+
+    .fav-btn.is-fav {
+      background: #fff0f0;
+      border-color: #ffcccc;
+    }
+
+    .in-list-badge {
+      color: #22994e;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .variant-badge {
+      display: inline-block;
+      background: #f0f0ff;
+      color: #5555cc;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-top: 3px;
+    }
+
+    .variant-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .variant-chip {
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #f0f0ff;
+      color: #5555cc;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid #ddddf8;
+      white-space: nowrap;
+    }
+
+    .variant-chip .variant-del {
+      font-size: 14px;
+      opacity: 0.5;
+      cursor: pointer;
+      margin-left: 2px;
+    }
+
+    .variant-chip .variant-del:hover {
+      opacity: 1;
+    }
+
+    .add-variant-btn {
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: white;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px dashed var(--line);
+    }
+
+    .variant-input-wrap {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .variant-input {
+      flex: 1;
+      height: 38px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .variant-input:focus {
+      border-color: var(--blue);
+    }
+
+    .variant-save-btn {
+      height: 38px;
+      padding: 0 16px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .zegel-content {
+      text-align: center;
+      padding: 12px 8px 4px;
+    }
+
+    .zegel-title {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .zegel-message {
+      margin: 18px 0 10px;
+      padding: 24px 16px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #fff8eb 0%, #fff3d3 100%);
+      color: #7a5200;
+      border: 1px solid rgba(122, 82, 0, 0.10);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .zegel-sub {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .zegel-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-wide {
+      min-width: 180px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 14px;
+      }
+
+      .item {
+        grid-template-columns: auto 74px 1fr;
+      }
+
+      .thumb {
+        width: 74px;
+        height: 74px;
+        border-radius: 18px;
+      }
+
+      .actions {
+        grid-column: 2 / 4;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .item-title {
+        font-size: 16px;
+      }
+
+      .qty-value {
+        font-size: 28px;
+      }
+
+      .zegel-actions {
+        flex-direction: column;
+      }
+
+      .btn-wide {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <h1>Boodschappenlijst</h1>
+      <p>Kies producten, pas aantallen aan, verwijder items en open direct de productpagina. Alles in één nette iPhone-vriendelijke pagina.</p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-label">Nog te halen</div>
+          <div class="stat-value" id="remainingCount">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Afgevinkt</div>
+          <div class="stat-value" id="checkedCount">0</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <button class="btn btn-primary" id="addButton">+ Product kiezen</button>
+      <button class="btn btn-secondary" id="resetButton">↺ Reset</button>
+      <button class="btn btn-zegel" id="zegelButton">⭐ Zegeltjes</button>
+    </div>
+
+    <div id="content"></div>
+  </div>
+
+  <div class="modal" id="productModal">
+    <div class="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="sheet-title">Kies een product</div>
+        <button class="sheet-close" id="closeProductModal">✕</button>
+      </div>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input class="search-input" id="searchInput" type="text" placeholder="Zoek een product..." autocomplete="off" />
+      </div>
+      <div id="categoryNav"></div>
+      <div class="sheet-scroll">
+        <div class="picker-grid" id="productPicker"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="variantModal">
+    <div class="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="sheet-title" id="variantTitle">Varianten</div>
+        <button class="sheet-close" id="closeVariantModal">✕</button>
+      </div>
+      <div class="sheet-scroll">
+        <div id="variantContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="zegelModal">
+    <div class="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div class="sheet-title">Zegeltjes</div>
+        <button class="sheet-close" id="closeZegelModal">✕</button>
+      </div>
+      <div class="zegel-content">
+        <div class="zegel-message">Ik wil graag zegeltjes alstublieft</div>
+        <div class="zegel-actions">
+          <button class="btn btn-primary btn-wide" id="speakZegelButton">🔊 Voorlezen</button>
+          <button class="btn btn-secondary btn-wide" id="stopSpeakButton">⏹ Stop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let allCategories = [];
+    let items = [];
+    let favorites = {};      // { "productUrl": true }
+    let customVariants = {};  // { "productUrl": ["Halfvol", "Aardbei"] }
+    let activeCategory = null;
+    let searchQuery = "";
+    let renderTimeout = null;
+    let activeVariantProduct = null;
+    let activeVariantCategory = null;
+
+    const PLACEHOLDER_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Crect width='74' height='74' fill='%23f1f4fa' rx='18'/%3E%3Ctext x='37' y='42' text-anchor='middle' font-size='28'%3E🛒%3C/text%3E%3C/svg%3E";
+
+    const content = document.getElementById("content");
+    const checkedCountEl = document.getElementById("checkedCount");
+    const remainingCountEl = document.getElementById("remainingCount");
+
+    const productModal = document.getElementById("productModal");
+    const variantModal = document.getElementById("variantModal");
+    const zegelModal = document.getElementById("zegelModal");
+
+    const productPicker = document.getElementById("productPicker");
+    const categoryNav = document.getElementById("categoryNav");
+    const searchInput = document.getElementById("searchInput");
+    const variantContent = document.getElementById("variantContent");
+    const variantTitle = document.getElementById("variantTitle");
+
+    document.getElementById("addButton").addEventListener("click", openProductModal);
+    document.getElementById("resetButton").addEventListener("click", resetList);
+    document.getElementById("zegelButton").addEventListener("click", openZegelModal);
+
+    document.getElementById("closeProductModal").addEventListener("click", closeProductModal);
+    document.getElementById("closeVariantModal").addEventListener("click", closeVariantModal);
+    document.getElementById("closeZegelModal").addEventListener("click", closeZegelModal);
+
+    document.getElementById("speakZegelButton").addEventListener("click", speakZegels);
+    document.getElementById("stopSpeakButton").addEventListener("click", stopSpeaking);
+
+    productModal.addEventListener("click", (e) => { if (e.target === productModal) closeProductModal(); });
+    variantModal.addEventListener("click", (e) => { if (e.target === variantModal) closeVariantModal(); });
+    zegelModal.addEventListener("click", (e) => { if (e.target === zegelModal) closeZegelModal(); });
+
+    searchInput.addEventListener("input", () => {
+      searchQuery = searchInput.value.trim().toLowerCase();
+      clearTimeout(renderTimeout);
+      renderTimeout = setTimeout(() => {
+        renderCategoryBar();
+        renderProductPicker();
+      }, 150);
+    });
+
+    // --- Favorites ---
+    function favKey(product, variant) {
+      return variant ? `${product.url}__${variant}` : product.url;
+    }
+
+    function isFavorite(product, variant) {
+      return !!favorites[favKey(product, variant)];
+    }
+
+    function toggleFavorite(product, e, variant) {
+      if (e) { e.stopPropagation(); e.preventDefault(); }
+      const key = favKey(product, variant);
+      if (favorites[key]) {
+        delete favorites[key];
+      } else {
+        favorites[key] = { name: product.name, brand: product.brand || null, image: product.image || null, url: product.url, variant: variant || null };
+      }
+      saveFavorites();
+      renderCategoryBar();
+      renderProductPicker();
+    }
+
+    function saveFavorites() {
+      try { localStorage.setItem("boodschappen-favs", JSON.stringify(favorites)); } catch {}
+    }
+
+    function loadFavorites() {
+      try {
+        const s = localStorage.getItem("boodschappen-favs");
+        if (s) favorites = JSON.parse(s);
+      } catch {}
+    }
+
+    function getFavoriteProducts() {
+      return Object.values(favorites);
+    }
+
+    // --- In-list check ---
+    function isInList(product, variant) {
+      const key = variant ? `${product.name}__${variant}` : product.name;
+      return items.some(i => i.key === key);
+    }
+
+    function getInListQty(product, variant) {
+      const key = variant ? `${product.name}__${variant}` : product.name;
+      const item = items.find(i => i.key === key);
+      return item ? item.quantity : 0;
+    }
+
+    // --- Custom Variants ---
+    function getVariants(product) {
+      return customVariants[product.url] || [];
+    }
+
+    function addVariant(product, variantName) {
+      if (!customVariants[product.url]) customVariants[product.url] = [];
+      const trimmed = variantName.trim();
+      if (!trimmed || customVariants[product.url].includes(trimmed)) return;
+      customVariants[product.url].push(trimmed);
+      saveVariants();
+    }
+
+    function removeVariant(product, variantName) {
+      if (!customVariants[product.url]) return;
+      customVariants[product.url] = customVariants[product.url].filter(v => v !== variantName);
+      if (customVariants[product.url].length === 0) delete customVariants[product.url];
+      saveVariants();
+    }
+
+    function saveVariants() {
+      try { localStorage.setItem("boodschappen-variants", JSON.stringify(customVariants)); } catch {}
+    }
+
+    function loadVariants() {
+      try {
+        const s = localStorage.getItem("boodschappen-variants");
+        if (s) customVariants = JSON.parse(s);
+      } catch {}
+    }
+
+    // --- Modals ---
+    function openProductModal() {
+      searchQuery = "";
+      searchInput.value = "";
+      activeCategory = null;
+      renderCategoryBar();
+      renderProductPicker();
+      productModal.classList.add("open");
+      setTimeout(() => searchInput.focus(), 100);
+    }
+
+    function closeProductModal() { productModal.classList.remove("open"); }
+
+    function openVariantModal(product, categoryName) {
+      activeVariantProduct = product;
+      activeVariantCategory = categoryName;
+      variantTitle.textContent = product.brand ? `${product.brand} ${product.name}` : product.name;
+      renderVariantContent();
+      variantModal.classList.add("open");
+    }
+
+    function closeVariantModal() {
+      variantModal.classList.remove("open");
+      activeVariantProduct = null;
+      activeVariantCategory = null;
+    }
+
+    function renderVariantContent() {
+      const product = activeVariantProduct;
+      const cat = activeVariantCategory;
+      if (!product) return;
+
+      const variants = getVariants(product);
+      variantContent.innerHTML = "";
+
+      // "Add without variant" button
+      const plainFav = isFavorite(product);
+      const plainQty = getInListQty(product, null);
+      const addPlain = document.createElement("div");
+      addPlain.className = "picker-item";
+      addPlain.style.marginBottom = "8px";
+      addPlain.innerHTML = `
+        <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+        <div>
+          <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
+          <div class="picker-sub">Zonder variant${plainQty > 0 ? ` · <span class="in-list-badge">✓ ${plainQty}× in lijst</span>` : ''}</div>
+        </div>
+        <button class="fav-btn ${plainFav ? "is-fav" : ""}">${plainFav ? "❤️" : "🤍"}</button>
+        <div class="pill">+</div>
+      `;
+      addPlain.addEventListener("click", (e) => {
+        if (e.target.closest('.fav-btn')) return;
+        addItem(product, cat, null);
+        closeVariantModal();
+        closeProductModal();
+      });
+      addPlain.querySelector('.fav-btn').addEventListener("click", (e) => {
+        toggleFavorite(product, e);
+        renderVariantContent();
+      });
+      variantContent.appendChild(addPlain);
+
+      // Existing variants
+      if (variants.length > 0) {
+        const header = document.createElement("div");
+        header.className = "cat-header";
+        header.textContent = "Jouw varianten";
+        variantContent.appendChild(header);
+
+        for (const v of variants) {
+          const vFav = isFavorite(product, v);
+          const vQty = getInListQty(product, v);
+          const btn = document.createElement("div");
+          btn.className = "picker-item";
+          btn.innerHTML = `
+            <img src="${product.image || PLACEHOLDER_IMG}" alt="${v}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+            <div>
+              <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
+              <div class="picker-sub"><span class="variant-badge">${v}</span>${vQty > 0 ? ` · <span class="in-list-badge">✓ ${vQty}× in lijst</span>` : ''}</div>
+            </div>
+            <button class="fav-btn ${vFav ? "is-fav" : ""}">${vFav ? "❤️" : "🤍"}</button>
+            <div style="display:flex;gap:6px;align-items:center">
+              <div class="pill">+</div>
+              <button class="icon-btn danger" style="width:32px;height:32px;border-radius:10px;font-size:14px" aria-label="Verwijder variant">✕</button>
+            </div>
+          `;
+          const delBtn = btn.querySelector(".danger");
+
+          btn.querySelector('.fav-btn').addEventListener("click", (e) => {
+            toggleFavorite(product, e, v);
+            renderVariantContent();
+          });
+
+          delBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            removeVariant(product, v);
+            renderVariantContent();
+          });
+
+          btn.addEventListener("click", (e) => {
+            if (e.target.closest('.fav-btn') || e.target.closest('.danger')) return;
+            addItem(product, cat, v);
+            closeVariantModal();
+            closeProductModal();
+          });
+
+          variantContent.appendChild(btn);
+        }
+      }
+
+      // Add new variant input
+      const inputHeader = document.createElement("div");
+      inputHeader.className = "cat-header";
+      inputHeader.textContent = "Nieuwe variant toevoegen";
+      variantContent.appendChild(inputHeader);
+
+      const inputWrap = document.createElement("div");
+      inputWrap.className = "variant-input-wrap";
+      inputWrap.innerHTML = `
+        <input class="variant-input" type="text" placeholder="bijv. Halfvol, Aardbei, Groot..." />
+        <button class="variant-save-btn">Opslaan</button>
+      `;
+      variantContent.appendChild(inputWrap);
+
+      const input = inputWrap.querySelector(".variant-input");
+      const saveBtn = inputWrap.querySelector(".variant-save-btn");
+
+      saveBtn.addEventListener("click", () => {
+        if (input.value.trim()) {
+          addVariant(product, input.value);
+          input.value = "";
+          renderVariantContent();
+        }
+      });
+
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && input.value.trim()) {
+          addVariant(product, input.value);
+          input.value = "";
+          renderVariantContent();
+        }
+      });
+
+      setTimeout(() => input.focus(), 100);
+    }
+
+    function openZegelModal() { zegelModal.classList.add("open"); }
+    function closeZegelModal() { zegelModal.classList.remove("open"); stopSpeaking(); }
+
+    function speakZegels() {
+      stopSpeaking();
+      const msg = new SpeechSynthesisUtterance("Ik wil graag zegeltjes alstublieft");
+      msg.lang = "nl-NL"; msg.rate = 0.95; msg.pitch = 1;
+      window.speechSynthesis.speak(msg);
+    }
+
+    function stopSpeaking() {
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    }
+
+    // --- Category bar ---
+    const CATEGORY_EMOJI = {
+      "Bier & wijn": "🍺", "Brood & bakkerij": "🍞", "Conserven & soepen": "🥫",
+      "Diepvries": "🧊", "Frisdrank, sap & water": "🥤", "Groente & fruit": "🥦",
+      "Huishouden & schoonmaak": "🧹", "Kaas": "🧀", "Koffie & thee": "☕",
+      "Ontbijt & cereals": "🥣", "Pasta, rijst & wereldkeuken": "🍝",
+      "Sauzen, kruiden & olie": "🫒", "Snacks, koeken & noten": "🍪",
+      "Snoep & chocolade": "🍫", "Vers vlees, vis & vega": "🥩",
+      "Verse maaltijden & pizza": "🍕", "Verzorging": "🧴",
+      "Vleeswaren & beleg": "🥪", "Zuivel, plantaardig & eieren": "🥛", "Overig": "📦",
+    };
+
+    function renderCategoryBar() {
+      categoryNav.innerHTML = "";
+
+      // Hide nav when searching
+      if (searchQuery) return;
+
+      // If a category is selected, show back bar
+      if (activeCategory) {
+        const bar = document.createElement("div");
+        bar.className = "back-bar";
+
+        const backBtn = document.createElement("button");
+        backBtn.className = "back-btn";
+        backBtn.innerHTML = "← Categorieën";
+        backBtn.addEventListener("click", () => {
+          activeCategory = null;
+          renderCategoryBar();
+          renderProductPicker();
+        });
+        bar.appendChild(backBtn);
+
+        const emoji = activeCategory === "__favs__" ? "❤️" : (CATEGORY_EMOJI[activeCategory] || "📦");
+        const title = document.createElement("span");
+        title.className = "back-title";
+        title.textContent = `${emoji} ${activeCategory === "__favs__" ? "Favorieten" : activeCategory}`;
+        bar.appendChild(title);
+
+        categoryNav.appendChild(bar);
+        return;
+      }
+
+      // Show category grid
+      const grid = document.createElement("div");
+      grid.className = "cat-grid";
+
+      const favCount = getFavoriteProducts().length;
+
+      // Favorites tile
+      if (favCount > 0) {
+        const fav = document.createElement("button");
+        fav.className = "cat-grid-item fav-item";
+        fav.innerHTML = `<span class="cat-emoji">❤️</span><span class="cat-label">Favorieten</span><span class="cat-count">${favCount}</span>`;
+        fav.addEventListener("click", () => {
+          activeCategory = "__favs__";
+          renderCategoryBar();
+          renderProductPicker();
+        });
+        grid.appendChild(fav);
+      }
+
+      allCategories.forEach((cat) => {
+        const emoji = CATEGORY_EMOJI[cat.name] || "📦";
+        const tile = document.createElement("button");
+        tile.className = "cat-grid-item";
+        tile.innerHTML = `<span class="cat-emoji">${emoji}</span><span class="cat-label">${cat.name}</span><span class="cat-count">${cat.products.length}</span>`;
+        tile.addEventListener("click", () => {
+          activeCategory = cat.name;
+          renderCategoryBar();
+          renderProductPicker();
+        });
+        grid.appendChild(tile);
+      });
+
+      categoryNav.appendChild(grid);
+    }
+
+    // --- Product picker ---
+    function getFilteredProducts() {
+      // Favorites view
+      if (activeCategory === "__favs__") {
+        const favProducts = getFavoriteProducts();
+        const filtered = searchQuery
+          ? favProducts.filter(p => p.name.toLowerCase().includes(searchQuery) || (p.brand && p.brand.toLowerCase().includes(searchQuery)) || (p.variant && p.variant.toLowerCase().includes(searchQuery)))
+          : favProducts;
+        return filtered.length > 0 ? [{ category: "Favorieten", products: filtered }] : [];
+      }
+
+      let results = [];
+      const categoriesToShow = activeCategory
+        ? allCategories.filter(c => c.name === activeCategory)
+        : allCategories;
+
+      for (const cat of categoriesToShow) {
+        const filtered = searchQuery
+          ? cat.products.filter(p => p.name.toLowerCase().includes(searchQuery) || (p.brand && p.brand.toLowerCase().includes(searchQuery)))
+          : cat.products;
+        if (filtered.length > 0) results.push({ category: cat.name, products: filtered });
+      }
+      return results;
+    }
+
+    function renderProductPicker() {
+      productPicker.innerHTML = "";
+
+      // If no category selected and no search, show nothing (category grid is visible)
+      if (!activeCategory && !searchQuery) return;
+
+      const groups = getFilteredProducts();
+      let totalCount = groups.reduce((sum, g) => sum + g.products.length, 0);
+
+      if (totalCount === 0) {
+        productPicker.innerHTML = `<div class="picker-status">Geen producten gevonden</div>`;
+        return;
+      }
+
+      const MAX_RENDER = 100;
+      let rendered = 0;
+
+      for (const group of groups) {
+        if (rendered >= MAX_RENDER) break;
+
+        if (!activeCategory && groups.length > 1) {
+          const header = document.createElement("div");
+          header.className = "cat-header";
+          header.textContent = `${group.category} (${group.products.length})`;
+          productPicker.appendChild(header);
+        }
+
+        const toRender = group.products.slice(0, MAX_RENDER - rendered);
+
+        for (const product of toRender) {
+          const productVariant = product.variant || null;
+          const variants = getVariants(product);
+          const hasVariants = variants.length > 0;
+          const fav = isFavorite(product, productVariant);
+          const qty = getInListQty(product, productVariant);
+
+          const row = document.createElement("div");
+          row.className = "picker-item";
+          const subParts = [];
+          if (productVariant) subParts.push(`<span class="variant-badge">${productVariant}</span>`);
+          else subParts.push(group.category);
+          if (!productVariant && hasVariants) subParts.push(`${variants.length} variant${variants.length > 1 ? 'en' : ''}`);
+          if (qty > 0) subParts.push(`<span class="in-list-badge">✓ ${qty}× in lijst</span>`);
+
+          row.innerHTML = `
+            <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+            <div>
+              <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
+              <div class="picker-sub">${subParts.join(' · ')}</div>
+            </div>
+            <button class="fav-btn ${fav ? "is-fav" : ""}">${fav ? "❤️" : "🤍"}</button>
+            <div class="pill">${productVariant ? '+' : (hasVariants ? '▸' : '+')}</div>
+          `;
+
+          // Add to list on click (but not on fav button)
+          row.addEventListener("click", (e) => {
+            if (e.target.closest('.fav-btn')) return;
+            if (productVariant) {
+              addItem(product, group.category, productVariant);
+              closeProductModal();
+            } else {
+              openVariantModal(product, group.category);
+            }
+          });
+
+          // Favorite button
+          row.querySelector('.fav-btn').addEventListener("click", (e) => toggleFavorite(product, e, productVariant));
+
+          productPicker.appendChild(row);
+          rendered++;
+        }
+      }
+
+      if (totalCount > MAX_RENDER) {
+        const more = document.createElement("div");
+        more.className = "picker-status";
+        more.textContent = `${totalCount - MAX_RENDER} meer producten — zoek om te verfijnen`;
+        productPicker.appendChild(more);
+      }
+    }
+
+    // --- Shopping list ---
+    function addItem(product, categoryName, variantName) {
+      const key = variantName ? `${product.name}__${variantName}` : product.name;
+      const existing = items.find((item) => item.key === key);
+
+      if (existing) {
+        existing.quantity = Math.min(99, existing.quantity + 1);
+      } else {
+        items.push({
+          id: crypto.randomUUID(),
+          key,
+          productName: product.name,
+          variant: variantName || null,
+          brand: product.brand || null,
+          category: categoryName,
+          image: product.image || PLACEHOLDER_IMG,
+          url: product.url,
+          quantity: 1,
+          checked: false
+        });
+      }
+
+      saveItems();
+      render();
+    }
+
+    function toggleItem(id) {
+      const item = items.find((e) => e.id === id);
+      if (!item) return;
+      item.checked = !item.checked;
+      saveItems(); render();
+    }
+
+    function increase(id) {
+      const item = items.find((e) => e.id === id);
+      if (!item) return;
+      item.quantity = Math.min(99, item.quantity + 1);
+      saveItems(); render();
+    }
+
+    function decrease(id) {
+      const item = items.find((e) => e.id === id);
+      if (!item) return;
+      item.quantity = Math.max(1, item.quantity - 1);
+      saveItems(); render();
+    }
+
+    function removeItem(id) {
+      items = items.filter((item) => item.id !== id);
+      saveItems(); render();
+    }
+
+    function resetList() {
+      items = [];
+      saveItems(); render();
+    }
+
+    function saveItems() {
+      try { localStorage.setItem("boodschappen-items", JSON.stringify(items)); } catch {}
+    }
+
+    function loadItems() {
+      try {
+        const s = localStorage.getItem("boodschappen-items");
+        if (s) items = JSON.parse(s);
+      } catch {}
+    }
+
+    function render() {
+      const checkedCount = items.filter((i) => i.checked).length;
+      const remainingCount = items.length - checkedCount;
+
+      checkedCountEl.textContent = checkedCount;
+      remainingCountEl.textContent = remainingCount;
+
+      if (items.length === 0) {
+        content.innerHTML = `
+          <div class="panel empty">
+            <div class="empty-icon">🛒</div>
+            <h2>Nog geen producten gekozen</h2>
+            <p>Tik op 'Product kiezen' om uit meer dan ${allCategories.reduce((s, c) => s + c.products.length, 0)} Lidl producten te kiezen. Markeer favorieten met ❤️ en maak varianten aan.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const list = document.createElement("div");
+      list.className = "list";
+
+      items.forEach((item) => {
+        const displayName = item.brand ? `<span style="color:var(--blue)">${item.brand}</span> ${item.productName}` : item.productName;
+        const variantTag = item.variant ? ` <span class="variant-badge">${item.variant}</span>` : '';
+
+        const card = document.createElement("div");
+        card.className = "item";
+        card.innerHTML = `
+          <button class="check ${item.checked ? "checked" : ""}" aria-label="Afvinken">✓</button>
+          <img class="thumb" src="${item.image}" alt="${item.productName}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+          <div class="item-main">
+            <h3 class="item-title ${item.checked ? "checked" : ""}">${displayName}${variantTag}</h3>
+            <div class="item-sub">${item.category || "Product"}</div>
+            <div class="qty-wrap">
+              <button class="qty-btn" ${item.quantity <= 1 ? "disabled" : ""} aria-label="Minder">−</button>
+              <div class="qty-value">${item.quantity}</div>
+              <button class="qty-btn" ${item.quantity >= 99 ? "disabled" : ""} aria-label="Meer">+</button>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="icon-btn" aria-label="Open link">↗</button>
+            <button class="icon-btn danger" aria-label="Verwijder">🗑</button>
+          </div>
+        `;
+
+        const [checkButton, , , actions] = card.children;
+        const qtyButtons = card.querySelectorAll(".qty-btn");
+        const openButton = actions.children[0];
+        const deleteButton = actions.children[1];
+
+        checkButton.addEventListener("click", () => toggleItem(item.id));
+        qtyButtons[0].addEventListener("click", () => decrease(item.id));
+        qtyButtons[1].addEventListener("click", () => increase(item.id));
+        openButton.addEventListener("click", () => window.open(item.url, "_blank"));
+        deleteButton.addEventListener("click", () => removeItem(item.id));
+
+        list.appendChild(card);
+      });
+
+      content.innerHTML = "";
+      content.appendChild(list);
+    }
+
+    async function init() {
+      loadItems();
+      loadFavorites();
+      loadVariants();
+      render();
+
+      try {
+        const res = await fetch("products.json");
+        const data = await res.json();
+        allCategories = data.categories || [];
+        render();
+      } catch (err) {
+        console.error("Kon products.json niet laden:", err);
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
