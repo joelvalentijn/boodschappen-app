@@ -89,7 +89,7 @@ jobs:
   mac:
     name: Mac
     runs-on: macos-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
 
@@ -109,9 +109,7 @@ jobs:
         run: |
           mkdir -p shots
           open build/Build/Products/Debug/Boodschappen.app --args -demo YES -demoCategorie Kaas
-          sleep 20
-          osascript -e 'tell application "Boodschappen" to activate' || true
-          sleep 3
+          sleep 25
           screencapture -x shots/mac-1.png
 
       - uses: actions/upload-artifact@v4
