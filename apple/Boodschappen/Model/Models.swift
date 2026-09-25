@@ -1,8 +1,9 @@
 import Foundation
 import SwiftData
 
-// Let op: voor iCloud-synchronisatie moeten alle velden een standaardwaarde
-// hebben of optioneel zijn, en mogen er geen unieke velden zijn.
+// Elk object heeft een vaste `syncID` (de naam van het iCloud-record) en een
+// `modifiedAt`, zodat bij gelijktijdige wijzigingen de laatste wint.
+// Nieuwe velden krijgen een standaardwaarde, zodat bestaande gegevens meeverhuizen.
 
 /// Een product op de boodschappenlijst.
 @Model
@@ -17,6 +18,8 @@ final class ShoppingItem {
     var isChecked: Bool = false
     var addedAt: Date = Date()
     var checkedAt: Date?
+    var syncID: String = ""
+    var modifiedAt: Date = Date()
 
     init(
         productURL: String,
@@ -35,6 +38,8 @@ final class ShoppingItem {
         self.imageURL = imageURL
         self.quantity = quantity
         self.addedAt = Date()
+        self.syncID = UUID().uuidString
+        self.modifiedAt = Date()
     }
 
     var key: String { ItemKey.make(url: productURL, name: name, variant: variant) }
@@ -51,6 +56,8 @@ final class FavoriteProduct {
     var category: String = ""
     var imageURL: String?
     var addedAt: Date = Date()
+    var syncID: String = ""
+    var modifiedAt: Date = Date()
 
     init(product: Product, variant: String?) {
         self.productURL = product.url
@@ -60,6 +67,8 @@ final class FavoriteProduct {
         self.category = product.category
         self.imageURL = product.imageURL
         self.addedAt = Date()
+        self.syncID = UUID().uuidString
+        self.modifiedAt = Date()
     }
 
     var key: String { ItemKey.make(url: productURL, name: name, variant: variant) }
@@ -84,11 +93,15 @@ final class CustomVariant {
     var productURL: String = ""
     var name: String = ""
     var addedAt: Date = Date()
+    var syncID: String = ""
+    var modifiedAt: Date = Date()
 
     init(productURL: String, name: String) {
         self.productURL = productURL
         self.name = name
         self.addedAt = Date()
+        self.syncID = UUID().uuidString
+        self.modifiedAt = Date()
     }
 }
 

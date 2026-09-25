@@ -12,6 +12,7 @@ struct RootView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) private var scenePhase
     @Environment(CatalogStore.self) private var catalog
+    @Environment(SyncMonitor.self) private var syncMonitor
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
@@ -22,6 +23,16 @@ struct RootView: View {
                 if phase == .active {
                     ListActions.mergeDuplicates(in: context)
                 }
+                syncMonitor.setAppActive(phase != .background)
+            }
+            .task {
+                // Pushberichten van iCloud, voor updates als de app op de achtergrond staat.
+                guard syncMonitor.containerIdentifier != nil else { return }
+                #if os(iOS)
+                UIApplication.shared.registerForRemoteNotifications()
+                #else
+                NSApplication.shared.registerForRemoteNotifications()
+                #endif
             }
             #if DEBUG
             .task(id: catalog.isLoaded) {

@@ -101,6 +101,9 @@ struct ShoppingListView: View {
         #else
         .listStyle(.inset)
         #endif
+        .refreshable {
+            await syncMonitor.syncNow()
+        }
         .overlay {
             if items.isEmpty {
                 emptyState
@@ -288,7 +291,10 @@ struct ShoppingItemRow: View {
             .onTapGesture(perform: toggle)
 
             if !item.isChecked {
-                QuantityStepper(quantity: $item.quantity)
+                QuantityStepper(quantity: Binding(
+                    get: { item.quantity },
+                    set: { ListActions.setQuantity($0, for: item, in: context) }
+                ))
             } else if item.quantity > 1 {
                 Text("\(item.quantity)×")
                     .font(.subheadline.weight(.semibold))

@@ -47,6 +47,13 @@ enum ListActions {
         add(product, variant: nil, in: context)
     }
 
+    static func setQuantity(_ quantity: Int, for item: ShoppingItem, in context: ModelContext) {
+        let newValue = min(99, max(1, quantity))
+        guard newValue != item.quantity else { return }
+        item.quantity = newValue
+        save(context)
+    }
+
     static func toggleChecked(_ item: ShoppingItem, in context: ModelContext) {
         item.isChecked.toggle()
         item.checkedAt = item.isChecked ? Date() : nil
@@ -111,7 +118,7 @@ enum ListActions {
         var changed = false
 
         var itemsByKey: [String: ShoppingItem] = [:]
-        for item in items(in: context).sorted(by: { $0.addedAt < $1.addedAt }) {
+        for item in items(in: context).sorted(by: { ($0.addedAt, $0.syncID) < ($1.addedAt, $1.syncID) }) {
             if let keep = itemsByKey[item.key] {
                 keep.quantity = max(keep.quantity, item.quantity)
                 keep.isChecked = keep.isChecked && item.isChecked
@@ -123,7 +130,7 @@ enum ListActions {
         }
 
         var favoriteKeys = Set<String>()
-        for favorite in favorites(in: context).sorted(by: { $0.addedAt < $1.addedAt }) {
+        for favorite in favorites(in: context).sorted(by: { ($0.addedAt, $0.syncID) < ($1.addedAt, $1.syncID) }) {
             if !favoriteKeys.insert(favorite.key).inserted {
                 context.delete(favorite)
                 changed = true
@@ -131,7 +138,7 @@ enum ListActions {
         }
 
         var variantKeys = Set<String>()
-        for variant in variants(in: context).sorted(by: { $0.addedAt < $1.addedAt }) {
+        for variant in variants(in: context).sorted(by: { ($0.addedAt, $0.syncID) < ($1.addedAt, $1.syncID) }) {
             if !variantKeys.insert(variant.productURL + "__" + variant.name.lowercased()).inserted {
                 context.delete(variant)
                 changed = true
@@ -156,10 +163,35 @@ enum ListActions {
     }
 
     static func save(_ context: ModelContext) {
+        let now = Date()
+        for model in context.insertedModelsArray + context.changedModelsArray {
+            if let synced = model as? any SyncedModel {
+                synced.modifiedAt = now
+            }
+        }
         do {
             try context.save()
+            NotificationCenter.default.post(name: .boodschappenLocalChange, object: nil)
         } catch {
             print("Opslaan mislukt: \(error)")
         }
+    }
+
+    /// Geeft objecten zonder (of met een dubbele) syncID een eigen ID.
+    /// Nodig voor gegevens van vóór de synchronisatie via CloudSync.
+    static func ensureSyncIDs(in context: ModelContext) {
+        var seen = Set<String>()
+        var changed = false
+        func fix(_ object: any SyncedModel) {
+            if object.syncID.isEmpty || !seen.insert(object.syncID).inserted {
+                object.syncID = UUID().uuidString
+                seen.insert(object.syncID)
+                changed = true
+            }
+        }
+        for item in items(in: context) { fix(item) }
+        for favorite in favorites(in: context) { fix(favorite) }
+        for variant in variants(in: context) { fix(variant) }
+        if changed { save(context) }
     }
 }

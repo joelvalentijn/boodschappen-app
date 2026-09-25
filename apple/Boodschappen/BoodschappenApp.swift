@@ -5,15 +5,24 @@ import SwiftData
 struct BoodschappenApp: App {
     @State private var catalog = CatalogStore()
     @State private var syncMonitor: SyncMonitor
+    @State private var cloudSync: CloudSync?
     private let modelContainer: ModelContainer
 
     init() {
         let storage = Self.makeModelContainer()
         modelContainer = storage.container
-        _syncMonitor = State(initialValue: SyncMonitor(
-            containerIdentifier: storage.cloudKitContainer,
-            storeError: storage.error
-        ))
+
+        let containerIdentifier = CloudKitSetup.containerIdentifier()
+        let monitor = SyncMonitor(containerIdentifier: containerIdentifier, storeError: storage.error)
+        _syncMonitor = State(initialValue: monitor)
+        if let containerIdentifier {
+            let sync = CloudSync(containerIdentifier: containerIdentifier, context: storage.container.mainContext, monitor: monitor)
+            monitor.engine = sync
+            _cloudSync = State(initialValue: sync)
+        } else {
+            _cloudSync = State(initialValue: nil)
+        }
+
         // Productfoto's op schijf bewaren, zodat de lijst ook in de winkel snel laadt.
         URLCache.shared = URLCache(memoryCapacity: 32 * 1024 * 1024, diskCapacity: 256 * 1024 * 1024)
     }
@@ -39,22 +48,19 @@ struct BoodschappenApp: App {
         #endif
     }
 
-    /// De lijst, favorieten en varianten worden via iCloud (CloudKit) gesynchroniseerd
-    /// tussen iPhone, iPad en Mac. SwiftData gebruikt daarvoor automatisch de eerste
-    /// iCloud-container uit de entitlements. Lukt dat niet, dan werkt de app lokaal
-    /// en toont hij in Instellingen waarom.
-    private static func makeModelContainer() -> (container: ModelContainer, cloudKitContainer: String?, error: String?) {
+    /// De gegevens staan lokaal in SwiftData. `CloudSync` synchroniseert ze zelf via iCloud,
+    /// zodat wijzigingen binnen een paar seconden op je andere apparaten staan.
+    private static func makeModelContainer() -> (container: ModelContainer, error: String?) {
         let schema = Schema([ShoppingItem.self, FavoriteProduct.self, CustomVariant.self])
+        let configuration = ModelConfiguration(schema: schema, cloudKitDatabase: .none)
         do {
-            let configuration = ModelConfiguration(schema: schema, cloudKitDatabase: .automatic)
-            let container = try ModelContainer(for: schema, configurations: [configuration])
-            return (container, configuration.cloudKitContainerIdentifier, nil)
+            return (try ModelContainer(for: schema, configurations: [configuration]), nil)
         } catch {
-            print("iCloud-opslag niet beschikbaar, lokaal opslaan: \(error)")
-            let configuration = ModelConfiguration(schema: schema, cloudKitDatabase: .none)
+            // Kan de bestaande opslag niet worden geopend, begin dan liever leeg dan te crashen.
+            print("Opslag kon niet worden geopend: \(error)")
+            let fallback = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
             do {
-                let container = try ModelContainer(for: schema, configurations: [configuration])
-                return (container, nil, SyncMonitor.describe(error).message)
+                return (try ModelContainer(for: schema, configurations: [fallback]), error.localizedDescription)
             } catch {
                 fatalError("Kon de opslag niet openen: \(error)")
             }

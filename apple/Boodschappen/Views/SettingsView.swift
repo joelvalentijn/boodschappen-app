@@ -13,6 +13,13 @@ struct SettingsView: View {
         Form {
             Section {
                 SyncStatusRow()
+                if syncMonitor.status != .off {
+                    Button {
+                        Task { await syncMonitor.syncNow() }
+                    } label: {
+                        Label("Nu synchroniseren", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                }
                 if let lastSuccess = syncMonitor.lastSuccess {
                     LabeledContent("Laatst gesynchroniseerd") {
                         Text(lastSuccess, format: .relative(presentation: .named))
@@ -114,11 +121,11 @@ struct SettingsView: View {
     private var syncFooter: String {
         switch syncMonitor.status {
         case .off:
-            "Deze versie is gebouwd zonder iCloud-rechten, dus je lijst blijft op dit apparaat. Zie ‘iCloud-synchronisatie’ in apple/README.md."
+            "Deze installatie heeft geen iCloud-rechten, dus je lijst blijft op dit apparaat. Installeer de app vanuit Xcode met een betaald ontwikkelaarsaccount; zie ‘iCloud-synchronisatie’ in apple/README.md."
         case .problem:
             "Zolang dit niet werkt, blijft alles wat je doet op dit apparaat bewaard en wordt het later alsnog gesynchroniseerd."
         default:
-            "Je lijst, favorieten en varianten zijn hetzelfde op al je apparaten met hetzelfde Apple-account. Wijzigingen verschijnen meestal binnen een paar seconden; open de app op het andere apparaat als het langer duurt."
+            "Je lijst, favorieten en varianten zijn hetzelfde op al je apparaten met hetzelfde Apple-account. Zolang de app open is, staan wijzigingen binnen een paar seconden op je andere apparaten; anders zodra je de app opent."
         }
     }
 }

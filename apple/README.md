@@ -2,7 +2,7 @@
 
 Een echte app (SwiftUI) met dezelfde functies als de web-app, maar dan:
 
-- **iCloud-synchronisatie**: je lijst, favorieten en varianten zijn hetzelfde op je iPhone, iPad en Mac.
+- **iCloud-synchronisatie binnen een paar seconden**: je lijst, favorieten en varianten zijn hetzelfde op je iPhone, iPad en Mac. Zolang de app open is, staat een wijziging binnen enkele seconden op je andere apparaten; trek de lijst omlaag om meteen te synchroniseren.
 - **Winkelvolgorde**: de lijst is gegroepeerd per afdeling (groente, brood, vlees, …), in de volgorde waarin je door de Lidl loopt.
 - **Afvinken met een veeg** (of een tik), afgevinkte producten schuiven naar “In je mandje”.
 - **Snel toevoegen**: de productkiezer blijft open, zodat je meerdere producten achter elkaar kunt toevoegen. Staat iets niet in de catalogus, dan voeg je het toe als eigen product.
@@ -43,8 +43,9 @@ Open in de app **Instellingen → iCloud** (op de Mac: *Boodschappen → Instell
    - Bouw de app daarna opnieuw op beide apparaten.
 3. **Zelfde Apple-account, iCloud aan voor de app.** Op de iPhone: *Instellingen → [je naam] → iCloud → Apps die iCloud gebruiken → Boodschappen* aan. Op de Mac: *Systeeminstellingen → [je naam] → iCloud*.
 4. **Allebei vanuit Xcode geïnstalleerd.** Een versie uit Xcode praat met de *ontwikkel*-database van iCloud, een TestFlight- of App Store-versie met de *productie*-database. Die zien elkaars gegevens niet.
-5. **Even geduld na de eerste installatie.** De eerste keer kan het een minuut duren. Open de app op het andere apparaat; wijzigingen komen binnen zodra de app actief is.
-6. **Controleren in het CloudKit-dashboard.** Op [icloud.developer.apple.com](https://icloud.developer.apple.com) → je container → *Development* → *Records* (zone `com.apple.coredata.cloudkit.zone`) zie je of er gegevens aankomen.
+5. **De app moet open zijn.** Zolang de app open is (op de Mac mag hij op de achtergrond staan), kijkt hij elke 3 seconden of er iets veranderd is. Is de app dicht, dan komen de wijzigingen binnen zodra je hem opent. Trek de lijst omlaag of tik in Instellingen op *Nu synchroniseren* om direct te synchroniseren.
+6. **Niet in de simulator.** iCloud werkt alleen in een installatie op een echt apparaat die met je ontwikkelaarsaccount is ondertekend.
+7. **Controleren in het CloudKit-dashboard.** Op [icloud.developer.apple.com](https://icloud.developer.apple.com) → je container → *Development* → *Records* (zone `Boodschappen`, typen `Item`, `Favorite` en `Variant`) zie je of er gegevens aankomen.
 
 ## Je lijst overzetten vanuit de web-app
 
@@ -55,7 +56,7 @@ Open in de app **Instellingen → iCloud** (op de Mac: *Boodschappen → Instell
 
 | Onderdeel | Waar |
 | --- | --- |
-| Lijst, favorieten, varianten | SwiftData met CloudKit (`Model/Models.swift`) |
+| Lijst, favorieten, varianten | Lokaal in SwiftData (`Model/Models.swift`), gesynchroniseerd met `CKSyncEngine` (`Model/CloudSync.swift`) |
 | Productcatalogus | `products.json` zit in de app; `Model/CatalogStore.swift` haalt elke 6 uur de nieuwste versie van GitHub |
 | Nieuwe producten | De GitHub Action *Nieuwe Lidl-producten ophalen* draait elke maandag `scraper.mjs` |
 | Schermen | `Views/` — iPhone gebruikt `PhoneRootView`, iPad en Mac `SplitRootView` |
