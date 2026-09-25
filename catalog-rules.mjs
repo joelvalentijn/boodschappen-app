@@ -110,6 +110,10 @@ const RULES = [
     /pindakaas|hagelslag|\bvlokken\b|chocoladevlokken|muisjes|\bjam\b|(?<!a)jam\b|confiture|marmelade|appelstroop|schenkstroop|\bstroop\b|\bhoning|chocopasta|chocoladepasta|hazelnootpasta|speculoospasta|notenpasta|sandwichspread|boterhamkorrels|\bvruchtenhagel|\bchoco nussa|\bnutella|\bmaribel/,
     /\bham\b|ham\b|achterham|beenham|schouderham|cervelaat|salami|chorizo|pepperoni|mortadella|rookvlees|fricandeau|leverworst|\bpate\b|pate\b|leverpastei|boterhamworst|\bfilet americain|\bkipfilet beleg|\bgebraden gehakt|\bgebraden fricandeau|\bsnijworst|\bgekookte worst|\bgekookte ham|\bvleeswaren|\bbeleg\b|\brauwe ham|serrano|prosciutto crudo|\bpancetta|guanciale/,
   ]],
+  // Koekjes met een smaak ("choco biscuits melk") niet bij de zuivel.
+  ['Snacks, koeken & noten', [
+    /biscuits?\b|koekjes\b/,
+  ]],
   ['Zuivel, plantaardig & eieren', [
     /fraiche|vla\b/,
     /actimel|yakult|kwark|dessert|room\b|zuivel|proviact|\bcroma\b|\bmild creamy/,
