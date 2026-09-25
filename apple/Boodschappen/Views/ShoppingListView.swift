@@ -8,6 +8,7 @@ struct ShoppingListView: View {
 
     @Environment(\.modelContext) private var context
     @Environment(CatalogStore.self) private var catalog
+    @Environment(SyncMonitor.self) private var syncMonitor
     @Query(sort: \ShoppingItem.addedAt) private var items: [ShoppingItem]
     @AppStorage("lijstGroeperen") private var groupByCategory = true
     #if DEBUG
@@ -51,6 +52,12 @@ struct ShoppingListView: View {
 
     var body: some View {
         List {
+            if syncMonitor.status == .problem {
+                Section {
+                    syncWarning
+                }
+            }
+
             if !items.isEmpty {
                 Section {
                     ProgressHeader(total: items.count, checked: checkedItems.count)
@@ -121,6 +128,23 @@ struct ShoppingListView: View {
                 withAnimation { ListActions.clearList(in: context) }
             }
         }
+    }
+
+    @ViewBuilder
+    private var syncWarning: some View {
+        #if os(iOS)
+        Button {
+            showingSettings = true
+        } label: {
+            SyncStatusRow()
+        }
+        .buttonStyle(.plain)
+        #else
+        SettingsLink {
+            SyncStatusRow()
+        }
+        .buttonStyle(.plain)
+        #endif
     }
 
     private var emptyState: some View {

@@ -32,6 +32,20 @@ iCloud (CloudKit) werkt alleen met een **betaald Apple Developer-account** (€ 
 
 Ga je de app via TestFlight of de App Store verspreiden, zet dan in het [CloudKit-dashboard](https://icloud.developer.apple.com) het schema over naar *Production*.
 
+### Synchroniseert het niet?
+
+Open in de app **Instellingen → iCloud** (op de Mac: *Boodschappen → Instellingen…*). Daar staat of iCloud werkt en zo niet, waarom. Onder **Technische details** zie je de laatste synchronisatiestappen en kun je met **Deel diagnose** een verslag versturen. Loop daarnaast deze punten na:
+
+1. **“iCloud staat niet aan in deze versie van de app”**: de app is gebouwd zonder iCloud-rechten. Dat gebeurt met een gratis Apple ID, of als *Code Signing Entitlements* leeg is gemaakt. Je hebt een betaald ontwikkelaarsaccount nodig.
+2. **De container moet bij je account horen.** Kijk in Xcode bij *Signing & Capabilities* of er geen rode foutmelding staat, zowel met je iPhone als met **My Mac** als bestemming (de Mac gebruikt een eigen entitlements-bestand). Staat de container er niet goed bij, maak hem dan zelf aan op [developer.apple.com](https://developer.apple.com/account/resources/identifiers/list/cloudContainer):
+   - *Identifiers → iCloud Containers → +* → `iCloud.nl.joelvalentijn.Boodschappen`
+   - *Identifiers → App IDs → nl.joelvalentijn.Boodschappen → iCloud → Configure* → vink de container aan
+   - Bouw de app daarna opnieuw op beide apparaten.
+3. **Zelfde Apple-account, iCloud aan voor de app.** Op de iPhone: *Instellingen → [je naam] → iCloud → Apps die iCloud gebruiken → Boodschappen* aan. Op de Mac: *Systeeminstellingen → [je naam] → iCloud*.
+4. **Allebei vanuit Xcode geïnstalleerd.** Een versie uit Xcode praat met de *ontwikkel*-database van iCloud, een TestFlight- of App Store-versie met de *productie*-database. Die zien elkaars gegevens niet.
+5. **Even geduld na de eerste installatie.** De eerste keer kan het een minuut duren. Open de app op het andere apparaat; wijzigingen komen binnen zodra de app actief is.
+6. **Controleren in het CloudKit-dashboard.** Op [icloud.developer.apple.com](https://icloud.developer.apple.com) → je container → *Development* → *Records* (zone `com.apple.coredata.cloudkit.zone`) zie je of er gegevens aankomen.
+
 ## Je lijst overzetten vanuit de web-app
 
 1. Open de web-app in Safari en tik onderaan op **Overzetten naar iPhone/Mac-app**.

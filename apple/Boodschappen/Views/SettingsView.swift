@@ -6,27 +6,43 @@ struct SettingsView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @AppStorage("lijstGroeperen") private var groupByCategory = true
+    @Environment(SyncMonitor.self) private var syncMonitor
     @State private var importMessage: String?
-    @State private var iCloudAvailable = FileManager.default.ubiquityIdentityToken != nil
 
     var body: some View {
         Form {
             Section {
-                Label {
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text(iCloudAvailable ? "iCloud-synchronisatie staat aan" : "Niet ingelogd bij iCloud")
-                        Text(iCloudAvailable
-                             ? "Je lijst, favorieten en varianten zijn hetzelfde op al je apparaten met dit Apple-account."
-                             : "Log in bij iCloud om je lijst te delen tussen iPhone, iPad en Mac. Tot die tijd blijft alles op dit apparaat.")
-                            .font(.footnote)
-                            .foregroundStyle(.secondary)
+                SyncStatusRow()
+                if let lastSuccess = syncMonitor.lastSuccess {
+                    LabeledContent("Laatst gesynchroniseerd") {
+                        Text(lastSuccess, format: .relative(presentation: .named))
                     }
-                } icon: {
-                    Image(systemName: iCloudAvailable ? "checkmark.icloud.fill" : "icloud.slash")
-                        .foregroundStyle(iCloudAvailable ? Color.accentColor : Color.secondary)
+                }
+                DisclosureGroup("Technische details") {
+                    LabeledContent("Container", value: syncMonitor.containerIdentifier ?? "geen")
+                    LabeledContent("iCloud-account", value: syncMonitor.accountDescription)
+                    ForEach(syncMonitor.log) { entry in
+                        Label {
+                            VStack(alignment: .leading, spacing: 1) {
+                                Text(entry.text)
+                                    .font(.footnote)
+                                Text(entry.date, format: .dateTime.hour().minute().second())
+                                    .font(.caption2)
+                                    .foregroundStyle(.secondary)
+                            }
+                        } icon: {
+                            Image(systemName: entry.succeeded ? "checkmark.circle.fill" : "xmark.octagon.fill")
+                                .foregroundStyle(entry.succeeded ? Color.green : Color.red)
+                        }
+                    }
+                    ShareLink(item: syncMonitor.diagnosticReport) {
+                        Label("Deel diagnose", systemImage: "square.and.arrow.up")
+                    }
                 }
             } header: {
                 Text("iCloud")
+            } footer: {
+                Text(syncFooter)
             }
 
             Section("Lijst") {
@@ -85,6 +101,7 @@ struct SettingsView: View {
         }
         .formStyle(.grouped)
         .navigationTitle("Instellingen")
+        .task { await syncMonitor.refreshAccount() }
         #if os(iOS)
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
@@ -92,5 +109,59 @@ struct SettingsView: View {
             }
         }
         #endif
+    }
+
+    private var syncFooter: String {
+        switch syncMonitor.status {
+        case .off:
+            "Deze versie is gebouwd zonder iCloud-rechten, dus je lijst blijft op dit apparaat. Zie ‘iCloud-synchronisatie’ in apple/README.md."
+        case .problem:
+            "Zolang dit niet werkt, blijft alles wat je doet op dit apparaat bewaard en wordt het later alsnog gesynchroniseerd."
+        default:
+            "Je lijst, favorieten en varianten zijn hetzelfde op al je apparaten met hetzelfde Apple-account. Wijzigingen verschijnen meestal binnen een paar seconden; open de app op het andere apparaat als het langer duurt."
+        }
+    }
+}
+
+/// Eén regel met de iCloud-status: icoon, titel en uitleg.
+struct SyncStatusRow: View {
+    @Environment(SyncMonitor.self) private var syncMonitor
+
+    var body: some View {
+        Label {
+            VStack(alignment: .leading, spacing: 3) {
+                Text(syncMonitor.statusDescription)
+                    .fontWeight(.semibold)
+                if let message = syncMonitor.problemMessage {
+                    Text(message)
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        } icon: {
+            if syncMonitor.status == .syncing || syncMonitor.status == .connecting {
+                ProgressView()
+                    .controlSize(.small)
+            } else {
+                Image(systemName: iconName)
+                    .foregroundStyle(iconColor)
+            }
+        }
+    }
+
+    private var iconName: String {
+        switch syncMonitor.status {
+        case .off: "icloud.slash"
+        case .problem: "exclamationmark.icloud.fill"
+        default: "checkmark.icloud.fill"
+        }
+    }
+
+    private var iconColor: Color {
+        switch syncMonitor.status {
+        case .off: Color.secondary
+        case .problem: Color.orange
+        default: Color.green
+        }
     }
 }
