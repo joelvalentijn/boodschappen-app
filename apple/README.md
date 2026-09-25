@@ -47,3 +47,5 @@ Ga je de app via TestFlight of de App Store verspreiden, zet dan in het [CloudKi
 | Schermen | `Views/` — iPhone gebruikt `PhoneRootView`, iPad en Mac `SplitRootView` |
 
 Minimaal iOS 17 en macOS 14 (Sonoma).
+
+Bij elke wijziging in `apple/` bouwt GitHub de app voor iPhone en Mac (*iPhone- en Mac-app bouwen*). Screenshots nodig? Start *Actions → Screenshots van de app → Run workflow*; de afbeeldingen staan daarna als download onder de run. Debug-builds kun je met voorbeeldgegevens starten via het launch-argument `-demo YES` (zie `Model/DemoMode.swift`).

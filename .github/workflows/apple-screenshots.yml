@@ -1,10 +1,8 @@
 name: Screenshots van de app
 
+# Handmatig starten via Actions → Screenshots van de app → Run workflow.
+# De screenshots staan daarna onderaan de run als download.
 on:
-  push:
-    paths:
-      - "apple/**"
-      - ".github/workflows/apple-screenshots.yml"
   workflow_dispatch:
 
 concurrency:
@@ -77,14 +75,6 @@ jobs:
           name: screenshots-iphone
           path: shots/
 
-      - name: Screenshots in het log
-        run: |
-          for f in shots/*.png; do
-            sips -Z 760 -s format jpeg -s formatOptions 50 "$f" --out "${f%.png}.jpg" >/dev/null
-            echo "=====BEGIN $(basename "${f%.png}")====="
-            base64 -i "${f%.png}.jpg" | fold -w 2000
-            echo "=====END====="
-          done
 
   mac:
     name: Mac
@@ -116,12 +106,3 @@ jobs:
         with:
           name: screenshots-mac
           path: shots/
-
-      - name: Screenshot in het log
-        run: |
-          for f in shots/*.png; do
-            sips -Z 1100 -s format jpeg -s formatOptions 50 "$f" --out "${f%.png}.jpg" >/dev/null
-            echo "=====BEGIN $(basename "${f%.png}")====="
-            base64 -i "${f%.png}.jpg" | fold -w 2000
-            echo "=====END====="
-          done
