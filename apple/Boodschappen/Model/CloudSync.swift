@@ -70,7 +70,9 @@ final class CloudSync: CKSyncEngineDelegate {
         pollTask?.cancel()
         pollTask = nil
         guard active else { return }
-        pollTask = Task { [weak self] in
+        // Losgekoppeld (detached): CKSyncEngine staat niet toe dat werk dat vanuit een van zijn
+        // eigen callbacks is gestart, weer op de engine wacht.
+        pollTask = Task.detached { @MainActor [weak self] in
             // Bij openen meteen versturen wat nog klaarstaat en ophalen wat nieuw is.
             await self?.syncNow()
             while !Task.isCancelled {
@@ -137,7 +139,10 @@ final class CloudSync: CKSyncEngineDelegate {
 
     private func scheduleLocalCheck() {
         localCheckTask?.cancel()
-        localCheckTask = Task { [weak self] in
+        // Wordt ook vanuit CKSyncEngine-callbacks aangeroepen (na ophalen of versturen). Een gewone
+        // Task hoort dan nog bij die callback, en daaruit mag niet op de engine gewacht worden:
+        // CloudKit stopt de app dan met "BUG IN CLIENT OF CLOUDKIT". Daarom detached.
+        localCheckTask = Task.detached { @MainActor [weak self] in
             // Snel achter elkaar tikken (bijv. + + +) als één wijziging versturen.
             try? await Task.sleep(for: .milliseconds(250))
             guard !Task.isCancelled, let self else { return }
@@ -202,7 +207,10 @@ final class CloudSync: CKSyncEngineDelegate {
             @unknown default:
                 break
             }
-            await monitor?.refreshAccount()
+            let monitor = self.monitor
+            Task.detached { @MainActor in
+                await monitor?.refreshAccount()
+            }
 
         case .fetchedDatabaseChanges(let changes):
             if changes.deletions.contains(where: { $0.zoneID == Self.zoneID }) {
