@@ -11,6 +11,7 @@ import AppKit
 struct RootView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(CatalogStore.self) private var catalog
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
@@ -22,6 +23,11 @@ struct RootView: View {
                     ListActions.mergeDuplicates(in: context)
                 }
             }
+            #if DEBUG
+            .task(id: catalog.isLoaded) {
+                DemoMode.seedIfNeeded(catalog: catalog, context: context)
+            }
+            #endif
     }
 
     @ViewBuilder
@@ -39,7 +45,11 @@ struct RootView: View {
 }
 
 struct PhoneRootView: View {
+    #if DEBUG
+    @State private var showingProducts = DemoMode.startScreen == "producten"
+    #else
     @State private var showingProducts = false
+    #endif
 
     var body: some View {
         NavigationStack {
@@ -70,7 +80,11 @@ struct ProductPickerSheet: View {
 struct SplitRootView: View {
     @Environment(CatalogStore.self) private var catalog
     @Query private var favorites: [FavoriteProduct]
+    #if DEBUG
+    @State private var scope: BrowseScope? = DemoMode.startCategory.map { BrowseScope.category($0) } ?? .all
+    #else
     @State private var scope: BrowseScope? = .all
+    #endif
 
     var body: some View {
         NavigationSplitView {

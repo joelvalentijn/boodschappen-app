@@ -10,7 +10,11 @@ struct ShoppingListView: View {
     @Environment(CatalogStore.self) private var catalog
     @Query(sort: \ShoppingItem.addedAt) private var items: [ShoppingItem]
     @AppStorage("lijstGroeperen") private var groupByCategory = true
+    #if DEBUG
+    @State private var showingZegels = DemoMode.startScreen == "zegeltjes"
+    #else
     @State private var showingZegels = false
+    #endif
     @State private var showingSettings = false
     @State private var confirmingClear = false
 

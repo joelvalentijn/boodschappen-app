@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boodschappenlijst</title>
   <link rel="icon" type="image/svg+xml" href="lidl-logo.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Boodschappen" />
   <style>
     :root {
       --bg: #f3f6fb;
@@ -478,6 +481,29 @@
       border-color: #ffcccc;
     }
 
+    .cat-grid-item.new-item {
+      background: #fff7e6;
+      border-color: #ffe0a3;
+    }
+
+    .footer {
+      margin: 22px 0 8px;
+      text-align: center;
+    }
+
+    .link-btn {
+      background: none;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 12px;
+    }
+
+    .link-btn:hover {
+      color: var(--blue);
+    }
+
     .back-bar {
       display: flex;
       align-items: center;
@@ -805,6 +831,10 @@
     </div>
 
     <div id="content"></div>
+
+    <div class="footer">
+      <button class="link-btn" id="exportButton">📲 Overzetten naar iPhone/Mac-app</button>
+    </div>
   </div>
 
   <div class="modal" id="productModal">
@@ -866,7 +896,8 @@
     let activeVariantProduct = null;
     let activeVariantCategory = null;
 
-    const PLACEHOLDER_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='74' viewBox='0 0 74 74'%3E%3Crect width='74' height='74' fill='%23f1f4fa' rx='18'/%3E%3Ctext x='37' y='42' text-anchor='middle' font-size='28'%3E🛒%3C/text%3E%3C/svg%3E";
+    // Enkele aanhalingstekens zijn gecodeerd (%27), zodat de URL veilig in onerror="..." past.
+    const PLACEHOLDER_IMG = "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2774%27 height=%2774%27 viewBox=%270 0 74 74%27%3E%3Crect width=%2774%27 height=%2774%27 fill=%27%23f1f4fa%27 rx=%2718%27/%3E%3Ctext x=%2737%27 y=%2742%27 text-anchor=%27middle%27 font-size=%2728%27%3E🛒%3C/text%3E%3C/svg%3E";
 
     const content = document.getElementById("content");
     const checkedCountEl = document.getElementById("checkedCount");
@@ -885,6 +916,7 @@
     document.getElementById("addButton").addEventListener("click", openProductModal);
     document.getElementById("resetButton").addEventListener("click", resetList);
     document.getElementById("zegelButton").addEventListener("click", openZegelModal);
+    document.getElementById("exportButton").addEventListener("click", exportForApp);
 
     document.getElementById("closeProductModal").addEventListener("click", closeProductModal);
     document.getElementById("closeVariantModal").addEventListener("click", closeVariantModal);
@@ -1028,7 +1060,7 @@
       addPlain.className = "picker-item";
       addPlain.style.marginBottom = "8px";
       addPlain.innerHTML = `
-        <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+        <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">
         <div>
           <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
           <div class="picker-sub">Zonder variant${plainQty > 0 ? ` · <span class="in-list-badge">✓ ${plainQty}× in lijst</span>` : ''}</div>
@@ -1061,7 +1093,7 @@
           const btn = document.createElement("div");
           btn.className = "picker-item";
           btn.innerHTML = `
-            <img src="${product.image || PLACEHOLDER_IMG}" alt="${v}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+            <img src="${product.image || PLACEHOLDER_IMG}" alt="${v}" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">
             <div>
               <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
               <div class="picker-sub"><span class="variant-badge">${v}</span>${vQty > 0 ? ` · <span class="in-list-badge">✓ ${vQty}× in lijst</span>` : ''}</div>
@@ -1156,7 +1188,36 @@
       "Snoep & chocolade": "🍫", "Vers vlees, vis & vega": "🥩",
       "Verse maaltijden & pizza": "🍕", "Verzorging": "🧴",
       "Vleeswaren & beleg": "🥪", "Zuivel, plantaardig & eieren": "🥛", "Overig": "📦",
+      "Huisdieren": "🐾", "Bloemen & planten": "💐",
     };
+
+    function emojiFor(categoryName) {
+      const cat = allCategories.find(c => c.name === categoryName);
+      return (cat && cat.emoji) || CATEGORY_EMOJI[categoryName] || "📦";
+    }
+
+    // Producten die de afgelopen drie weken voor het eerst in het assortiment zijn gezien.
+    const NEW_DAYS = 21;
+    function isNewProduct(product) {
+      if (!product.firstSeen) return false;
+      const age = (Date.now() - new Date(product.firstSeen).getTime()) / 86400000;
+      return age <= NEW_DAYS;
+    }
+
+    function countNewProducts() {
+      return allCategories.reduce((sum, c) => sum + c.products.filter(isNewProduct).length, 0);
+    }
+
+    // Kopieert lijst, favorieten en varianten, zodat de app ze kan overnemen.
+    async function exportForApp() {
+      const data = JSON.stringify({ type: "boodschappen-export", version: 1, items, favorites, variants: customVariants });
+      try {
+        await navigator.clipboard.writeText(data);
+        alert("Gekopieerd! Open de Boodschappen-app, ga naar Instellingen en tik op ‘Plak’ bij ‘Overzetten vanuit de web-app’.");
+      } catch {
+        prompt("Kopieer deze tekst en plak hem in de app (Instellingen):", data);
+      }
+    }
 
     function renderCategoryBar() {
       categoryNav.innerHTML = "";
@@ -1179,10 +1240,11 @@
         });
         bar.appendChild(backBtn);
 
-        const emoji = activeCategory === "__favs__" ? "❤️" : (CATEGORY_EMOJI[activeCategory] || "📦");
+        const emoji = activeCategory === "__favs__" ? "❤️" : activeCategory === "__new__" ? "✨" : emojiFor(activeCategory);
+        const label = activeCategory === "__favs__" ? "Favorieten" : activeCategory === "__new__" ? "Nieuw bij Lidl" : activeCategory;
         const title = document.createElement("span");
         title.className = "back-title";
-        title.textContent = `${emoji} ${activeCategory === "__favs__" ? "Favorieten" : activeCategory}`;
+        title.textContent = `${emoji} ${label}`;
         bar.appendChild(title);
 
         categoryNav.appendChild(bar);
@@ -1208,8 +1270,22 @@
         grid.appendChild(fav);
       }
 
+      // Nieuwe producten
+      const newCount = countNewProducts();
+      if (newCount > 0) {
+        const tile = document.createElement("button");
+        tile.className = "cat-grid-item new-item";
+        tile.innerHTML = `<span class="cat-emoji">✨</span><span class="cat-label">Nieuw bij Lidl</span><span class="cat-count">${newCount}</span>`;
+        tile.addEventListener("click", () => {
+          activeCategory = "__new__";
+          renderCategoryBar();
+          renderProductPicker();
+        });
+        grid.appendChild(tile);
+      }
+
       allCategories.forEach((cat) => {
-        const emoji = CATEGORY_EMOJI[cat.name] || "📦";
+        const emoji = emojiFor(cat.name);
         const tile = document.createElement("button");
         tile.className = "cat-grid-item";
         tile.innerHTML = `<span class="cat-emoji">${emoji}</span><span class="cat-label">${cat.name}</span><span class="cat-count">${cat.products.length}</span>`;
@@ -1236,14 +1312,16 @@
       }
 
       let results = [];
-      const categoriesToShow = activeCategory
+      const onlyNew = activeCategory === "__new__";
+      const categoriesToShow = activeCategory && !onlyNew
         ? allCategories.filter(c => c.name === activeCategory)
         : allCategories;
 
       for (const cat of categoriesToShow) {
+        const products = onlyNew ? cat.products.filter(isNewProduct) : cat.products;
         const filtered = searchQuery
-          ? cat.products.filter(p => p.name.toLowerCase().includes(searchQuery) || (p.brand && p.brand.toLowerCase().includes(searchQuery)))
-          : cat.products;
+          ? products.filter(p => p.name.toLowerCase().includes(searchQuery) || (p.brand && p.brand.toLowerCase().includes(searchQuery)))
+          : products;
         if (filtered.length > 0) results.push({ category: cat.name, products: filtered });
       }
       return results;
@@ -1269,7 +1347,7 @@
       for (const group of groups) {
         if (rendered >= MAX_RENDER) break;
 
-        if (!activeCategory && groups.length > 1) {
+        if ((!activeCategory || activeCategory === "__new__") && groups.length > 1) {
           const header = document.createElement("div");
           header.className = "cat-header";
           header.textContent = `${group.category} (${group.products.length})`;
@@ -1294,7 +1372,7 @@
           if (qty > 0) subParts.push(`<span class="in-list-badge">✓ ${qty}× in lijst</span>`);
 
           row.innerHTML = `
-            <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+            <img src="${product.image || PLACEHOLDER_IMG}" alt="${product.name}" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">
             <div>
               <div class="picker-title">${product.brand ? `<span style="color:var(--blue);font-weight:800">${product.brand}</span> ` : ''}${product.name}</div>
               <div class="picker-sub">${subParts.join(' · ')}</div>
@@ -1427,7 +1505,7 @@
         card.className = "item";
         card.innerHTML = `
           <button class="check ${item.checked ? "checked" : ""}" aria-label="Afvinken">✓</button>
-          <img class="thumb" src="${item.image}" alt="${item.productName}" loading="lazy" onerror="this.src='${PLACEHOLDER_IMG}'">
+          <img class="thumb" src="${item.image}" alt="${item.productName}" loading="lazy" onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}'">
           <div class="item-main">
             <h3 class="item-title ${item.checked ? "checked" : ""}">${displayName}${variantTag}</h3>
             <div class="item-sub">${item.category || "Product"}</div>

@@ -31,7 +31,7 @@ jobs:
           - platform: macOS
             destination: generic/platform=macOS
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Xcode-versie
         run: xcodebuild -version

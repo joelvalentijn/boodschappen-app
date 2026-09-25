@@ -18,7 +18,11 @@ struct ProductEntry: Identifiable, Hashable {
 /// Startscherm van de productkiezer op iPhone: zoeken of een categorie kiezen.
 struct ProductBrowserView: View {
     @Environment(CatalogStore.self) private var catalog
+    #if DEBUG
+    @State private var searchText = DemoMode.initialSearch
+    #else
     @State private var searchText = ""
+    #endif
 
     private var query: String { searchText.trimmingCharacters(in: .whitespaces) }
 

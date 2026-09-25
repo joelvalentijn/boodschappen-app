@@ -1,0 +1,129 @@
+name: Screenshots van de app
+
+on:
+  push:
+    paths:
+      - "apple/**"
+      - ".github/workflows/apple-screenshots.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  iphone:
+    name: iPhone
+    runs-on: macos-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Simulator starten
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, re, sys
+          best = None
+          for runtime, devices in json.load(sys.stdin)["devices"].items():
+              m = re.search(r"iOS-(\d+)-(\d+)", runtime)
+              if not m:
+                  continue
+              version = (int(m.group(1)), int(m.group(2)))
+              for dev in devices:
+                  name = dev["name"]
+                  if name.startswith("iPhone") and not any(x in name for x in ("SE", "Max", "Plus", "Air", "e")):
+                      score = (version, "Pro" in name)
+                      if best is None or score > best[0]:
+                          best = (score, dev["udid"], name)
+          print(best[1])
+          print("Simulator:", best[2], file=sys.stderr)
+          ')
+          echo "UDID=$UDID" >> "$GITHUB_ENV"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3
+
+      - name: App bouwen en installeren
+        run: |
+          xcodebuild build \
+            -project apple/Boodschappen.xcodeproj \
+            -scheme Boodschappen \
+            -configuration Debug \
+            -destination "id=$UDID" \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
+          xcrun simctl install "$UDID" build/Build/Products/Debug-iphonesimulator/Boodschappen.app
+
+      - name: Screenshots maken
+        run: |
+          mkdir -p shots
+          shot() {
+            name=$1; shift
+            xcrun simctl terminate "$UDID" nl.joelvalentijn.Boodschappen 2>/dev/null || true
+            xcrun simctl launch "$UDID" nl.joelvalentijn.Boodschappen -demo YES "$@"
+            sleep 14
+            xcrun simctl io "$UDID" screenshot "shots/iphone-$name.png"
+          }
+          shot 1-lijst
+          shot 2-producten -demoScherm producten
+          shot 3-zoeken -demoScherm producten -demoZoek melk
+          shot 4-zegeltjes -demoScherm zegeltjes
+          xcrun simctl ui "$UDID" appearance dark
+          shot 5-lijst-donker
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-iphone
+          path: shots/
+
+      - name: Screenshots in het log
+        run: |
+          for f in shots/*.png; do
+            sips -Z 760 -s format jpeg -s formatOptions 50 "$f" --out "${f%.png}.jpg" >/dev/null
+            echo "=====BEGIN $(basename "${f%.png}")====="
+            base64 -i "${f%.png}.jpg" | fold -w 2000
+            echo "=====END====="
+          done
+
+  mac:
+    name: Mac
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: App bouwen
+        run: |
+          xcodebuild build \
+            -project apple/Boodschappen.xcodeproj \
+            -scheme Boodschappen \
+            -configuration Debug \
+            -destination "generic/platform=macOS" \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
+          codesign --force --deep -s - build/Build/Products/Debug/Boodschappen.app
+
+      - name: Screenshot maken
+        run: |
+          mkdir -p shots
+          open build/Build/Products/Debug/Boodschappen.app --args -demo YES -demoCategorie Kaas
+          sleep 20
+          osascript -e 'tell application "Boodschappen" to activate' || true
+          sleep 3
+          screencapture -x shots/mac-1.png
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-mac
+          path: shots/
+
+      - name: Screenshot in het log
+        run: |
+          for f in shots/*.png; do
+            sips -Z 1100 -s format jpeg -s formatOptions 50 "$f" --out "${f%.png}.jpg" >/dev/null
+            echo "=====BEGIN $(basename "${f%.png}")====="
+            base64 -i "${f%.png}.jpg" | fold -w 2000
+            echo "=====END====="
+          done
