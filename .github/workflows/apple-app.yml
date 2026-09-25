@@ -1,0 +1,47 @@
+name: iPhone- en Mac-app bouwen
+
+on:
+  push:
+    paths:
+      - "apple/**"
+      - "products.json"
+      - ".github/workflows/apple-app.yml"
+  pull_request:
+    paths:
+      - "apple/**"
+      - "products.json"
+      - ".github/workflows/apple-app.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: apple-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Bouwen voor ${{ matrix.platform }}
+    runs-on: macos-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: iOS
+            destination: generic/platform=iOS
+          - platform: macOS
+            destination: generic/platform=macOS
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode-versie
+        run: xcodebuild -version
+
+      - name: Bouwen (zonder ondertekenen)
+        run: |
+          xcodebuild build \
+            -project apple/Boodschappen.xcodeproj \
+            -scheme Boodschappen \
+            -configuration Debug \
+            -destination "${{ matrix.destination }}" \
+            CODE_SIGNING_ALLOWED=NO \
+            -quiet
