@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-25T18:38:50Z",
+ "generatedAt": "2026-09-25T18:54:35Z",
  "categories": [
   {
    "name": "Groente & fruit",
@@ -671,13 +671,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Gember big shot",
-     "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/ucsxpkm1abV5Avvu6d46MvShW6ZYUSMMQO6c0xmgR7A/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzQ0NTJCODEwRjZFOUI0NTUxN0NEQUE0NE/QxOEFCN0ZFNzhGNTU2QkRCMkQ5QTkyQjQ0Mjg0OTJBQThENDc4NUQucG5n.png",
-     "url": "https://www.lidl.nl/p/gember-big-shot/p10015093",
-     "firstSeen": "2026-04-13"
-    },
-    {
      "name": "Geschoonde spruiten",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/-3n9fq2540S32Zd_NwezEhXuB6cH85qmuQz9k-65Iq0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzNGRTM0OTc5NTM2NDY5N0VDNzc2NTJBOT/M3NEQxNEZCQ0FCRDUxOTEwQkJFQkVFN0JFOUU3RUMyN0RBMUQ0MDMucG5n.png",
@@ -745,13 +738,6 @@
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/shCwjuz20k1thkxPoVzRDQu6HdCQk7RD7gPc4l9PjeY/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS81MjEyQTBFQzUwQjVBN0I4NjI0RTZBMkI/5QzAyMjBDODExRjBBRjM1RDA3QjQ1RjdEQjQwRjE0MzQ0NDEwMjE2LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/groene-jalapeno/p82609",
-     "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Groente shots",
-     "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/phiFEQ3ZyMx-IP2w3roTcH-tCai39Cl954eRMMfHZoE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GNjZFQjMwN0FCRDI1RTIxRkU1RjE3OUQ/yRjgxMjM5MDRBNjlBMzMzQkNGODQ1OTc1NTdFOEE1RkUxOUVFNENFLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/groente-shots/p6608463",
      "firstSeen": "2026-04-13"
     },
     {
@@ -9275,13 +9261,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Powershot",
-     "brand": "Chef Select",
-     "image": "https://imgproxy-retcat.assets.schwarz/v6b3ddxl-be4KehZnzr5WUbQqGvvvRq2ilGJvw5srbk/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzkyODU5RkIyMjM5QTBEMjE1MTgyQzM5Mk/Y0N0U4MzE2RTQ0MzI4N0I1NjM3NzU4RTczN0I5MEEwNDBFRDFGNTQucG5n.png",
-     "url": "https://www.lidl.nl/p/powershot/p10014720",
-     "firstSeen": "2026-04-13"
-    },
-    {
      "name": "Premium maaltijdzakjes",
      "brand": "Coshida",
      "image": "https://imgproxy-retcat.assets.schwarz/MJrEL5DJxE1vGYcJiSN8OBQ3jMq12o9vo9migkqmAsA/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzBDMTYzMTEyMjMwN0U2MDEyMTJDMjE5OD/E2MEJCNjk1RTlFN0RGM0U4RDc4MzU1RUFEOTM4N0I3NEM2MDAxNEUucG5n.png",
@@ -15385,6 +15364,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Gember big shot",
+     "brand": null,
+     "image": "https://imgproxy-retcat.assets.schwarz/ucsxpkm1abV5Avvu6d46MvShW6ZYUSMMQO6c0xmgR7A/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzQ0NTJCODEwRjZFOUI0NTUxN0NEQUE0NE/QxOEFCN0ZFNzhGNTU2QkRCMkQ5QTkyQjQ0Mjg0OTJBQThENDc4NUQucG5n.png",
+     "url": "https://www.lidl.nl/p/gember-big-shot/p10015093",
+     "firstSeen": "2026-04-13"
+    },
+    {
      "name": "Ginger beer",
      "brand": "Freeway",
      "image": "https://imgproxy-retcat.assets.schwarz/BfIOHZGVdSFmRpjYgo_pQ7vDNxWfvKwPd8ZWBUdRReY/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzUxNUEwRDQ1M0U2QzQ0NkExODM1NkU3Qz/lFOTc2RDk3NzQ2MzQ3MDc1OUIwQTZEM0RBMzI5MTUzQTQxOEI0RTQucG5n.png",
@@ -15396,6 +15382,13 @@
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/63wuUb-5Mieqq-rlByQ-KT3xHL-82wlSdoH8nw49jaI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BQzQ4NDUwNTc3RjY1MzIzRjA3QThBMTU/4RjEyQjA0QTA2MUJBNzRDQ0JBNTAxQTQxNDFGQzNDOTMxMDM2MDQ0LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/groene-ijsthee/p147106",
+     "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Groente shots",
+     "brand": null,
+     "image": "https://imgproxy-retcat.assets.schwarz/phiFEQ3ZyMx-IP2w3roTcH-tCai39Cl954eRMMfHZoE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GNjZFQjMwN0FCRDI1RTIxRkU1RjE3OUQ/yRjgxMjM5MDRBNjlBMzMzQkNGODQ1OTc1NTdFOEE1RkUxOUVFNENFLmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/groente-shots/p6608463",
      "firstSeen": "2026-04-13"
     },
     {
@@ -15623,6 +15616,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Powershot",
+     "brand": "Chef Select",
+     "image": "https://imgproxy-retcat.assets.schwarz/v6b3ddxl-be4KehZnzr5WUbQqGvvvRq2ilGJvw5srbk/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzkyODU5RkIyMjM5QTBEMjE1MTgyQzM5Mk/Y0N0U4MzE2RTQ0MzI4N0I1NjM3NzU4RTczN0I5MEEwNDBFRDFGNTQucG5n.png",
+     "url": "https://www.lidl.nl/p/powershot/p10014720",
+     "firstSeen": "2026-04-13"
+    },
+    {
      "name": "Proteïne drink",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/SQT_0n4ow3UKvHOeyQT4-mKcgxdhw0X3p5XyChwNKBE/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzYzMEVBRTRDOTMyRjlDQjExQTFCQTQyN0/JDOUU1NDY0NEZGREI4RkQ2RTNGREYyQzdFRjZFQjRCRTgzQzQ3NTMucG5n.png",
@@ -15683,6 +15683,13 @@
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/uSLURNe30x95rsoBh8t_CntNz88PqNM6varQaoDpM1Q/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzY1NzBDMTA0NjY4NjA1Rjg0MTY2MEYxNT/lFMEFFRDMxQTE4Q0U5MDM1REZBNkU0N0NBNEM2MzQzODcyOURCOTkucG5n.png",
      "url": "https://www.lidl.nl/p/schweppes-argumes/p10025480",
+     "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Shots",
+     "brand": null,
+     "image": "https://imgproxy-retcat.assets.schwarz/bSX-oLHPAcV-O222GSkj8AhTBBuk-uaOq0bfUM4lUWo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BOTZBRjlCMUNFRkJGMzFERDU1MjM4NTQ/xNjMwRTgyQkU5QTYwNDRGOUVDNkQxRERGQzI0REYwODk1NTg0MTc1LmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/shots/p6608467",
      "firstSeen": "2026-04-13"
     },
     {
@@ -19309,13 +19316,6 @@
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/_g-ZTtmHkZCXScI1r-j_Zx9imCWx_0fvyM_W1vE4_oE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xOUY0NjVFNEQzNjJGQUQzMTc1NzExQUN/DQTAzODMzQTk4RDhGNzAxQjQ0OTFCQUZDREIyMkRDMDZCREM0NTU2LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/schuursponzen/p10007798",
-     "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Shots",
-     "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/bSX-oLHPAcV-O222GSkj8AhTBBuk-uaOq0bfUM4lUWo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BOTZBRjlCMUNFRkJGMzFERDU1MjM4NTQ/xNjMwRTgyQkU5QTYwNDRGOUVDNkQxRERGQzI0REYwODk1NTg0MTc1LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/shots/p6608467",
      "firstSeen": "2026-04-13"
     },
     {

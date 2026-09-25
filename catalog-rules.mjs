@@ -84,7 +84,7 @@ const RULES = [
   ]],
   ['Frisdrank, sap & water', [
     /vruchtendrank|nekar\b|vitamin drink/,
-    /\baa drink|\baa iso|\barizona|dubbeldrank|dubbelfris|fuze tea|\boasis\b|red ?bull|\brivella|schweppes|proteine drink/,
+    /shots?\b|\baa drink|\baa iso|\barizona|dubbeldrank|dubbelfris|fuze tea|\boasis\b|red ?bull|\brivella|schweppes|proteine drink/,
     /frisdrank|\bcola\b|coca cola|\bpepsi|\bfanta|\bsprite|\b7up|\bsinas\b|\bcassis\b|limonade|ice tea|\bicetea|ijsthee|energy drink|energydrink|\benergy\b|sportdrank|isotoon|isotonic/,
     /sap\b|sappen\b|\bnektar|\bnectar\b|smoothie|(?<!in )water\b|\bspa\b|chaudfontaine|siroop|\branja|diksap|\btonic\b|bitter lemon|ginger ale|ginger beer|kokoswater|\bdrinkpakje|\bfreeway\b|\bsolevita\b|\bsaskia\b|\bvittel|\bbcaa drink|cranberrydrink|\bkong strong/,
   ]],
