@@ -114,7 +114,8 @@ struct CategoryTile: View {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(Color.primary)
-                    .lineLimit(2)
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.85)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 Text("\(count)")
@@ -124,7 +125,7 @@ struct CategoryTile: View {
             Spacer(minLength: 0)
         }
         .padding(10)
-        .frame(maxWidth: .infinity, minHeight: 66, alignment: .leading)
+        .frame(maxWidth: .infinity, minHeight: 70, maxHeight: .infinity, alignment: .leading)
         .background(Color.cardBackground, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }

@@ -115,7 +115,7 @@ struct SplitRootView: View {
                 }
             }
             .navigationTitle("Producten")
-            .navigationSplitViewColumnWidth(min: 220, ideal: 260, max: 340)
+            .navigationSplitViewColumnWidth(min: 210, ideal: 240, max: 320)
         } content: {
             Group {
                 if let scope {
@@ -125,7 +125,7 @@ struct SplitRootView: View {
                     ContentUnavailableView("Kies een categorie", systemImage: "square.grid.2x2")
                 }
             }
-            .navigationSplitViewColumnWidth(min: 320, ideal: 430, max: 600)
+            .navigationSplitViewColumnWidth(min: 300, ideal: 380, max: 540)
         } detail: {
             NavigationStack {
                 ShoppingListView()

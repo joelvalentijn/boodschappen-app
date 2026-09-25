@@ -48,19 +48,46 @@ final class CatalogStore {
         let terms = query.searchNormalized
             .split(whereSeparator: { $0 == " " || $0 == "-" })
             .map(String.init)
-        guard let first = terms.first else { return products ?? [] }
+        guard !terms.isEmpty else { return products ?? [] }
+        let phrase = terms.joined(separator: " ")
+
+        let matches = (products ?? allProducts).filter { product in
+            terms.allSatisfy { product.searchKey.contains($0) }
+        }
+
+        // In het Nederlands staat het hoofdwoord achteraan: "halfvolle melk" is melk,
+        // "melk brioche" is brood. Namen die op de zoekterm eindigen gaan dus voor.
+        func endsWithPhrase(_ name: String) -> Bool {
+            name.hasSuffix(phrase) || name.hasSuffix(phrase + "s") || name.hasSuffix(phrase + "en")
+        }
+
+        // De afdeling waar de zoekterm het vaakst het hoofdwoord is ("melk" → zuivel)
+        // krijgt voorrang boven producten die er alleen naar smaken ("hagelslag melk").
+        var headCounts: [String: Int] = [:]
+        for product in matches where endsWithPhrase(product.nameKey) {
+            headCounts[product.category, default: 0] += 1
+        }
+        let mainCategory = headCounts.max { lhs, rhs in
+            lhs.value != rhs.value ? lhs.value < rhs.value : lhs.key > rhs.key
+        }?.key
 
         var scored: [(score: Int, product: Product)] = []
-        for product in products ?? allProducts {
-            guard terms.allSatisfy({ product.searchKey.contains($0) }) else { continue }
+        for product in matches {
+            let name = product.nameKey
             var score = 0
-            if product.nameKey.hasPrefix(first) { score += 4 }
-            if product.nameKey.contains(" " + first) { score += 2 }
-            if product.nameKey.contains(first) { score += 1 }
+            if name == phrase { score += 20 }
+            if (" " + name + " ").contains(" " + phrase + " ") { score += 6 }
+            if endsWithPhrase(name) { score += 5 }
+            if name.hasPrefix(phrase) { score += 3 }
+            if name.contains(phrase) { score += 1 }
+            if product.category == mainCategory { score += 4 }
             scored.append((score, product))
         }
         scored.sort { lhs, rhs in
             if lhs.score != rhs.score { return lhs.score > rhs.score }
+            if lhs.product.name.count != rhs.product.name.count {
+                return lhs.product.name.count < rhs.product.name.count
+            }
             return lhs.product.name.localizedStandardCompare(rhs.product.name) == .orderedAscending
         }
         return scored.prefix(limit).map { $0.product }
