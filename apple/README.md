@@ -43,7 +43,7 @@ Open in de app **Instellingen → iCloud** (op de Mac: *Boodschappen → Instell
    - Bouw de app daarna opnieuw op beide apparaten.
 3. **Zelfde Apple-account, iCloud aan voor de app.** Op de iPhone: *Instellingen → [je naam] → iCloud → Apps die iCloud gebruiken → Boodschappen* aan. Op de Mac: *Systeeminstellingen → [je naam] → iCloud*.
 4. **Allebei vanuit Xcode geïnstalleerd.** Een versie uit Xcode praat met de *ontwikkel*-database van iCloud, een TestFlight- of App Store-versie met de *productie*-database. Die zien elkaars gegevens niet.
-5. **De app moet open zijn.** Zolang de app open is (op de Mac mag hij op de achtergrond staan), kijkt hij elke 3 seconden of er iets veranderd is. Is de app dicht, dan komen de wijzigingen binnen zodra je hem opent. Trek de lijst omlaag of tik in Instellingen op *Nu synchroniseren* om direct te synchroniseren.
+5. **De app moet open zijn.** Zolang de app open is (op de Mac mag het venster achter andere vensters staan), kijkt hij elke 3 seconden of er iets veranderd is. Is de app dicht, dan komen de wijzigingen binnen zodra je hem opent. Trek de lijst omlaag of tik in Instellingen op *Nu synchroniseren* om direct te synchroniseren.
 6. **Niet in de simulator.** iCloud werkt alleen in een installatie op een echt apparaat die met je ontwikkelaarsaccount is ondertekend.
 7. **Controleren in het CloudKit-dashboard.** Op [icloud.developer.apple.com](https://icloud.developer.apple.com) → je container → *Development* → *Records* (zone `Boodschappen`, typen `Item`, `Favorite` en `Variant`) zie je of er gegevens aankomen.
 

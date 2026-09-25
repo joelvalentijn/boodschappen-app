@@ -71,9 +71,12 @@ final class CloudSync: CKSyncEngineDelegate {
         pollTask = nil
         guard active else { return }
         pollTask = Task { [weak self] in
+            // Bij openen meteen versturen wat nog klaarstaat en ophalen wat nieuw is.
+            await self?.syncNow()
             while !Task.isCancelled {
-                await self?.fetch()
                 try? await Task.sleep(for: Self.pollInterval)
+                guard !Task.isCancelled else { return }
+                await self?.fetch()
             }
         }
     }
@@ -116,6 +119,8 @@ final class CloudSync: CKSyncEngineDelegate {
             case .requestRateLimited, .zoneBusy, .serviceUnavailable:
                 // iCloud vraagt om even te wachten.
                 pauseUntil = Date().addingTimeInterval(ckError.retryAfterSeconds ?? 10)
+            case .networkFailure, .networkUnavailable:
+                pauseUntil = Date().addingTimeInterval(5)
             case .notAuthenticated, .accountTemporarilyUnavailable:
                 // Zonder account heeft elke paar seconden proberen geen zin.
                 pauseUntil = Date().addingTimeInterval(30)
@@ -265,6 +270,7 @@ final class CloudSync: CKSyncEngineDelegate {
     private func apply(_ changes: CKSyncEngine.Event.FetchedRecordZoneChanges) {
         var objects = localObjects()
         var changedLocally = false
+        var inserted = false
 
         for modification in changes.modifications {
             let record = modification.record
@@ -286,6 +292,7 @@ final class CloudSync: CKSyncEngineDelegate {
                 context.insert(object)
                 objects[name] = object
                 changedLocally = true
+                inserted = true
             }
             stored.known[name] = KnownRecord(fingerprint: serverPrint, systemFields: Self.systemFields(of: record))
         }
@@ -306,6 +313,10 @@ final class CloudSync: CKSyncEngineDelegate {
             monitor?.didReceive(changes.modifications.count + changes.deletions.count)
         }
         stored.save()
+        if inserted {
+            // Hetzelfde product tegelijk op twee apparaten toegevoegd: samenvoegen.
+            ListActions.mergeDuplicates(in: context)
+        }
         scheduleLocalCheck()
     }
 
