@@ -4,7 +4,8 @@ Een echte app (SwiftUI) met dezelfde functies als de web-app, maar dan:
 
 - **iCloud-synchronisatie binnen een paar seconden**: je lijst, favorieten en varianten zijn hetzelfde op je iPhone, iPad en Mac. Zolang de app open is, staat een wijziging binnen enkele seconden op je andere apparaten; trek de lijst omlaag om meteen te synchroniseren.
 - **Winkelvolgorde**: de lijst is gegroepeerd per afdeling (groente, brood, vlees, …), in de volgorde waarin je door de Lidl loopt.
-- **Afvinken met een veeg** (of een tik), afgevinkte producten schuiven naar “In je mandje”.
+- **Afvinken** met het rondje of een veeg naar rechts; afgevinkte producten schuiven naar “In je mandje”.
+- **Meer informatie**: tik op een product voor een grote foto, het aantal, en prijs, beschrijving en EAN-code van de productpagina op lidl.nl, plus een knop naar de volledige pagina.
 - **Snel toevoegen**: de productkiezer blijft open, zodat je meerdere producten achter elkaar kunt toevoegen. Staat iets niet in de catalogus, dan voeg je het toe als eigen product.
 - **Nieuw bij Lidl**: producten die de afgelopen drie weken nieuw in het assortiment zijn.
 - **Automatisch nieuwe producten**: de app haalt de nieuwste productlijst van GitHub, je hoeft de app daarvoor niet opnieuw te installeren.

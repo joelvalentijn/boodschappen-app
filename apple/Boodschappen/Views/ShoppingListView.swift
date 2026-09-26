@@ -18,6 +18,7 @@ struct ShoppingListView: View {
     #endif
     @State private var showingSettings = false
     @State private var confirmingClear = false
+    @State private var detailItem: ShoppingItem?
 
     private struct ListSection: Identifiable {
         let title: String
@@ -67,7 +68,7 @@ struct ShoppingListView: View {
             ForEach(sections) { section in
                 Section {
                     ForEach(section.items) { item in
-                        ShoppingItemRow(item: item)
+                        ShoppingItemRow(item: item) { detailItem = item }
                     }
                 } header: {
                     if groupByCategory {
@@ -80,7 +81,7 @@ struct ShoppingListView: View {
             if !checkedItems.isEmpty {
                 Section {
                     ForEach(checkedItems) { item in
-                        ShoppingItemRow(item: item)
+                        ShoppingItemRow(item: item) { detailItem = item }
                     }
                 } header: {
                     HStack {
@@ -115,6 +116,9 @@ struct ShoppingListView: View {
             if let onAddProducts {
                 addButton(action: onAddProducts)
             }
+        }
+        .sheet(item: $detailItem) { item in
+            ShoppingItemDetailView(item: item)
         }
         .sheet(isPresented: $showingZegels) {
             ZegelView()
@@ -246,6 +250,8 @@ struct ShoppingListView: View {
 
 struct ShoppingItemRow: View {
     @Bindable var item: ShoppingItem
+    /// Tik op de naam of foto: meer informatie tonen.
+    var onShowDetails: () -> Void = {}
 
     @Environment(\.modelContext) private var context
     @Environment(\.openURL) private var openURL
@@ -288,7 +294,9 @@ struct ShoppingItemRow: View {
                 Spacer(minLength: 0)
             }
             .contentShape(Rectangle())
-            .onTapGesture(perform: toggle)
+            .onTapGesture(perform: onShowDetails)
+            .accessibilityAddTraits(.isButton)
+            .accessibilityHint("Toont meer informatie")
 
             if !item.isChecked {
                 QuantityStepper(quantity: Binding(
@@ -315,6 +323,9 @@ struct ShoppingItemRow: View {
             }
         }
         .contextMenu {
+            Button(action: onShowDetails) {
+                Label("Meer informatie", systemImage: "info.circle")
+            }
             Button(action: toggle) {
                 Label(item.isChecked ? "Terugzetten" : "Afvinken",
                       systemImage: item.isChecked ? "arrow.uturn.backward" : "checkmark")

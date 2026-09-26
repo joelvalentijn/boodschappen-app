@@ -265,9 +265,11 @@ struct ProductDetailView: View {
                 }
 
                 if !product.url.isEmpty, let url = URL(string: product.url) {
+                    ProductInfoSection(productURL: product.url)
                     Section {
-                        Link(destination: url) {
-                            Label("Bekijk op lidl.nl", systemImage: "safari")
+                        LidlPageButton(url: url)
+                        ShareLink(item: url) {
+                            Label("Deel product", systemImage: "square.and.arrow.up")
                         }
                     }
                 }
