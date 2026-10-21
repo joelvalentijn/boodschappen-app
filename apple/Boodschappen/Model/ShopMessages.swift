@@ -47,6 +47,21 @@ enum ShopStep: String, CaseIterable, Identifiable {
     }
 }
 
+/// Hoe de winkelmodus geopend wordt: met de lijst, of alleen voor zinnen en betalen.
+enum ShopModeEntry: String, Identifiable {
+    case shopping, talk
+
+    var id: String { rawValue }
+
+    /// `nil`: eerst de volgorde van de producten bepalen.
+    var startStep: ShopStep? {
+        switch self {
+        case .shopping: nil
+        case .talk: .help
+        }
+    }
+}
+
 struct ShopMessage: Codable, Identifiable, Hashable {
     var id = UUID()
     var text: String

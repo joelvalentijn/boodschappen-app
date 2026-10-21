@@ -21,6 +21,10 @@ struct ShopModeView: View {
     @State private var confirmingStop = false
     @State private var confirmingFinish = false
 
+    init(startStep: ShopStep? = nil) {
+        _step = State(initialValue: startStep)
+    }
+
     /// Producten die intussen (bijvoorbeeld via een ander apparaat) zijn verwijderd vallen weg.
     private var liveRoute: [ShoppingItem] {
         route.filter { $0.modelContext != nil && !$0.isDeleted }
@@ -39,7 +43,7 @@ struct ShopModeView: View {
         }
         // Zolang de volgorde nog bepaald wordt, meegaan met wijzigingen (bijv. via iCloud).
         .task(id: RouteTrigger(count: allItems.count, openCount: allItems.filter { !$0.isChecked }.count, catalogLoaded: catalog.isLoaded)) {
-            guard step == nil else { return }
+            guard step == nil || route.isEmpty else { return }
             route = ListActions.shopRoute(catalog: catalog, in: context)
         }
         .onDisappear {

@@ -18,9 +18,9 @@ struct ShoppingListView: View {
     #endif
     @State private var showingSettings = false
     #if DEBUG
-    @State private var showingShopMode = DemoMode.startScreen == "winkelen"
+    @State private var shopModeEntry: ShopModeEntry? = DemoMode.startScreen == "winkelen" ? .shopping : nil
     #else
-    @State private var showingShopMode = false
+    @State private var shopModeEntry: ShopModeEntry?
     #endif
     @State private var confirmingClear = false
     @State private var detailItem: ShoppingItem?
@@ -143,8 +143,8 @@ struct ShoppingListView: View {
                 SettingsView()
             }
         }
-        .fullScreenCover(isPresented: $showingShopMode) {
-            ShopModeView()
+        .fullScreenCover(item: $shopModeEntry) { entry in
+            ShopModeView(startStep: entry.startStep)
         }
         #endif
         .confirmationDialog("Hele lijst leegmaken?", isPresented: $confirmingClear, titleVisibility: .visible) {
@@ -194,11 +194,19 @@ struct ShoppingListView: View {
         if onAddProducts == nil {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    showingShopMode = true
+                    shopModeEntry = .shopping
                 } label: {
                     Label("Winkelen", systemImage: "cart.fill")
                 }
                 .disabled(openItems.isEmpty)
+            }
+        }
+        // Zinnen en betaalkaarten, ook zonder lijst (bijvoorbeeld in een andere winkel).
+        ToolbarItem(placement: .primaryAction) {
+            Button {
+                shopModeEntry = .talk
+            } label: {
+                Label("Zinnen en betalen", systemImage: "bubble.left.and.bubble.right")
             }
         }
         #endif
@@ -251,24 +259,26 @@ struct ShoppingListView: View {
 
     private func addButton(action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            Label("Product toevoegen", systemImage: "plus")
+            Label("Toevoegen", systemImage: "plus")
                 .font(.headline)
+                .lineLimit(1)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
         }
-        .buttonStyle(.borderedProminent)
+        .buttonStyle(.bordered)
         .buttonBorderShape(.capsule)
         .controlSize(.large)
-        .shadow(color: Color.accentColor.opacity(0.3), radius: 12, y: 6)
+        .background(.bar, in: Capsule())
     }
 
     #if os(iOS)
     private var shopButton: some View {
         Button {
-            showingShopMode = true
+            shopModeEntry = .shopping
         } label: {
             Label("Winkelen", systemImage: "cart.fill")
                 .font(.headline)
+                .lineLimit(1)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
         }
