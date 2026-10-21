@@ -23,6 +23,14 @@ enum Store: String, CaseIterable, Identifiable, Sendable {
         }
     }
 
+    /// Afbeelding in Assets.xcassets.
+    var logoName: String {
+        switch self {
+        case .lidl: "LidlLogo"
+        case .hema: "HemaLogo"
+        }
+    }
+
     var tagline: String {
         switch self {
         case .lidl: "Boodschappen, vers en houdbaar"

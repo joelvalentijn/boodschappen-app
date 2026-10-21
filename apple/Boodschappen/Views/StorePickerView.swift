@@ -125,20 +125,19 @@ private struct StoreCard: View {
     }
 }
 
-/// Een gekleurd vlak met de naam van de winkel.
+/// Het logo van de winkel.
 struct StoreBadge: View {
     let store: Store
     var size: CGFloat = 28
 
     var body: some View {
-        Text(store.name.uppercased())
-            .font(.system(size: size * 0.26, weight: .heavy, design: .rounded))
-            .foregroundStyle(.white)
-            .minimumScaleFactor(0.5)
-            .lineLimit(1)
-            .padding(size * 0.08)
+        Image(store.logoName)
+            .renderingMode(.original)
+            .resizable()
+            .interpolation(.high)
+            .scaledToFit()
             .frame(width: size, height: size)
-            .background(store.color, in: RoundedRectangle(cornerRadius: size * 0.24, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: size * 0.18, style: .continuous))
             .accessibilityHidden(true)
     }
 }
@@ -152,7 +151,9 @@ struct SwitchStoreButton: View {
         Button {
             withAnimation(.snappy) { selection.current = nil }
         } label: {
-            Label("Andere winkel", systemImage: "storefront")
+            // Een vaste maat, anders rekt de werkbalk het logo uit.
+            StoreBadge(store: catalog.store, size: 28)
+                .fixedSize()
         }
         .help("Kies een andere winkel")
         .accessibilityLabel("Andere winkel kiezen, nu \(catalog.store.name)")
