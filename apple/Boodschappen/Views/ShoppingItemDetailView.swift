@@ -126,7 +126,7 @@ struct ShoppingItemDetailView: View {
                     Text("\(catalog.emoji(for: item.category)) \(item.category)")
                         .foregroundStyle(.secondary)
                     if isNew {
-                        Label("Nieuw bij Lidl", systemImage: "sparkles")
+                        Label("Nieuw bij \(item.shop.name)", systemImage: "sparkles")
                             .foregroundStyle(Color.orange)
                     }
                 }

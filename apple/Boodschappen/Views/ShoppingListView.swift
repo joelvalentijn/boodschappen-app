@@ -9,7 +9,7 @@ struct ShoppingListView: View {
     @Environment(\.modelContext) private var context
     @Environment(CatalogStore.self) private var catalog
     @Environment(SyncMonitor.self) private var syncMonitor
-    @Query(sort: \ShoppingItem.addedAt) private var items: [ShoppingItem]
+    @Query(sort: \ShoppingItem.addedAt) private var allItems: [ShoppingItem]
     @AppStorage("lijstGroeperen") private var groupByCategory = true
     #if DEBUG
     @State private var showingZegels = DemoMode.startScreen == "zegeltjes"
@@ -30,6 +30,10 @@ struct ShoppingListView: View {
         let emoji: String
         let items: [ShoppingItem]
         var id: String { title }
+    }
+
+    private var items: [ShoppingItem] {
+        allItems.filter { $0.shop == catalog.store }
     }
 
     private var openItems: [ShoppingItem] {
@@ -115,7 +119,7 @@ struct ShoppingListView: View {
                 emptyState
             }
         }
-        .navigationTitle("Boodschappen")
+        .navigationTitle(catalog.store.name)
         .toolbar { toolbarContent }
         .safeAreaInset(edge: .bottom) {
             if let onAddProducts {
@@ -178,7 +182,7 @@ struct ShoppingListView: View {
             if onAddProducts == nil {
                 Text("Kies een categorie en tik op + om producten toe te voegen.")
             } else {
-                Text("Kies uit \(catalog.allProducts.count) Lidl-producten, of typ zelf iets in.")
+                Text("Kies uit \(catalog.allProducts.count) \(catalog.store.name)-producten, of typ zelf iets in.")
             }
         } actions: {
             if let onAddProducts {
@@ -190,6 +194,9 @@ struct ShoppingListView: View {
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
+        ToolbarItem(placement: .navigation) {
+            SwitchStoreButton()
+        }
         #if os(iOS)
         if onAddProducts == nil {
             ToolbarItem(placement: .primaryAction) {
@@ -301,7 +308,7 @@ struct ShoppingListView: View {
             if let variant = item.variant { line += " (\(variant))" }
             return line
         }
-        return (["🛒 Boodschappenlijst"] + lines).joined(separator: "\n")
+        return (["🛒 Boodschappenlijst \(catalog.store.name)"] + lines).joined(separator: "\n")
     }
 }
 
@@ -391,7 +398,7 @@ struct ShoppingItemRow: View {
                 Button {
                     openURL(url)
                 } label: {
-                    Label("Bekijk op lidl.nl", systemImage: "safari")
+                    Label("Bekijk op \(item.shop.host)", systemImage: "safari")
                 }
             }
             Button(role: .destructive, action: delete) {

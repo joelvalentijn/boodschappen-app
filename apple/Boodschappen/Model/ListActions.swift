@@ -9,7 +9,7 @@ enum ListActions {
     @discardableResult
     static func add(_ product: Product, variant: String?, quantity: Int = 1, in context: ModelContext) -> ShoppingItem {
         let key = ItemKey.make(url: product.url, name: product.name, variant: variant)
-        if let existing = items(in: context).first(where: { $0.key == key }) {
+        if let existing = currentItems(in: context).first(where: { $0.key == key }) {
             existing.quantity = min(99, existing.quantity + quantity)
             if existing.isChecked {
                 existing.isChecked = false
@@ -27,6 +27,7 @@ enum ListActions {
             imageURL: product.imageURL,
             quantity: min(99, max(1, quantity))
         )
+        item.storeID = Store.current.rawValue
         context.insert(item)
         save(context)
         return item
@@ -66,14 +67,14 @@ enum ListActions {
     }
 
     static func removeChecked(in context: ModelContext) {
-        for item in items(in: context) where item.isChecked {
+        for item in currentItems(in: context) where item.isChecked {
             context.delete(item)
         }
         save(context)
     }
 
     static func clearList(in context: ModelContext) {
-        for item in items(in: context) {
+        for item in currentItems(in: context) {
             context.delete(item)
         }
         save(context)
@@ -84,7 +85,7 @@ enum ListActions {
     /// De open producten in de volgorde voor de winkelmodus. Producten zonder plek
     /// komen achter de laatste ingedeelde producten van dezelfde of een eerdere afdeling.
     static func shopRoute(catalog: CatalogStore, in context: ModelContext) -> [ShoppingItem] {
-        let open = items(in: context).filter { !$0.isChecked }
+        let open = currentItems(in: context).filter { !$0.isChecked }
         let storeIndex: (ShoppingItem) -> Int = { catalog.sortIndex(for: $0.category) }
         var route = open
             .filter { $0.shopOrder > 0 }
@@ -147,21 +148,23 @@ enum ListActions {
     static func mergeDuplicates(in context: ModelContext) {
         var changed = false
 
+        // Eigen producten met dezelfde naam bij twee winkels zijn geen dubbele regels.
         var itemsByKey: [String: ShoppingItem] = [:]
         for item in items(in: context).sorted(by: { ($0.addedAt, $0.syncID) < ($1.addedAt, $1.syncID) }) {
-            if let keep = itemsByKey[item.key] {
+            let key = item.shop.rawValue + "|" + item.key
+            if let keep = itemsByKey[key] {
                 keep.quantity = max(keep.quantity, item.quantity)
                 keep.isChecked = keep.isChecked && item.isChecked
                 context.delete(item)
                 changed = true
             } else {
-                itemsByKey[item.key] = item
+                itemsByKey[key] = item
             }
         }
 
         var favoriteKeys = Set<String>()
         for favorite in favorites(in: context).sorted(by: { ($0.addedAt, $0.syncID) < ($1.addedAt, $1.syncID) }) {
-            if !favoriteKeys.insert(favorite.key).inserted {
+            if !favoriteKeys.insert(favorite.shop.rawValue + "|" + favorite.key).inserted {
                 context.delete(favorite)
                 changed = true
             }
@@ -180,8 +183,14 @@ enum ListActions {
 
     // MARK: - Hulpfuncties
 
+    /// Alle regels, van elke winkel.
     static func items(in context: ModelContext) -> [ShoppingItem] {
         (try? context.fetch(FetchDescriptor<ShoppingItem>())) ?? []
+    }
+
+    /// De regels op de lijst van de winkel die nu open staat.
+    static func currentItems(in context: ModelContext) -> [ShoppingItem] {
+        items(in: context).filter { $0.shop == Store.current }
     }
 
     static func favorites(in context: ModelContext) -> [FavoriteProduct] {

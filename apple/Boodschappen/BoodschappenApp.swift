@@ -3,7 +3,7 @@ import SwiftData
 
 @main
 struct BoodschappenApp: App {
-    @State private var catalog = CatalogStore()
+    @State private var stores = StoreSelection()
     @State private var syncMonitor: SyncMonitor
     @State private var cloudSync: CloudSync?
     private let modelContainer: ModelContainer
@@ -29,10 +29,9 @@ struct BoodschappenApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RootView()
-                .environment(catalog)
+            StoreGate()
+                .environment(stores)
                 .environment(syncMonitor)
-                .task { await catalog.load() }
         }
         .modelContainer(modelContainer)
         .defaultSize(width: 1180, height: 760)
@@ -41,7 +40,7 @@ struct BoodschappenApp: App {
         Settings {
             SettingsView()
                 .frame(width: 460)
-                .environment(catalog)
+                .environment(stores.catalog(for: stores.current ?? .lidl))
                 .environment(syncMonitor)
                 .modelContainer(modelContainer)
         }

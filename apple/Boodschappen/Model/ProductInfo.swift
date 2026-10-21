@@ -17,7 +17,7 @@ actor ProductInfoLoader {
 
     func info(for urlString: String) async -> ProductInfo? {
         if let cached = cache[urlString] { return cached }
-        guard let url = URL(string: urlString), url.host?.hasSuffix("lidl.nl") == true else { return nil }
+        guard let url = URL(string: urlString), Store(productURL: urlString) != nil else { return nil }
 
         var request = URLRequest(url: url)
         request.timeoutInterval = 15

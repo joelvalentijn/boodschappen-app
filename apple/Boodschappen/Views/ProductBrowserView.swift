@@ -57,11 +57,12 @@ struct ProductBrowserView: View {
 
 struct CategoryGridView: View {
     @Environment(CatalogStore.self) private var catalog
-    @Query private var favorites: [FavoriteProduct]
+    @Query private var allFavorites: [FavoriteProduct]
 
     private let columns = [GridItem(.adaptive(minimum: 155), spacing: 12)]
 
     var body: some View {
+        let favorites = allFavorites.filter { $0.shop == catalog.store }
         ScrollView {
             LazyVGrid(columns: columns, spacing: 12) {
                 if !favorites.isEmpty {
@@ -72,7 +73,7 @@ struct CategoryGridView: View {
                 let newCount = catalog.newProducts.count
                 if newCount > 0 {
                     NavigationLink(value: BrowseScope.new) {
-                        CategoryTile(emoji: "✨", title: "Nieuw bij Lidl", count: newCount, tint: .orange)
+                        CategoryTile(emoji: "✨", title: "Nieuw bij \(catalog.store.name)", count: newCount, tint: .orange)
                     }
                 }
                 ForEach(catalog.categories) { category in
@@ -136,16 +137,20 @@ struct ScopedProductsView: View {
     let scope: BrowseScope
 
     @Environment(CatalogStore.self) private var catalog
-    @Query(sort: \FavoriteProduct.addedAt, order: .reverse) private var favorites: [FavoriteProduct]
+    @Query(sort: \FavoriteProduct.addedAt, order: .reverse) private var allFavorites: [FavoriteProduct]
     @State private var searchText = ""
 
     private var query: String { searchText.trimmingCharacters(in: .whitespaces) }
+
+    private var favorites: [FavoriteProduct] {
+        allFavorites.filter { $0.shop == catalog.store }
+    }
 
     private var title: String {
         switch scope {
         case .all: "Alle producten"
         case .favorites: "Favorieten"
-        case .new: "Nieuw bij Lidl"
+        case .new: "Nieuw bij \(catalog.store.name)"
         case .category(let name): name
         }
     }

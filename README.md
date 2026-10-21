@@ -7,6 +7,7 @@ Een boodschappenlijst met het hele Lidl-assortiment: kies producten per afdeling
 - **Web-app** — `index.html`. Werkt in elke browser; op de iPhone kun je hem via *Deel → Zet op beginscherm* als app gebruiken.
 - **iPhone-, iPad- en Mac-app** — map [`apple/`](apple/README.md). Native SwiftUI-app met iCloud-synchronisatie, winkelvolgorde en een “Nieuw bij Lidl”-overzicht. Zie [apple/README.md](apple/README.md) voor installatie.
 - **Productcatalogus** — `products.json`, gemaakt door `scraper.mjs` met de regels uit `catalog-rules.mjs`.
+- **HEMA-catalogus** — `products-hema.json`, het hele HEMA-assortiment, gemaakt door `node scraper-hema.mjs` (leest alleen de sitemap van hema.nl, duurt een paar seconden). In de iPhone- en Mac-app kies je bij het openen tussen Lidl en HEMA; elke winkel heeft een eigen lijst en eigen favorieten.
 
 ## Productcatalogus bijwerken
 

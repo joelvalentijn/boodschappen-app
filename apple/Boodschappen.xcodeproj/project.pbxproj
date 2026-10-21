@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B0D5C4A1000000000000A008 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C4A1000000000000A007 /* products.json */; };
+		B0D5C4A1000000000000A0F2 /* products-hema.json in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C4A1000000000000A0F1 /* products-hema.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B0D5C4A1000000000000A006 /* Boodschappen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boodschappen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D5C4A1000000000000A007 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = products.json; path = ../products.json; sourceTree = SOURCE_ROOT; };
+		B0D5C4A1000000000000A0F1 /* products-hema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "products-hema.json"; path = "../products-hema.json"; sourceTree = SOURCE_ROOT; };
 		B0D5C4A1000000000000A014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D5C4A1000000000000A015 /* Boodschappen-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Boodschappen-iOS.entitlements"; sourceTree = "<group>"; };
 		B0D5C4A1000000000000A016 /* Boodschappen-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Boodschappen-macOS.entitlements"; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C4A1000000000000A007 /* products.json */,
+				B0D5C4A1000000000000A0F1 /* products-hema.json */,
 			);
 			name = Productcatalogus;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D5C4A1000000000000A008 /* products.json in Resources */,
+				B0D5C4A1000000000000A0F2 /* products-hema.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

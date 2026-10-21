@@ -1,11 +1,12 @@
 import Foundation
 import Observation
 
-/// Laadt de productcatalogus en haalt periodiek de nieuwste versie op van GitHub,
-/// zodat nieuwe Lidl-producten verschijnen zonder de app opnieuw te installeren.
+/// Laadt de productcatalogus van één winkel en haalt periodiek de nieuwste versie op van
+/// GitHub, zodat nieuwe producten verschijnen zonder de app opnieuw te installeren.
 @MainActor
 @Observable
 final class CatalogStore {
+    let store: Store
     private(set) var categories: [CatalogCategory] = []
     private(set) var allProducts: [Product] = []
     private(set) var generatedAt: Date?
@@ -16,6 +17,12 @@ final class CatalogStore {
     @ObservationIgnored private var productsByURL: [String: Product] = [:]
     @ObservationIgnored private var categoryOrder: [String: Int] = [:]
     @ObservationIgnored private var didStartLoading = false
+    @ObservationIgnored private let files: CatalogFiles
+
+    init(store: Store) {
+        self.store = store
+        self.files = CatalogFiles(store: store)
+    }
 
     /// Producten die de afgelopen drie weken voor het eerst in het assortiment zijn gezien.
     var newProducts: [Product] {
@@ -99,8 +106,8 @@ final class CatalogStore {
         guard !didStartLoading else { return }
         didStartLoading = true
 
-        let bundledURL = Bundle.main.url(forResource: "products", withExtension: "json")
-        let cacheURL = CatalogFiles.cacheURL
+        let bundledURL = Bundle.main.url(forResource: store.catalogName, withExtension: "json")
+        let cacheURL = files.cacheURL
         let snapshot = await Task.detached(priority: .userInitiated) { () -> CatalogSnapshot? in
             let bundled = bundledURL
                 .flatMap { try? Data(contentsOf: $0) }
@@ -122,7 +129,7 @@ final class CatalogStore {
     /// Controleert of er een nieuwere catalogus op GitHub staat.
     func refresh(force: Bool) async {
         let defaults = UserDefaults.standard
-        if !force, let last = defaults.object(forKey: CatalogFiles.lastCheckKey) as? Date,
+        if !force, let last = defaults.object(forKey: files.lastCheckKey) as? Date,
            Date().timeIntervalSince(last) < 6 * 60 * 60 {
             return
         }
@@ -131,7 +138,7 @@ final class CatalogStore {
         defer { isRefreshing = false }
 
         do {
-            var request = URLRequest(url: CatalogFiles.remoteURL)
+            var request = URLRequest(url: store.remoteCatalogURL)
             request.cachePolicy = .reloadIgnoringLocalCacheData
             request.timeoutInterval = 30
             let (data, response) = try await URLSession.shared.data(for: request)
@@ -141,7 +148,7 @@ final class CatalogStore {
             let snapshot = try await Task.detached(priority: .utility) {
                 try CatalogSnapshot.decode(data)
             }.value
-            defaults.set(Date(), forKey: CatalogFiles.lastCheckKey)
+            defaults.set(Date(), forKey: files.lastCheckKey)
 
             guard (snapshot.generatedAt ?? .distantPast) > (generatedAt ?? .distantPast) else {
                 statusMessage = "Je hebt de nieuwste productlijst al."
@@ -150,7 +157,7 @@ final class CatalogStore {
             let knownURLs = Set(allProducts.map(\.url))
             let added = snapshot.allProducts.filter { !knownURLs.contains($0.url) }.count
             apply(snapshot)
-            try? data.write(to: CatalogFiles.cacheURL, options: .atomic)
+            try? data.write(to: files.cacheURL, options: .atomic)
             statusMessage = added == 1 ? "1 nieuw product gevonden." : "\(added) nieuwe producten gevonden."
         } catch {
             if force { statusMessage = "Kon niet controleren op nieuwe producten. Ben je online?" }
@@ -169,13 +176,16 @@ final class CatalogStore {
     }
 }
 
-enum CatalogFiles {
-    static let remoteURL = URL(string: "https://raw.githubusercontent.com/joelvalentijn/boodschappen-app/main/products.json")!
-    static let lastCheckKey = "catalogusLaatstGecontroleerd"
+struct CatalogFiles {
+    let store: Store
 
-    static var cacheURL: URL {
+    var lastCheckKey: String {
+        store == .lidl ? "catalogusLaatstGecontroleerd" : "catalogusLaatstGecontroleerd-\(store.rawValue)"
+    }
+
+    var cacheURL: URL {
         let directory = URL.applicationSupportDirectory.appending(path: "Catalogus", directoryHint: .isDirectory)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        return directory.appending(path: "products.json")
+        return directory.appending(path: "\(store.catalogName).json")
     }
 }

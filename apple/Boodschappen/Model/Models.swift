@@ -20,6 +20,8 @@ final class ShoppingItem {
     var checkedAt: Date?
     /// Plek in de winkelmodus; 0 = nog niet ingedeeld.
     var shopOrder: Int = 0
+    /// `Store.rawValue`; leeg bij regels van vóór de HEMA, die horen bij de Lidl.
+    var storeID: String = ""
     var syncID: String = ""
     var modifiedAt: Date = Date()
 
@@ -58,6 +60,8 @@ final class FavoriteProduct {
     var category: String = ""
     var imageURL: String?
     var addedAt: Date = Date()
+    /// `Store.rawValue`; leeg bij favorieten van vóór de HEMA, die horen bij de Lidl.
+    var storeID: String = ""
     var syncID: String = ""
     var modifiedAt: Date = Date()
 
@@ -68,6 +72,7 @@ final class FavoriteProduct {
         self.variant = variant
         self.category = product.category
         self.imageURL = product.imageURL
+        self.storeID = Store(productURL: product.url)?.rawValue ?? ""
         self.addedAt = Date()
         self.syncID = UUID().uuidString
         self.modifiedAt = Date()

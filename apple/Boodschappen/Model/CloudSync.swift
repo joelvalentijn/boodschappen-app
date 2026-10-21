@@ -540,7 +540,7 @@ private extension CKRecord {
 extension ShoppingItem: SyncedModel {
     static var recordType: String { "Item" }
     static var contentKeys: [String] {
-        ["productURL", "name", "brand", "variant", "category", "imageURL", "quantity", "isChecked", "addedAt", "checkedAt", "shopOrder"]
+        ["productURL", "name", "brand", "variant", "category", "imageURL", "quantity", "isChecked", "addedAt", "checkedAt", "shopOrder", "store"]
     }
 
     func write(to record: CKRecord) {
@@ -555,6 +555,7 @@ extension ShoppingItem: SyncedModel {
         record.set("addedAt", addedAt)
         record.set("checkedAt", checkedAt)
         record.set("shopOrder", shopOrder)
+        record.set("store", storeID)
         record.set("modifiedAt", modifiedAt)
     }
 
@@ -570,6 +571,7 @@ extension ShoppingItem: SyncedModel {
         addedAt = record.date("addedAt") ?? Date()
         checkedAt = record.date("checkedAt")
         shopOrder = record.number("shopOrder")?.intValue ?? 0
+        storeID = record.string("store") ?? ""
         modifiedAt = record.date("modifiedAt") ?? Date()
     }
 }
@@ -577,7 +579,7 @@ extension ShoppingItem: SyncedModel {
 extension FavoriteProduct: SyncedModel {
     static var recordType: String { "Favorite" }
     static var contentKeys: [String] {
-        ["productURL", "name", "brand", "variant", "category", "imageURL", "addedAt"]
+        ["productURL", "name", "brand", "variant", "category", "imageURL", "addedAt", "store"]
     }
 
     func write(to record: CKRecord) {
@@ -588,6 +590,7 @@ extension FavoriteProduct: SyncedModel {
         record.set("category", category)
         record.set("imageURL", imageURL)
         record.set("addedAt", addedAt)
+        record.set("store", storeID)
         record.set("modifiedAt", modifiedAt)
     }
 
@@ -599,6 +602,7 @@ extension FavoriteProduct: SyncedModel {
         category = record.string("category") ?? ""
         imageURL = record.string("imageURL")
         addedAt = record.date("addedAt") ?? Date()
+        storeID = record.string("store") ?? ""
         modifiedAt = record.date("modifiedAt") ?? Date()
     }
 }

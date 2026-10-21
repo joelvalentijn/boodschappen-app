@@ -9,31 +9,16 @@ import AppKit
 /// Op iPhone: de lijst met een knop om producten te kiezen.
 /// Op iPad en Mac: categorieën, producten en de lijst naast elkaar.
 struct RootView: View {
+    #if DEBUG
     @Environment(\.modelContext) private var context
-    @Environment(\.scenePhase) private var scenePhase
     @Environment(CatalogStore.self) private var catalog
-    @Environment(SyncMonitor.self) private var syncMonitor
+    #endif
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     #endif
 
     var body: some View {
         layout
-            .onChange(of: scenePhase, initial: true) { _, phase in
-                if phase == .active {
-                    ListActions.mergeDuplicates(in: context)
-                }
-                syncMonitor.setAppActive(phase != .background)
-            }
-            .task {
-                // Pushberichten van iCloud, voor updates als de app op de achtergrond staat.
-                guard syncMonitor.containerIdentifier != nil else { return }
-                #if os(iOS)
-                UIApplication.shared.registerForRemoteNotifications()
-                #else
-                NSApplication.shared.registerForRemoteNotifications()
-                #endif
-            }
             #if DEBUG
             .task(id: catalog.isLoaded) {
                 DemoMode.seedIfNeeded(catalog: catalog, context: context)
@@ -90,7 +75,7 @@ struct ProductPickerSheet: View {
 
 struct SplitRootView: View {
     @Environment(CatalogStore.self) private var catalog
-    @Query private var favorites: [FavoriteProduct]
+    @Query private var allFavorites: [FavoriteProduct]
     #if DEBUG
     @State private var scope: BrowseScope? = DemoMode.startCategory.map { BrowseScope.category($0) } ?? .all
     #else
@@ -104,11 +89,11 @@ struct SplitRootView: View {
                     Label("Alle producten", systemImage: "square.grid.2x2")
                         .tag(BrowseScope.all)
                     Label("Favorieten", systemImage: "heart")
-                        .badge(favorites.count)
+                        .badge(allFavorites.filter { $0.shop == catalog.store }.count)
                         .tag(BrowseScope.favorites)
                     let newCount = catalog.newProducts.count
                     if newCount > 0 {
-                        Label("Nieuw bij Lidl", systemImage: "sparkles")
+                        Label("Nieuw bij \(catalog.store.name)", systemImage: "sparkles")
                             .badge(newCount)
                             .tag(BrowseScope.new)
                     }
@@ -125,7 +110,7 @@ struct SplitRootView: View {
                     }
                 }
             }
-            .navigationTitle("Producten")
+            .navigationTitle(catalog.store.name)
             .navigationSplitViewColumnWidth(min: 210, ideal: 240, max: 320)
         } content: {
             Group {

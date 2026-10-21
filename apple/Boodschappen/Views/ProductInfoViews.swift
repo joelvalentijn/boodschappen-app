@@ -3,9 +3,11 @@ import SwiftUI
 import SafariServices
 #endif
 
-/// Prijs, beschrijving en EAN-code van lidl.nl, voor in een Form.
+/// Prijs, beschrijving en EAN-code van de website van de winkel, voor in een Form.
 struct ProductInfoSection: View {
     let productURL: String
+
+    private var host: String { (Store(productURL: productURL) ?? .lidl).host }
 
     private enum Phase: Equatable {
         case loading
@@ -23,12 +25,12 @@ struct ProductInfoSection: View {
                 HStack(spacing: 10) {
                     ProgressView()
                         .controlSize(.small)
-                    Text("Informatie ophalen van lidl.nl…")
+                    Text("Informatie ophalen van \(host)…")
                         .foregroundStyle(.secondary)
                 }
             case .loaded(let info):
                 if let price = info.price {
-                    LabeledContent("Prijs op lidl.nl") {
+                    LabeledContent("Prijs op \(host)") {
                         Text(price)
                             .font(.body.weight(.semibold))
                             .foregroundStyle(Color.primary)
@@ -91,7 +93,7 @@ struct LidlPageButton: View {
             openURL(url)
             #endif
         } label: {
-            Label("Bekijk op lidl.nl", systemImage: "safari")
+            Label("Bekijk op \((Store(productURL: url.absoluteString) ?? .lidl).host)", systemImage: "safari")
         }
         #if os(iOS)
         .sheet(isPresented: $showingPage) {

@@ -8,6 +8,7 @@ struct ProductListView: View {
     var emptyMessage: String = "Geen producten gevonden"
 
     @Environment(\.modelContext) private var context
+    @Environment(CatalogStore.self) private var catalog
     @Query private var items: [ShoppingItem]
     @Query private var favorites: [FavoriteProduct]
     @Query(sort: \CustomVariant.addedAt) private var variants: [CustomVariant]
@@ -16,8 +17,9 @@ struct ProductListView: View {
     @State private var addCount = 0
 
     var body: some View {
-        let quantities = Dictionary(items.map { ($0.key, $0.quantity) }, uniquingKeysWith: +)
-        let favoriteKeys = Set(favorites.map(\.key))
+        let storeItems = items.filter { $0.shop == catalog.store }
+        let quantities = Dictionary(storeItems.map { ($0.key, $0.quantity) }, uniquingKeysWith: +)
+        let favoriteKeys = Set(favorites.filter { $0.shop == catalog.store }.map(\.key))
         let variantsByURL = Dictionary(grouping: variants, by: \.productURL)
         let customText = customName?.trimmingCharacters(in: .whitespaces) ?? ""
 
@@ -32,7 +34,7 @@ struct ProductListView: View {
                     }
                 } footer: {
                     if entries.isEmpty {
-                        Text("Niet gevonden in de Lidl-catalogus.")
+                        Text("Niet gevonden in de \(catalog.store.name)-catalogus.")
                     }
                 }
             }

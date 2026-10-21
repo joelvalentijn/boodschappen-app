@@ -27,14 +27,17 @@ jobs:
       - name: Producten ophalen
         run: node scraper.mjs
 
+      - name: HEMA-producten ophalen
+        run: node scraper-hema.mjs
+
       - name: Wijzigingen opslaan
         run: |
-          if git diff --quiet -- products.json; then
+          if git diff --quiet -- products.json products-hema.json; then
             echo "Geen nieuwe of verdwenen producten."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
-          git add products.json
+          git add products.json products-hema.json
           git commit -m "Productcatalogus bijgewerkt ($(date +%Y-%m-%d))"
           git push

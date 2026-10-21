@@ -99,9 +99,9 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
             } header: {
-                Text("Productcatalogus")
+                Text("Productcatalogus \(catalog.store.name)")
             } footer: {
-                Text("Nieuwe Lidl-producten worden elke week verzameld en automatisch in de app gezet.")
+                Text("Nieuwe \(catalog.store.name)-producten worden elke week verzameld en automatisch in de app gezet.")
             }
 
             Section {
