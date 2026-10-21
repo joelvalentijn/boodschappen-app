@@ -7,6 +7,7 @@ import SwiftData
 ///     -demo YES                lijst vullen met voorbeeldproducten
 ///     -demoScherm producten    meteen de productkiezer openen
 ///     -demoScherm zegeltjes    meteen het zegeltjes-scherm openen
+///     -demoScherm winkelen     meteen de winkelmodus openen
 ///     -demoZoek melk           met deze zoekterm starten
 ///     -demoCategorie Kaas      (iPad/Mac) deze categorie tonen
 enum DemoMode {

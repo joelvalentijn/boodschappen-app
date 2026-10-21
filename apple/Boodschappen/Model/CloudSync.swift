@@ -540,7 +540,7 @@ private extension CKRecord {
 extension ShoppingItem: SyncedModel {
     static var recordType: String { "Item" }
     static var contentKeys: [String] {
-        ["productURL", "name", "brand", "variant", "category", "imageURL", "quantity", "isChecked", "addedAt", "checkedAt"]
+        ["productURL", "name", "brand", "variant", "category", "imageURL", "quantity", "isChecked", "addedAt", "checkedAt", "shopOrder"]
     }
 
     func write(to record: CKRecord) {
@@ -554,6 +554,7 @@ extension ShoppingItem: SyncedModel {
         record.set("isChecked", isChecked)
         record.set("addedAt", addedAt)
         record.set("checkedAt", checkedAt)
+        record.set("shopOrder", shopOrder)
         record.set("modifiedAt", modifiedAt)
     }
 
@@ -568,6 +569,7 @@ extension ShoppingItem: SyncedModel {
         isChecked = record.number("isChecked")?.boolValue ?? false
         addedAt = record.date("addedAt") ?? Date()
         checkedAt = record.date("checkedAt")
+        shopOrder = record.number("shopOrder")?.intValue ?? 0
         modifiedAt = record.date("modifiedAt") ?? Date()
     }
 }

@@ -18,6 +18,8 @@ final class ShoppingItem {
     var isChecked: Bool = false
     var addedAt: Date = Date()
     var checkedAt: Date?
+    /// Plek in de winkelmodus; 0 = nog niet ingedeeld.
+    var shopOrder: Int = 0
     var syncID: String = ""
     var modifiedAt: Date = Date()
 

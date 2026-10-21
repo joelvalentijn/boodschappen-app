@@ -1,5 +1,4 @@
 import SwiftUI
-import AVFoundation
 
 /// Groot scherm voor aan de kassa, met voorleesknop.
 struct ZegelView: View {
@@ -59,26 +58,5 @@ struct ZegelView: View {
         #if os(macOS)
         .frame(minWidth: 460, minHeight: 500)
         #endif
-    }
-}
-
-final class Speaker {
-    private let synthesizer = AVSpeechSynthesizer()
-
-    func speak(_ text: String) {
-        #if os(iOS)
-        // Ook voorlezen als de telefoon op stil staat.
-        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio, options: [.duckOthers])
-        try? AVAudioSession.sharedInstance().setActive(true)
-        #endif
-        synthesizer.stopSpeaking(at: .immediate)
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "nl-NL")
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.95
-        synthesizer.speak(utterance)
-    }
-
-    func stop() {
-        synthesizer.stopSpeaking(at: .immediate)
     }
 }

@@ -11,6 +11,12 @@ Een echte app (SwiftUI) met dezelfde functies als de web-app, maar dan:
 - **Automatisch nieuwe producten**: de app haalt de nieuwste productlijst van GitHub, je hoeft de app daarvoor niet opnieuw te installeren.
 - **Mac en iPad**: categorieën, producten en je lijst naast elkaar.
 - Zegeltjes-scherm met voorleesknop, lijst delen via Berichten/WhatsApp, donkere modus.
+- **Winkelmodus** (iPhone en iPad): voor als een medewerker je boodschappen pakt. Tik op **Winkelen**, zet de producten met de pijltjes in de goede volgorde en doorloop drie stappen in een schermvullende weergave:
+  1. **Hulp**: tik op een zin, de app toont hem groot en leest hem voor.
+  2. **Winkelen**: één product per scherm, met foto, naam, variant en aantal heel groot. *Gepakt* vinkt af en gaat naar het volgende product.
+  3. **Afrekenen**: kies je betaalkaart (de app leest jouw zin voor, bijvoorbeeld waar de chip hangt). Na Face ID zegt de app alleen “Kijk even op mijn telefoon” en staat de pincode 10 seconden in beeld.
+
+  De zinnen en betaalkaarten pas je aan in **Instellingen → Winkelmodus**. Pincodes staan alleen op dat apparaat in de sleutelhanger van iOS en gaan niet mee met iCloud; de volgorde van de producten synchroniseert wel.
 
 ## Installeren
 

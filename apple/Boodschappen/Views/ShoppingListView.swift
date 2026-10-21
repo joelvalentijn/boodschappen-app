@@ -17,6 +17,11 @@ struct ShoppingListView: View {
     @State private var showingZegels = false
     #endif
     @State private var showingSettings = false
+    #if DEBUG
+    @State private var showingShopMode = DemoMode.startScreen == "winkelen"
+    #else
+    @State private var showingShopMode = false
+    #endif
     @State private var confirmingClear = false
     @State private var detailItem: ShoppingItem?
 
@@ -114,7 +119,16 @@ struct ShoppingListView: View {
         .toolbar { toolbarContent }
         .safeAreaInset(edge: .bottom) {
             if let onAddProducts {
-                addButton(action: onAddProducts)
+                HStack(spacing: 10) {
+                    addButton(action: onAddProducts)
+                    #if os(iOS)
+                    if !openItems.isEmpty {
+                        shopButton
+                    }
+                    #endif
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 8)
             }
         }
         .sheet(item: $detailItem) { item in
@@ -128,6 +142,9 @@ struct ShoppingListView: View {
             NavigationStack {
                 SettingsView()
             }
+        }
+        .fullScreenCover(isPresented: $showingShopMode) {
+            ShopModeView()
         }
         #endif
         .confirmationDialog("Hele lijst leegmaken?", isPresented: $confirmingClear, titleVisibility: .visible) {
@@ -173,6 +190,18 @@ struct ShoppingListView: View {
 
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
+        #if os(iOS)
+        if onAddProducts == nil {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    showingShopMode = true
+                } label: {
+                    Label("Winkelen", systemImage: "cart.fill")
+                }
+                .disabled(openItems.isEmpty)
+            }
+        }
+        #endif
         ToolbarItem(placement: .primaryAction) {
             Button {
                 showingZegels = true
@@ -231,9 +260,25 @@ struct ShoppingListView: View {
         .buttonBorderShape(.capsule)
         .controlSize(.large)
         .shadow(color: Color.accentColor.opacity(0.3), radius: 12, y: 6)
-        .padding(.horizontal, 20)
-        .padding(.bottom, 8)
     }
+
+    #if os(iOS)
+    private var shopButton: some View {
+        Button {
+            showingShopMode = true
+        } label: {
+            Label("Winkelen", systemImage: "cart.fill")
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 6)
+        }
+        .buttonStyle(.borderedProminent)
+        .buttonBorderShape(.capsule)
+        .controlSize(.large)
+        .tint(Color.green)
+        .shadow(color: Color.green.opacity(0.3), radius: 12, y: 6)
+    }
+    #endif
 
     private var shareText: String {
         let lines = openItems.map { item -> String in

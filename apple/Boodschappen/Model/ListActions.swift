@@ -79,6 +79,36 @@ enum ListActions {
         save(context)
     }
 
+    // MARK: - Winkelmodus
+
+    /// De open producten in de volgorde voor de winkelmodus. Producten zonder plek
+    /// komen achter de laatste ingedeelde producten van dezelfde of een eerdere afdeling.
+    static func shopRoute(catalog: CatalogStore, in context: ModelContext) -> [ShoppingItem] {
+        let open = items(in: context).filter { !$0.isChecked }
+        let storeIndex: (ShoppingItem) -> Int = { catalog.sortIndex(for: $0.category) }
+        var route = open
+            .filter { $0.shopOrder > 0 }
+            .sorted { ($0.shopOrder, $0.addedAt) < ($1.shopOrder, $1.addedAt) }
+        let unplaced = open
+            .filter { $0.shopOrder <= 0 }
+            .sorted { (storeIndex($0), $0.addedAt) < (storeIndex($1), $1.addedAt) }
+        for item in unplaced {
+            let position = route.lastIndex { storeIndex($0) <= storeIndex(item) }.map { $0 + 1 } ?? 0
+            route.insert(item, at: position)
+        }
+        saveShopOrder(route, in: context)
+        return route
+    }
+
+    static func saveShopOrder(_ route: [ShoppingItem], in context: ModelContext) {
+        var changed = false
+        for (index, item) in route.enumerated() where item.shopOrder != index + 1 {
+            item.shopOrder = index + 1
+            changed = true
+        }
+        if changed { save(context) }
+    }
+
     // MARK: - Favorieten
 
     static func toggleFavorite(_ product: Product, variant: String?, in context: ModelContext) {

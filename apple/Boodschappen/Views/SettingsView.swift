@@ -56,6 +56,25 @@ struct SettingsView: View {
                 Toggle("Groeperen per categorie (winkelvolgorde)", isOn: $groupByCategory)
             }
 
+            #if os(iOS)
+            Section {
+                NavigationLink {
+                    ShopMessagesEditor()
+                } label: {
+                    Label("Berichten", systemImage: "text.bubble")
+                }
+                NavigationLink {
+                    PaymentCardsView()
+                } label: {
+                    Label("Betaalkaarten en pincodes", systemImage: "creditcard")
+                }
+            } header: {
+                Text("Winkelmodus")
+            } footer: {
+                Text("De zinnen die de app in de winkel groot toont en voorleest, en de kaarten waarmee je betaalt.")
+            }
+            #endif
+
             Section {
                 LabeledContent("Producten", value: catalog.allProducts.count.formatted())
                 if let date = catalog.generatedAt {
