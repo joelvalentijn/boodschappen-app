@@ -262,13 +262,15 @@ struct ShoppingListView: View {
             Label("Toevoegen", systemImage: "plus")
                 .font(.headline)
                 .lineLimit(1)
+                .foregroundStyle(Color.accentColor)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 6)
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.borderedProminent)
         .buttonBorderShape(.capsule)
         .controlSize(.large)
-        .background(.bar, in: Capsule())
+        .tint(Color.softBlue)
+        .shadow(color: Color.accentColor.opacity(0.2), radius: 12, y: 6)
     }
 
     #if os(iOS)

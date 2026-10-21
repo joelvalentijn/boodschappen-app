@@ -154,6 +154,23 @@ extension Color {
         #endif
     }
 
+    /// Lichtblauw, in donkere modus donkerblauw; voor knoppen naast een felle hoofdknop.
+    static var softBlue: Color {
+        #if os(iOS)
+        return Color(uiColor: UIColor { traits in
+            traits.userInterfaceStyle == .dark
+                ? UIColor(red: 0.11, green: 0.19, blue: 0.34, alpha: 1)
+                : UIColor(red: 0.87, green: 0.92, blue: 1.0, alpha: 1)
+        })
+        #else
+        return Color(nsColor: NSColor(name: nil) { appearance in
+            appearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+                ? NSColor(red: 0.11, green: 0.19, blue: 0.34, alpha: 1)
+                : NSColor(red: 0.87, green: 0.92, blue: 1.0, alpha: 1)
+        })
+        #endif
+    }
+
     static var cardBackground: Color {
         #if os(iOS)
         return Color(uiColor: .secondarySystemGroupedBackground)
