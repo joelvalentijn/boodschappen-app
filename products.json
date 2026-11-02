@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T10:06:58Z",
+ "generatedAt": "2026-11-02T12:22:57Z",
  "categories": [
   {
    "name": "Groente & fruit",
@@ -13,11 +13,25 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Aardappelen kruimig",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpf0f8d1d6fb664187a52cff4dbb5e6165.png",
+     "url": "https://www.lidl.nl/p/aardappelen-kruimig/p11493347",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Aardappelen vastkokend",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp4400802b7c434c638aa678a102cc2ae6.png",
+     "url": "https://www.lidl.nl/p/aardappelen-vastkokend/p11304018",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Aardappelgratin",
      "brand": "Chef Select",
      "image": "https://www.lidl.nl/assets/gcp95b56876a3f54ce395af1a86069d7a93.png",
-     "url": "https://www.lidl.nl/p/chef-select-aardappelgratin/p11514947",
-     "firstSeen": "2026-10-26"
+     "url": "https://www.lidl.nl/p/aardappelgratin/p11514947",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Aardappelpartjes met schil",
@@ -39,6 +53,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/yxR_eDsfe3Kk7nj9UsJQ9DEe2dBIuzl6t2iGbA47Spw/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8yRDFCOTIwNDJERDAxRTA5REQ1MjkxODd/GMTI5RThGQTg5OEZENEEwNDE0NDUzOThBQzRGMjNENzlGOTI1REJGLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/aardappelpureemix/p117530",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Aardappels XXL",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpcccdfcb3e27048edac2c3631f36ab6d1.png",
+     "url": "https://www.lidl.nl/p/aardappels-xxl/p11493372",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Aardappelwedges",
@@ -78,16 +99,16 @@
     {
      "name": "Aubergine",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/pMH4-BABzlNKAJO-fn9esWTojXk-xGfk6Gp78Q0o854/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9DNjVFQkE3ODIyMUY4MTA0OTE3MjE1RUN/COEQ3QzRGNEZEMkNEOTE3RENCNjIyMUQxQzJFRDI4MzI4ODgxNDI5LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/aubergine/p82181",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpf1c15edb6ca64cd0ba49106b20d936dd.png",
+     "url": "https://www.lidl.nl/p/aubergine/p11214436",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Avocado",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/9hEIMhmlrVD4-xPfGByHqU8lPofiIMpmTFVNfoL4dn4/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wNEMyQUQzRjAxMDg5MzcwQkM3QjUyM0N/DNjQxQURGNzY0MEVCM0RCQUZBNDYyNDEyRUNFMzJBQjc5MjgwRkZELmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/avocado/p80616",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpdb99c4662fed4c7c85a745913a490ad1.png",
+     "url": "https://www.lidl.nl/p/avocado/p11150914",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Avocado in net",
@@ -95,6 +116,13 @@
      "image": null,
      "url": "https://www.lidl.nl/p/avocado-in-net/p11029903",
      "firstSeen": "2026-10-26"
+    },
+    {
+     "name": "Avocado ready to eat",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp6773278c596e42b489c626b94a9f51db.png",
+     "url": "https://www.lidl.nl/p/avocado-ready-to-eat/p11150915",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Avocado's in net",
@@ -113,9 +141,37 @@
     {
      "name": "Bananen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/JxlnkJxVnA0UT4tziVzxKx-FajzwzpxRR14y7tsgobI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CRTQxMEMxNzI1MEU5NDRBQkNGOTRGMkQ/wNUFCNDQzODRENDkxN0UzRTk1OEFGRTVGNTExMjAxRDkwOEEwMzY3LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/bananen/p80000",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpc1ba42c02e704d56991b6f5c2c6f00a1.png",
+     "url": "https://www.lidl.nl/p/bananen/p11150766",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio aardappelen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpecbc38e96dcd484ca81dbd7c3a8c9a24.png",
+     "url": "https://www.lidl.nl/p/bio-aardappelen/p11494003",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio aardappelen",
+     "brand": "BIO ORGANIC",
+     "image": "https://www.lidl.nl/assets/gcp4de0f38bb1dd42c1b43b74d562725d2b.png",
+     "url": "https://www.lidl.nl/p/bio-organic-bio-aardappelen/p11029325",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio bananen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp980ecf08423541f38df35b43a463d8b6.png",
+     "url": "https://www.lidl.nl/p/bio-bananen/p11029818",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio bieslook in pot",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpd8d2d8f152ee45e29a1a27ce5e1f607a.png",
+     "url": "https://www.lidl.nl/p/bio-bieslook-in-pot/p11214293",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Bio boerenkool",
@@ -125,6 +181,20 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Bio citroen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpd8b4939f65af4b60aa7c42dfbdd10d28.png",
+     "url": "https://www.lidl.nl/p/bio-citroen/p11214544",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio kastanjechampignons",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp052b9d2e23e2447f8e52454b642e0bec.png",
+     "url": "https://www.lidl.nl/p/bio-kastanjechampignons/p11263871",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Bio maïs",
      "brand": "Freshona",
      "image": "https://imgproxy-retcat.assets.schwarz/GmQuKQh_uwVcQi_yZAfaRHWMRky-kqmQtOXUULhw3CU/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GOEU1RDgwMjAxQTk5RjhDRkU0RDYzODE/xOTg3RDg4QzI4NzJEM0UzNjRDMzVGMkM0OTRENzlFREY5MjlGOEYyLmpwZw.jpg",
@@ -132,11 +202,39 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Bio pastinaak",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp7abe1703b0f2473292f73f06ddd10029.png",
+     "url": "https://www.lidl.nl/p/bio-pastinaak/p11214301",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio peterselie in pot",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp20063f7f95c1486187d64153dec1e398.png",
+     "url": "https://www.lidl.nl/p/bio-peterselie-in-pot/p11151259",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Bio pompoenstukjes",
      "brand": "Chef Select",
      "image": "https://imgproxy-retcat.assets.schwarz/e5Ya3p9O63LxF8bJ7dVsT1Ln4Dh1FzObVnE_8KGhZbI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzlFNjBGRjgzNEVGMDVBNTc4MzM0NjQwMj/U5MjMzRjNBMTUwRTk3RjExQUNBRkRBRUY3QTAyRUZGQ0E4NTU0NUQucG5n.png",
      "url": "https://www.lidl.nl/p/chef-select-bio-pompoenstukjes/p10014990",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Bio rode bieten",
+     "brand": "BIO ORGANIC",
+     "image": "https://www.lidl.nl/assets/gcpb803107552124a07a48cf2235ca85bf7.png",
+     "url": "https://www.lidl.nl/p/bio-organic-bio-rode-bieten/p11494032",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio wortels",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp8b10425eae5246abbcbdbd4f0285b179.png",
+     "url": "https://www.lidl.nl/p/bio-wortels/p11029390",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Biologische aardappelen",
@@ -316,16 +414,16 @@
     {
      "name": "Bloedsinaasappels",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/dWWYpBxyxrdAUGtR5dXDphHnQoZsGP3suw8Yc9Goi_E/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wRkMxQjhFRDRFNTVDQ0E4QjAyREM2OTJ/DQ0U3MDJBQTIzNTQ5OEVGOUI4NThCNEY1NTFGREE2RTVBNDU2NEM2LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/bloedsinaasappels/p80033",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp1c613b96e3834b9f9fb26e2c34346343.png",
+     "url": "https://www.lidl.nl/p/bloedsinaasappels/p11102466",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Bloemkool",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/kSKzb-kDy-SNs0SPRpE_6xJXbk5U5xF1-FuW9k5tWkY/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0I1QTA2NzUwQjNEOTA3QzcxQTBFOUFDRD/JGM0YzQUY2MzJENkZGRjcyQzE1NzRGMTc0RjU4OTkyNEQwRDgxQkEucG5n.png",
-     "url": "https://www.lidl.nl/p/bloemkool/p82876",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp6317887ac17c4b29be5c27abd07c6787.png",
+     "url": "https://www.lidl.nl/p/bloemkool/p11041473",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Bloemkoolroosjes",
@@ -337,9 +435,9 @@
     {
      "name": "Bospeen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/94oyHc9Cpa64nbexaJ8VZFOzQXNjXXrOJHYcSEigcm4/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzU5QjkzMThEOERGMkVFQTY0OEFFNkJCMU/IwNjZCNUZDMUYzRTU1NEMzNTM2NUNBNUQ0Q0FDREY3MTE3OTVDN0YucG5n.png",
-     "url": "https://www.lidl.nl/p/bospeen/p82781",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpf2d383e447d7495fb3f778b40ee88ae8.png",
+     "url": "https://www.lidl.nl/p/bospeen/p11029530",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Botersla",
@@ -365,16 +463,16 @@
     {
      "name": "Champignons",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/U-U4185WH3VhYRNOF3NGWiG3vlF1GUWMIFGYtjsBZj0/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzI0Q0JDNUFFMjcxMDdENzk5MDZBMDk4N0/I1QTE5MDY0OUVBRTZFRkQ0REE3QTQ2MkRERUJBNkFDQkFENzJEREQucG5n.png",
-     "url": "https://www.lidl.nl/p/champignons/p83015",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp449890e8226447c08ccddcd4706cce16.png",
+     "url": "https://www.lidl.nl/p/champignons/p11029654",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Chinese kool",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/mWrfjEqAqM1kdH8i_nIxGYHGFZpdIt3vPcxuvYJ6JJA/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BRTY0ODhBMkM1N0Y5MzZCNTEyRUFBOEE/xQzM1MEJDNEVGRTY0QTQ4RTA1MzlFQ0ZDQTVBRjIyREQ3NkJDREZGLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/chinese-kool/p82911",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcped96337bcafa4fac915534eacd8c75f0.png",
+     "url": "https://www.lidl.nl/p/chinese-kool/p11266565",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Chinese wokgroenten stijl",
@@ -389,6 +487,20 @@
      "image": null,
      "url": "https://www.lidl.nl/p/citroenen/p11030000",
      "firstSeen": "2026-10-26"
+    },
+    {
+     "name": "Cocktailtrostomaten",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpa4aa8e538c504cdbb34e518d203af3b0.png",
+     "url": "https://www.lidl.nl/p/cocktailtrostomaten/p11151085",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Conference peer",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp22a4a27c51b64df0ab26bdaccb75201b.png",
+     "url": "https://www.lidl.nl/p/conference-peer/p11030061",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Conference peren",
@@ -468,13 +580,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Dubbel frisss boost bosvruchten appel",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dubbel-frisss-boost-bosvruchten-appel/p11559993",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Eikenblad slamelange",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/0FZjWlZLK67Iyv31-E9PV4CYKB5rxMHLrltdBvmwizo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80RUE0REMzQjcxOTRDREJGODg0M0RDM0I/2MUFFQ0YxQzMwMkNDMDY0QkI1MDk1MjgyMkEyNTAyQTI5QjhCODJGLmpwZw.jpg",
@@ -484,9 +589,9 @@
     {
      "name": "Elstar appels",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/tBYSiG2oHyh4Dq5vr9CpJRRsWNEIQx8N7Swd471C1Vs/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS83QzBDOUZGM0MwNTYwMjlGNzE2NTQ5Qzc/zNzlGRDQ1RURENkVBNTkwQ0M5QjdDNThDNzA0MDY1MTQwMzMwQTMyLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/elstar-appels/p80241",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpc3c89f7e11654d988a4bcd4fe50c73e7.png",
+     "url": "https://www.lidl.nl/p/elstar-appels/p11150824",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Energygel appel",
@@ -522,6 +627,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/6dYmb-fZgZtinerbJ_-ETPEotL8VmNdeeDP0tOiH2zQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84MDU5RDM1RkFDODRBRjBGREQyNENENDV/BNjJBRDNCOTc3NjQ0NzYxREMzRjg0QzlGQjNEMEQ2MTFFODZCRTY2LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/fairtrade-biologische-bananen/p81510",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Fijngesneden andijvie",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp73af8e1289964ab8bacc8bf2ab3cd77c.png",
+     "url": "https://www.lidl.nl/p/fijngesneden-andijvie/p11317739",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Fijngesneden andijvie",
@@ -645,9 +757,9 @@
     {
      "name": "Gember",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/pzpGsX8bGliQ1lv0AfAnZ1-UYzSfou7thrSGveLJ380/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzFFNERFODA5Q0U5QTY0MzAxQUEyNTlGQT/U0OTlGQUVCQ0U2MjUyNzc0NDgxNkIxNUFDNTFCOTU2NzkwMTk0MTMucG5n.png",
-     "url": "https://www.lidl.nl/p/gember/p82700",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp50c330b561c34345bee993f5b03dc23a.png",
+     "url": "https://www.lidl.nl/p/gember/p11029618",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Geschoonde spruiten",
@@ -683,6 +795,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/2xc6hMU1mUKLCiux1jQ2YGAvYU2toOZ1iL9MvtisyCQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xOTg2NzIxNTU0REY1N0Y1RDNEMUM4RTV/GRjYzRTNENjgzMjMxQjcyNjZDNUVFNTM1REY4OTQ0OUUxN0Q3RUNDLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/golden-delicious-appels/p81295",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Goudreinet appel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpbfb41994530d474391b08889644d5db6.png",
+     "url": "https://www.lidl.nl/p/goudreinet-appel/p11029972",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Goudreinette appels",
@@ -755,6 +874,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Grote watermeloen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpec101e34b8ff49f38b54d62422eea2ab.png",
+     "url": "https://www.lidl.nl/p/grote-watermeloen/p11150902",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Halloweenpompoen",
      "brand": null,
      "image": "https://www.lidl.nl/assets/gcp0db557f5d3724c35b82ce74043164d17.png",
@@ -778,16 +904,16 @@
     {
      "name": "Handsinaasappels",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/xkbkU7CeZnV4n8TlsgcYvrc9HBeeKoWD0kIqpEaBrEE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82NDY2NTlERjM4MTdGRDY3NTdGMjg5N0I/4MENCM0Q0RjUxQ0QzM0U3QzBENDg2OTYwQkM4RkQzOEYxMDU3QjMxLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/handsinaasappels/p80142",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp421fd00c8fc54f1a9043d4616c86557e.png",
+     "url": "https://www.lidl.nl/p/handsinaasappels/p11115702",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Haricots verts",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/dtbx7EY0AvFLBgheklGKzw3agZ9LDZRYk7tXPuPnZvg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xMTUzQkY0RDM1QzA1Qzc2MDQ1QThBOTl/EOUFEMTI0RUUyMDg0QTA0RTc0QjM0REFFMkFGQzlEOUFGRjdGQzY2LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/haricots-verts/p82211",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpe068b31e06cd40979d605e643b7c0af6.png",
+     "url": "https://www.lidl.nl/p/haricots-verts/p11029703",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Haricots verts extra fijn",
@@ -797,11 +923,18 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Hollandse aardbeien",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpcc571834b92b45edbd15801004c2d8c2.png",
+     "url": "https://www.lidl.nl/p/hollandse-aardbeien/p11150943",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "IJsbergsla",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/313rD9J_AWNiec_Z5aQugBZyO7ENpDiUiD9ZyH0Kq_Q/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzFGQzAwRjE0MTZFRkEwNENBNjRCRjQxRj/k0MUNGRTE0NDQwNkZCMTM1QTQ0NkQ2OTBBOTIyNkYyQjEyMzk1NjUucG5n.png",
-     "url": "https://www.lidl.nl/p/ijsbergsla/p82031",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpf4ae38f93b2c40968336b6a0daf2f7fe.png",
+     "url": "https://www.lidl.nl/p/ijsbergsla/p11151017",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "IJsbergsla",
@@ -809,6 +942,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/joMtztiHESmV1a1esac4U4Sr9V-lRxOqa5h1C02F5Hc/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9EMkIyOUI2N0I4Qzc3MUNBMTdFNTZENDY/wQjNFMkQyNkUwQUNCQTExREYxRUExOTg2OUIwRjE2RjhBREI3MjYyLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/ijsbergsla/p10012428",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Jonagold appel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpc7249cc76c4f481c99335acf87def8fe.png",
+     "url": "https://www.lidl.nl/p/jonagold-appel/p11491910",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Jonagold appels",
@@ -841,9 +981,9 @@
     {
      "name": "Kastanjechampignons",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/_8YQU2m9CeGKO5wcLcr5z4UoWSJL780o0BfmYiFCcbI/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzFDM0Y4N0MzQ0NDNTUwMjExRDgzNEE1MU/EyMjQ4RjQ0Njg4NEI5QzQxMTVBRDRFMjUxMjcxMzI1MUJENzc5QzcucG5n.png",
-     "url": "https://www.lidl.nl/p/kastanjechampignons/p83006",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp601a0f799e54472ab19395355859fe74.png",
+     "url": "https://www.lidl.nl/p/kastanjechampignons/p11151168",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Kersen licht gesuikerd",
@@ -874,11 +1014,32 @@
      "firstSeen": "2026-10-26"
     },
     {
+     "name": "Kiwi gold",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp8cf69292b5c34f66a4612a2c97046beb.png",
+     "url": "https://www.lidl.nl/p/kiwi-gold/p11214533",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Kiwi groen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2ee32b7a0375479d90c20d085a70753d.png",
+     "url": "https://www.lidl.nl/p/kiwi-groen/p11030005",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Kleine appeltjes",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpad8ce0bdf8294fcdadd81558aeba481c.png",
+     "url": "https://www.lidl.nl/p/kleine-appeltjes/p11029959",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Knoflook",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/13LpklzWDDV7nZVnNdk9NbFm7govpFJ8HQKMWS0haiA/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzM3QTAwRkI2RkRDOTc4RkRDRkI0OTNGQj/A2NTZBRUZGODE1NTM4NTE5MjNBMTMzRDc0MTMzRDMzMkRFNTU1MTIucG5n.png",
-     "url": "https://www.lidl.nl/p/knoflook/p82711",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpb1b54f2c6834498ba27b1ff7dc3e2618.png",
+     "url": "https://www.lidl.nl/p/knoflook/p11029617",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Knoflook in mand",
@@ -890,16 +1051,16 @@
     {
      "name": "Knolselderij",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/GpYLTt7kDyiLaWU156zgNG0-Rf4k48r2NwMRMwPL6Fc/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0RDRTRCRUFGNEU5NkFFOUQ1RUY5NUY1Nz/kxODY4NUVDNTlEM0FDQUVFMEQ3RDlEQkI0NUI1NUI0NjNERTFFRDMucG5n.png",
-     "url": "https://www.lidl.nl/p/knolselderij/p82721",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpb81384d7355c461ca76e1021ed684c04.png",
+     "url": "https://www.lidl.nl/p/knolselderij/p11277486",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Komkommer",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/OfntSy1nnP7I3fkQgIE55uspdWQHJyznCccUzLUgcVc/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80MUIzOEYwOUE5NTJBOEZCN0YwOERDOEU/xQjZBQTg3RkUzQzUyODg4QTI0QTlFRUNENUZBNUUxOEZGRTcwQTQ5LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/komkommer/p82231",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcp5f36c8b72ab24f9abf7243691c282cc0.png",
+     "url": "https://www.lidl.nl/p/komkommer/p11151055",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Kropsla",
@@ -907,6 +1068,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/Npl1K1rA2tUrMBkOFBOM44ukYosfyXhxMIbv1tXDEhg/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzE3OEJFQUJENDc2RTlENTlEMkI5NzA4MT/c4NTI0QkQxRTdDNzIzQjI2OEIyMUIwRDI3OUQwOEE0OTE2RkUxMDAucG5n.png",
      "url": "https://www.lidl.nl/p/kropsla/p82071",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Kropsla met kluit",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpf3f91f7a3a6244069ac60997b125ad91.png",
+     "url": "https://www.lidl.nl/p/kropsla-met-kluit/p11029885",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Krulsla slamelange",
@@ -918,9 +1086,9 @@
     {
      "name": "Lente ui",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/WP5sqZcu-NWAky3aLCOIarL-xdn5X6TQWUwR7NLYu_w/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzEzMEMwNEExMzExQjQ4NjI0RTgzQTEyMT/A0RjMwMDBDRUQwOEQ5MURFRTE5MUY4NUVEMzgxMjI0OUNCOTU0RDgucG5n.png",
-     "url": "https://www.lidl.nl/p/lente-ui/p82236",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpe43dbe311a7c46a88d78a0b4d1b17623.png",
+     "url": "https://www.lidl.nl/p/lente-ui/p11151058",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Limoen",
@@ -928,6 +1096,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/yNRQgAOwL2-T4q3uXiVkimUHHhkX9jyXQbiC_uj-FY0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xMUMyNTIyQjZBMzEwNjg5N0E3N0UyMjF/GRDc2RUY4RkIzNDMzNUI2RjBGRjkxM0RCN0JFNUNGOTBCRkQyMzMxLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/limoen/p80067",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Limoenen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpbc4bc852c1544646a25059c94299fd73.png",
+     "url": "https://www.lidl.nl/p/limoenen/p11030152",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Mandarijnen",
@@ -939,9 +1114,9 @@
     {
      "name": "Mango",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/e_qyqDawXgohU6xopIuv1KgnX3Z4yXzh1_1uKPocr1U/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80ODY1ODEyMUMzNUNGQTVGMTQ0RjFFREQ/yM0ZERUQyRUU3QTg1QzU1QkREOTkyRTA0MDEwQzQ5MzM5NTY0MTIzLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/mango/p80711",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp175ab9431a914d7cb38caa870529b473.png",
+     "url": "https://www.lidl.nl/p/mango/p11029883",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Mini appeltaartje",
@@ -972,11 +1147,46 @@
      "firstSeen": "2026-10-26"
     },
     {
+     "name": "Mini krieltjes barbecue",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp89f467dbeed1401ab2a1ae679885d1ed.png",
+     "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-barbecue/p11317762",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini krieltjes BBQ",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp886c83c300a2488b9474f65f6d1dd804.png",
+     "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-bbq/p11562239",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini krieltjes bourgondisch",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp6ad2e060213f4975a96d485b94cb02f4.png",
+     "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-bourgondisch/p11562242",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini krieltjes naturel",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcpf2ac418d330544d4bc45b99b15071f8d.png",
+     "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-naturel/p11317818",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Mini krieltjes voordeelverpakking",
      "brand": "Chef Select",
      "image": "https://imgproxy-retcat.assets.schwarz/Vy5-OlX8ufoo_bxo2Ah5c6Amius-D5TkvfHvkGEPDmY/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9FQzYyQkUzQjJEN0Y4RUNENUQzMTlFNEI/xN0ZDRjI3QjhDQ0QzRTIwQTEwRkEwRkQxRDFFREYwMDYzQ0I1RDBGLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-voordeelverpakking/p10007822",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Mini Romana sla",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2c7679d00044477385fdacd7af4e05dc.png",
+     "url": "https://www.lidl.nl/p/mini-romana-sla/p11029873",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Mini-krieltjes bourgondische stijl",
@@ -995,9 +1205,9 @@
     {
      "name": "Minneola",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/z7R_KGiVhbkxr4TXW9euHE0AlxYmc8aMvo-31t6bqrE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9DOUYwQkVBMjU1OEYwREI5RDY4RkIxRkY/0NzAxNkU3MEM2RUMwOEVDNzBBQURCQzEyQjYzQUU3MUVBNENBNkM0LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/minneola/p80130",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpa51bf14e2d3f4e428cf1079aafaa355f.png",
+     "url": "https://www.lidl.nl/p/minneola/p11488299",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Mix voor appeltaart",
@@ -1007,11 +1217,25 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Nashi Peren",
+     "name": "Multi color sla",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/y2KRRb7KtkTGAPPP0ElCzGClaLC9ONEaQr7SWODS4UA/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wREU2N0Y4NDlFNjVBQUE2NzI3OTNCRTk/1M0FEQTA5RTIxNUY2QjQ1QTAyRDUzQjkwMDU3MkY1NkVBMjFCNEI0LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/nashi-peren/p80316",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp594f3c7a2354401ba624b6734c891306.png",
+     "url": "https://www.lidl.nl/p/multi-color-sla/p11029747",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Munt",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpbc119ce31e804a88b417cea14e27fa82.png",
+     "url": "https://www.lidl.nl/p/munt/p11151178",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Nashi peren",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpa3be146692b34821a3d8b8c9ccd74c8c.png",
+     "url": "https://www.lidl.nl/p/nashi-peren/p11214565",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Natuur kriel",
@@ -1023,16 +1247,16 @@
     {
      "name": "Nectarines",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/2pG5jgPy9TMOyqIpHP7OCqQDuXNeYzR8dz-Iga6Dr0A/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BMDFERTFGRjk2MzExOTNGRkYwQURCNzZ/EMDlCQkEyMUJGMzU5RDFBNzUzOUQ2MkREOEE4NDRDMENGODU3QTAxLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/nectarines/p80385",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp60f0dc728f5c4cc4885e32c0f4aa86d4.png",
+     "url": "https://www.lidl.nl/p/nectarines/p11029976",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Oesterzwammen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/o9PvgVNCD_f3m4EkF51VLS3Iohj-plakrcpUhnIDVuA/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzZCREI2Qjg3MzNBQjYwMTMwNEQ5QzNBQk/I5NUIzNThCOEEyOEY4OTQwODBEQzBFRDFDMkU2RjdDNDQ5QjA5NzgucG5n.png",
-     "url": "https://www.lidl.nl/p/oesterzwammen/p82985",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp84421a90e44744ed9b98818376fd44d1.png",
+     "url": "https://www.lidl.nl/p/oesterzwammen/p11029541",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Ovengroente courgette",
@@ -1058,9 +1282,9 @@
     {
      "name": "Paksoi",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/rIci7UjM29ENqnfePO0oiBb_A7KypoWZfUDr_02cSzg/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzRBRUY4OUU0OTA3QzU2MjRGNzQ4NjE0Nz/k5MTFBMEFDREMzN0M4NUUzRTZDMzFGNTc3OTQ0MjhCNTgwMEUwRTYucG5n.png",
-     "url": "https://www.lidl.nl/p/paksoi/p82973",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcp368ac02dacd54863b3870754091aa6bd.png",
+     "url": "https://www.lidl.nl/p/paksoi/p11029729",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Paprika gegrild",
@@ -1070,11 +1294,18 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Paprika rood",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp9b001f34930b49b2add331d920889ad9.png",
+     "url": "https://www.lidl.nl/p/paprika-rood/p11029717",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Paprikamix",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/OVJ2MmLfU_kj7JXIu2Dl9MYuazut4SjoIDCmwRxVeTA/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0NGNkZDMkJFODU2NUU3NUEwMTJDRkMwME/QzQTMwNTA3Qzc3MjM3N0Q3RUNCQkVCMzNBMDA0N0I0RjY5QzBGREEucG5n.png",
-     "url": "https://www.lidl.nl/p/paprikamix/p82586",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpf536ea08ada4469787f12f88edf75872.png",
+     "url": "https://www.lidl.nl/p/paprikamix/p11151119",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Passievrucht",
@@ -1084,11 +1315,18 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Passievruchten",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2be18060b1404528b82590bad038b370.png",
+     "url": "https://www.lidl.nl/p/passievruchten/p11150931",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Perssinaasappels",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/wiqN6O16ReUwJUGlvU03gsXlrGy1e_qxtxmw9A_9Ius/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84MzQ3RTI1Mzc1RjIyOEJCNjY0RDU5OEU/wQkY4NUU3RDAwRjA4NzRENTY2QjJFNUZFRjAyQTMzMTFDOEZGMDJELmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/perssinaasappels/p80157",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpf9d235d4969949428724d1af273d482b.png",
+     "url": "https://www.lidl.nl/p/perssinaasappels/p11030093",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Perzik-sinaasappelnektar",
@@ -1100,9 +1338,16 @@
     {
      "name": "Peulen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/IMv1ju-EC5IRKrqo8mqfR99fBgPoE_Drgdf3d8Unqhk/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wQjIxNjNEOUFFQzdDQkE0ODRCMjc0Q0Y/xRDlBODRDOTNCNjMxMEQwMDZDRTk5MTA0RDFDQTg0QkUwNjcwOTEwLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/peulen/p82358",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp025460c21e73449a8fa123a34b1dd7d6.png",
+     "url": "https://www.lidl.nl/p/peulen/p11151079",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Pink Lady appel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp1cc7d32427fb41bda217b0679b416d47.png",
+     "url": "https://www.lidl.nl/p/pink-lady-appel/p11030098",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Pink Lady appels",
@@ -1121,9 +1366,9 @@
     {
      "name": "Pitloze witte druiven",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/YCQb6eMh9ocWx7DnZKkBxyCyPeTWW5Mqb0iLsU1PAL4/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8zODFFNUNGNzJGM0M0Q0RDQjQzNTM1NkE/1Q0RGQzVENTk3MzRBRTBCMTFFM0JDQUZBRDhEMDNGMUU0REJBMDU3LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/pitloze-witte-druiven/p80505",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp64b3e569ac704796afba66be0179c9eb.png",
+     "url": "https://www.lidl.nl/p/pitloze-witte-druiven/p11030020",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Pomelo",
@@ -1149,9 +1394,9 @@
     {
      "name": "Prei",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/HiuqmP0Q1_HV3R1mdWKtcQHJZZdrzqdDtlhhxPQwEQg/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzgzMjNFMjI1MDY1NDU1MDZFMjE2MUIwMD/RCNkIzRjI0NDUyNENERDRCNzlENjlEODNFRjIwMjQ3MjM1MDRDMzIucG5n.png",
-     "url": "https://www.lidl.nl/p/prei/p82256",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp49525428bc494ad9bb64f09c0e428b7e.png",
+     "url": "https://www.lidl.nl/p/prei/p11029706",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Prei fijngesneden",
@@ -1159,13 +1404,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/Q6z7YVGTGvZmXFq_itDKcNmFoUSEjOyu9KvR3DJk_ng/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS83QUYyMUFBRjZBQzZFRDIzQkZDREYwOUY/0QThDMjczRTg3MUY4M0E1Mjc0NjBGQTk2MzRFMDdGNkE5Mzg1MjQyLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/prei-fijngesneden/p10012434",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Premium druiven crunchy dream",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/premium-druiven-crunchy-dream/p11318548",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Premium pitloze blauwe druiven",
@@ -1177,9 +1415,9 @@
     {
      "name": "Pruimen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/RDEoLQqKLgG8c9ViVcRa-L8434qJ-6dYTMCImqTptM0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82NDYzREQ3Q0Q5OEZBQkExNDQzQjREREZ/GOUFGQzJCQzIzRjZDMDlCQkZEREI2QkFENEY4QUVFQUVCQUY4Q0QwLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/pruimen/p80410",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpf695c857dad9454d80798d59c4bbfe94.png",
+     "url": "https://www.lidl.nl/p/pruimen/p11150867",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Puntpaprikamix",
@@ -1210,6 +1448,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Ready to Eat mango's",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp11bd87fd277b47599da0be7c5750689c.png",
+     "url": "https://www.lidl.nl/p/ready-to-eat-mango-s/p11150929",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Red Pearl cocktailtomaten",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/800XunzalRGre77NMEecGr75mhvRiea-DkvVK0LAhuQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9ENjU3NTM2OENFNjQxQTczM0U0NzVGMkN/DOTYwMThDNDIwNUQ3OTQxMDY4RjE1MjI2QjNGQzJEM0YzNUQxMEI0LmpwZw.jpg",
@@ -1229,6 +1474,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/RamC_oOWJ6P0hoRoachC9uPrXCHHBfP4LOEqGEqPICg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CREI4MkE0MUZFMjIxN0UzRDQ4MThDMDR/BNzlCRkYwNjgxRjkxMjZGREQ2MUExMjBGRjgxQTYzODk3QTU3MDdGLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/snack-day-rockers-paprika/p10009280",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Rode appels",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp225d953907874133a6113f4763b4671a.png",
+     "url": "https://www.lidl.nl/p/rode-appels/p11029914",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Rode bieten",
@@ -1268,9 +1520,9 @@
     {
      "name": "Rode kool",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/BjWZa1vB6n9CFuY2Aly6Er_X4FSmVcK4fPx01XzULjA/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzgzOUMyN0IzOUUyNTRBMDRCRTBFODM0QU/IyMDE0NzdFNUI0MzIyMUQ1RTcxMDcyOTlENzM3MjM4MjgyMTdFNjUucG5n.png",
-     "url": "https://www.lidl.nl/p/rode-kool/p82946",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp29b0d10b3f6f479b91c6aee815eb4625.png",
+     "url": "https://www.lidl.nl/p/rode-kool/p11266561",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Rode kool met appel",
@@ -1292,6 +1544,20 @@
      "image": "https://imgproxy-retcat.assets.schwarz/j5GNDhxQI1LKciDLVB_JbolsZwAh_6gJJVi0Og_a5q0/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0NEMDdBOTIzNERBQzhBQzhBOTdGODQ1RE/ZDOEE0QkFFRTZCQjNENTc3N0E2MkQyOEMzMjA3NjAzOTlCOUZFNEMucG5n.png",
      "url": "https://www.lidl.nl/p/rode-paprika/p82615",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Rode pitloze druiven",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp36ee5ae73b7c4b458bd2968cc4dc3626.png",
+     "url": "https://www.lidl.nl/p/rode-pitloze-druiven/p11150885",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Rode snacktomaten",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2221b9476aca4d55af192d5fc53be83c.png",
+     "url": "https://www.lidl.nl/p/rode-snacktomaten/p11029802",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Rode uien",
@@ -1336,13 +1602,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Ruby dream druiven",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/ruby-dream-druiven/p11491929",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Rucola",
      "brand": "Chef Select",
      "image": "https://imgproxy-retcat.assets.schwarz/tjTXmKxY8Y4WApNMO-PfSBGDXrSDz3xkdrtHMYch0Lg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80NTI5NDgzM0JDMTJBNEJDRURBNTRGQzR/BMzBBNkIyNjQ2MTIyM0U2MDBDN0M0NzU4ODM4MDc0MTdDRUIwNTk4LmpwZw.jpg",
@@ -1373,9 +1632,9 @@
     {
      "name": "Sjalotten",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/sjalotten/p11151148",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/hiwdc6sEbbNftpho3DxUmxTzNwxr9ImtLZ-KeW16ZO4/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0ZGQzFDRDEyNDVGMTA0RUUyQjg3NzIwRT/gxMzgzRUVFQzA4RDFEQkYwNUY4MkQ1NDkzMTg5MThBNjY0MUFFM0UucG5n.png",
+     "url": "https://www.lidl.nl/p/sjalotten/p82833",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Slamix",
@@ -1390,6 +1649,20 @@
      "image": "https://imgproxy-retcat.assets.schwarz/IoOE8v5UrLISLdsqE-DR_xtCWuq4yOa0e16SgAfi4yk/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CNDVDOEJDQjU2RjQzMTI2N0JDMjdENUY/4NDY2MEFBQTEzOTVCODJBQjUxOTc3OTM1MjUwNThEMjk0RjExRjUzLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/snackboontjes/p6605110",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Snackpaprikamix",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpa8d7438266b44c51ac023d8c652d513c.png",
+     "url": "https://www.lidl.nl/p/snackpaprikamix/p11214452",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Snacktomatenmix",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp96832d2457cb422280c673c1f2244e6c.png",
+     "url": "https://www.lidl.nl/p/snacktomatenmix/p11151110",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Snijbonen gesneden",
@@ -1408,9 +1681,9 @@
     {
      "name": "Sperziebonen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/piYQVAfSymCHUx9t9P9FyrK2YGW8AMFPmOaaMFjWx8E/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84QzVGNzc0NDU2MTgyQTdGRTM4MkM0QTI/yQjZBRjgwM0NFNEY5QUI5Qjk3ODYxNjM3QjhBNTQ1MjAyNTQ0NEI2LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/sperziebonen/p180757",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpcbabd88592df44a993a66415aec2ab9e.png",
+     "url": "https://www.lidl.nl/p/sperziebonen/p11029858",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Sperziebonen gebroken",
@@ -1436,16 +1709,9 @@
     {
      "name": "Spruiten",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/spruiten/p11214362",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Spruitjes geschoond",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/spruitjes-geschoond/p11308128",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/y6D8mke4Y-egKtl8NDjrCVmrxylNBc9hM-F7itbZks8/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0MxRUU5RDlDRjEwMkQ0RjhDRkEyMTk1OD/NEQTY3OUJBOUJGMUE1NEJGQjhFNTYzNUNERUZERkE3RURDREM5RkMucG5n.png",
+     "url": "https://www.lidl.nl/p/spruiten/p82932",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Sugar snaps",
@@ -1453,6 +1719,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/wg5VXuyJddJS61Sg0gLnH_ouOW-ziHhxIaQwC-Fg37A/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzBBRDREQzdCRTcxQTFFMEE2RjAwRTFDMj/YxNkI1MTFDRUVGQjA5RDQzOTA1RDQwM0ZERDQ5QkYyNjJBNjlDN0MucG5n.png",
      "url": "https://www.lidl.nl/p/sugar-snaps/p82222",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Taksi tropisch fruit",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp03375878b26a4bc198b66e281799c51e.png",
+     "url": "https://www.lidl.nl/p/taksi-tropisch-fruit/p11323444",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Taugé",
@@ -1492,9 +1765,9 @@
     {
      "name": "Trostomaten",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/0SUHXeI4usfM77mZYS1TtSES--PGbF3SfYiY2wcdVtw/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9ENjNCNEM3QUFBNDQzMjEzNDNBREJGNjk/2NDlFQUE5REU1QkFBMkVGNzNDREEzMUY4MDY4RkQ1MzFGRTZENjk4LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/trostomaten/p82465",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpf44808795aa74a6fabc189610cc39c49.png",
+     "url": "https://www.lidl.nl/p/trostomaten/p11151101",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Uien",
@@ -1502,6 +1775,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/ylMtVVJj9IMl15rrxwLbT9Yo8n3U5Z0uclaeP1-ExZM/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzY3NUY3RUM0RDI2MkY3QjVDNTkzQjEyMj/Q4MkQ2M0M3M0U1RUE0NTRCQUU4M0M4MzkzNzBFOEUwNTk3RTI2MUIucG5n.png",
      "url": "https://www.lidl.nl/p/uien/p83366",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Uien rood",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpbddde67b39ba4c18a663711b70aa3511.png",
+     "url": "https://www.lidl.nl/p/uien-rood/p11151216",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Van de boerderij olijf & tomaat plakken",
@@ -1520,9 +1800,9 @@
     {
      "name": "Venkel",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/mslM-bK7DAFJQUaiutEVkVd9VGCYgE9KqV8IZ22Tgoo/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzMyMzgwNjA1NDczQ0EwMkE3MDI0MTg3N0/I2ODcyOEIzODMxREM4Q0IzMzE5QzMzRTMyM0NCNUI1RDAxMUY5NDkucG5n.png",
-     "url": "https://www.lidl.nl/p/venkel/p82689",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpe93cc9d58693454eadc8fbc832e5a05e.png",
+     "url": "https://www.lidl.nl/p/venkel/p11029714",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Verse aardappelgratin",
@@ -1562,9 +1842,9 @@
     {
      "name": "Waspeen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/BQgay413Zls_iyVkR5lvbkaiTyxZwXdT3ghzGVExVGw/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0VCOUI5NzlFNTREREE3OEVDQjE1QkZFQT/cxM0RENkJGMjQ3MEUwNDNBQzI3MUVBQTQyNUIwODQzRDk3NzJENEEucG5n.png",
-     "url": "https://www.lidl.nl/p/waspeen/p82759",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp4c654a3ec5fa4c9fa30c0fb26377a5bb.png",
+     "url": "https://www.lidl.nl/p/waspeen/p11151141",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Watermeloen",
@@ -1583,9 +1863,16 @@
     {
      "name": "Witlof",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/witlof/p11029764",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/DOiaHR0b6cWpyMJrxtSjU1_u_Jj72bhOXsv2RxN6cKs/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0NBQ0U3NDE5NkMwMzNGRkNGRjJDMkM3NT/gzQjhDRTgzOURBMDg0NjdGM0U5ODcxMTc0MUE1NzEyNTg5N0NEMUQucG5n.png",
+     "url": "https://www.lidl.nl/p/witlof/p82015",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Witte champignons",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp9c24fd539fc84427a7424b27adac5008.png",
+     "url": "https://www.lidl.nl/p/witte-champignons/p11214407",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Witte druiven",
@@ -1597,9 +1884,9 @@
     {
      "name": "Witte kool",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/D_UbGMgqaMLvNzcqiiOhQXFGQCnkMXeJY1zOCZmbSTU/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzZERkVCRjdFQURGMkZGNDk2RTRDNTBEQj/gzRDRFQUU3QjI0MjA4RENGMzFFMjJGM0I0Q0FFMjQ1NjlDQjA4NTcucG5n.png",
-     "url": "https://www.lidl.nl/p/witte-kool/p82956",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpad90b3ea424f4b0aafba4fffdd874c1a.png",
+     "url": "https://www.lidl.nl/p/witte-kool/p11235232",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Wortelen",
@@ -1623,6 +1910,20 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Zoete aardappels",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpb1007c70372547d082f244d967e09dd7.png",
+     "url": "https://www.lidl.nl/p/zoete-aardappels/p11150934",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Zoete puntpaprikamix",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpa7c45db86bdd4285b4ef73e9e58316d2.png",
+     "url": "https://www.lidl.nl/p/zoete-puntpaprikamix/p11029713",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Zoete rode puntpaprika",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/RQLA1T6QyV7EdA5yqKpgKyvBUBJS72qg_2MvvFGFrmU/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9ERTZDRDQwM0Q1MjNDNzg1NjA2ODlEM0Z/BQTg2Mjc5QjJDMDE3N0EwRDQ3OEFBNTM5M0NEMzBCRjY3RURFODE4LmpwZw.jpg",
@@ -1632,9 +1933,9 @@
     {
      "name": "Zoete romatomaatjes",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/UZU2qCuh8TDCmt3uxP0F2SwzV4G_SSLWmEU_UQHfuQ4/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8zQjk4MENGRTBEMzVDQUFEMjIwQ0YxQzc/2N0QxRUMzQjZCREEyQTcyRDlGMDNCQjIxMDdCNzcxNzcwNzE0RTZFLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/zoete-romatomaatjes/p82522",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpd17111cb727f425ab8cff7f745f8c2bc.png",
+     "url": "https://www.lidl.nl/p/zoete-romatomaatjes/p11029756",
+     "firstSeen": "2026-11-02"
     }
    ]
   },
@@ -1958,20 +2259,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Desem steenoven baguette meergranen",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/desem-steenoven-baguette-meergranen/p11327916",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Dulce de leche muffin",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dulce-de-leche-muffin/p11307880",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Dunne crackers",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/esp0953I82_h9ZEIbMBMulMwsvImF5fK6m-Z56l0KFQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BRUJBMzYyQTY1MDc2NERBNDVDRDUwNjN/CRTYxNjIyQTMxREM4MzQ2NTQ0NDZDQTc5RTk0QUVGRDUwQjEyMTlFLmpwZw.jpg",
@@ -2212,9 +2499,9 @@
     {
      "name": "Krentenbollen",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/krentenbollen/p11322236",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/VOrBcDYd5szi7HsXqqdVwKMAywAREe7mLDpj_kdXNpY/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9COUQ4MTU1QTI0MDk5NEY1RDQxRjQ3MEU/3QTgzRTQyRTFEOTQxNjEyRjhCQjBENzVDMTMzRDUxRkE3ODE5MEQxLmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/krentenbollen/p1847",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Kristalsuiker",
@@ -2222,6 +2509,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/rBMZ23Sh6pIehj5qXjrsGVcSmKP3usr8dXqT9_1LHUo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84RTNBQjBGREFCMTRFOTY2OTAyODYzQTQ/2MjQxRkFFOTM3RjczRThBRjA5QzNDNTdCMjQ2QzJEMUQ4M0FFN0U2LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/belbake-kristalsuiker/p96608357",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "LU mini crackers",
+     "brand": "Mondelez",
+     "image": "https://www.lidl.nl/assets/gcpca688f987a674ab98892d1d03ee0f12a.png",
+     "url": "https://www.lidl.nl/p/mondelez-lu-mini-crackers/p11677080",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Luxe crackers spelt",
@@ -2364,6 +2658,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Moon crackers",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp7122c36235b241d6a25916b674a65249.png",
+     "url": "https://www.lidl.nl/p/moon-crackers/p12230516",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Muffins",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/uZeYTgvsaXQgV8hh9IQL9q6DA7P1fbOP3fUXqvO-d78/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS85RDkyQkEyREM4NzZERjNEODhCODAxMEV/DM0UzQjRDQjhGMzdFRTA0QUQ2NTM1MUU3NTQzNEJFQUM0RDREQTRELmpwZw.jpg",
@@ -2413,6 +2714,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Party donuts",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp32411f6209a3443abcbd87fa402f68ec.png",
+     "url": "https://www.lidl.nl/p/party-donuts/p11003977",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Party toast",
      "brand": "Tastino",
      "image": "https://imgproxy-retcat.assets.schwarz/8DhrKMFSQreZS3Cm_DpU5KTRBmH5jP2R32sdGEkGBwA/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS85RUFENkI4MkFGMkMzNkI3NkM3NUY0OUY/4QjQ3N0Q0NUQ1M0I3N0M2MTRGNkY1ODZFNDlFQTEwN0M1QThFMzJGLmpwZw.jpg",
@@ -2432,13 +2740,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/WbEyhWAm1aEyEvp-v7GA3OvOCXITmULjC1QHqwcSqkw/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xMTdCNkJERjFCNDg1QjRGOERGRjQyNkE/5ODZFM0YzNDY4RTAwRDJFOTU5RUI4NzlCMzJCQjI5ODc0MjRBRkM1LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/pecannotenbroodje/p23786",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Pinky donuts",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/pinky-donuts/p11003978",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Pistolet wit",
@@ -2478,9 +2779,9 @@
     {
      "name": "Pompoenpitbroodje",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/vtcU7Cfuv69dgZ6ytawMRNyTH3SV_VyiLp2NcUZtZjw/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CRkM2QTJGRTk0RUJGNDNFRjQxMENFOTB/FMEEyOEZCNTNBRDBFMDk2QjJDQTQzREYyNDI1M0UyRDE3RjZFOUEzLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/pompoenpitbroodje/p92782",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp129cf15f980f43a3b182980dac8d3e90.png",
+     "url": "https://www.lidl.nl/p/pompoenpitbroodje/p11151395",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Reuze rozijnenkrentenbollen",
@@ -2504,6 +2805,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Roomboter cake",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpfc87776738ad4f8eb5ccdd92295caded.png",
+     "url": "https://www.lidl.nl/p/roomboter-cake/p11809270",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Roomboter cakejes",
      "brand": "Sondey",
      "image": "https://imgproxy-retcat.assets.schwarz/Z9iFhfjacvAakrS5m-CCAf3E2Yau1q_oJsgEcBX8qNE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8yOUQxMjkyMkI5NDA0OTU0NzE0M0VDQzM/5QzBDRDY0NTBEMTg2REU2QzYwMjA4M0FEODY1QUZDMTA4MDQ5RDJELmpwZw.jpg",
@@ -2525,6 +2833,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Roombotercroissant",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp16701a1c9bfa4669b859dfb8ef5a6791.png",
+     "url": "https://www.lidl.nl/p/roombotercroissant/p11001365",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Roomboterpuntjes",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/nym6Zl68BUSjKSWZwKGrfNZYstNWg82gE1dGZxVbiDg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82OURGMTU4M0Y1RTk2Mzg4NUYzNjcwRjB/EMDlBNDhFOUJCQzQ1QzM2ODMyOEIyMDdCRjQxRTQ3Q0QyRjE1MzNDLmpwZw.jpg",
@@ -2537,6 +2852,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/k4ONh9sEirmZA1KTAPwFJSaS6fWs5enBpShyLl8XIKo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzNGNDA4QjlBQjFDRTQ5Qjc3Rjg4Q0FFMT/dEQ0UwRkQ4MjQwMTE4ODg1OTIzMEI5NTBFODcxMkQ2NjY0NzE0NDEucG5n.png",
      "url": "https://www.lidl.nl/p/le-patissier-roze-tompoucen/p10001942",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Rozijnen krentenbrood",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp1069d189e525468b894f971c9f4d68a2.png",
+     "url": "https://www.lidl.nl/p/rozijnen-krentenbrood/p11559160",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Rozijnenkrentenbrood",
@@ -2583,9 +2905,9 @@
     {
      "name": "Saucijzenbroodje",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/saucijzenbroodje/p11303601",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/GL3TE73Pjypx5lyJKQZS2Y3AxkDo4S7xDc1OQ2IQ2RE/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CNkM2OUQ2NTg2NkMyRUE2REQ3RDIzREQ/wQUQ1NDRBODkzMTU2NkQzQzA3NzJEQjZGMzlGNEJEMEE5Qjc5QTc4LmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/saucijzenbroodje/p16603493",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Schnittbroodje",
@@ -2875,6 +3197,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Witte tijgergarnalen",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2353a63e9548403aaae9eae6b9193d17.png",
+     "url": "https://www.lidl.nl/p/witte-tijgergarnalen/p11332611",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Worstenbroodje",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/ugUUUx6_rnbxEDRHHiibT84tlqMRV8HjmqiVfyDeB48/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wMkUxRDU1Q0E1OEQ4RDI3QTdENkI2REQ/2QUJDOUJGRjlERjY4RDI4MkQ5NDlEOEEwRTYxMjRBRENGMTAwNzQxLmpwZw.jpg",
@@ -3072,16 +3401,16 @@
     {
      "name": "Braadworsten",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/braadworsten/p11558768",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/alNL6k4blS7vNhupw79L9sveSjufsrooPR8g3eJlZl4/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wNTJEOTM5NzVGNzA1MDZBRkZCNjA2NUI/0OTk3M0U5RTgwQkExNjhDRDA1NkQ1MUVEOUFCM0RDQkM3QjRERjhDLmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/braadworsten/p44931",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Carpaccio",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/jhm5xlqfNhIISp17Hhc6nJ8mET2stCnvWDnevBzSyYE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CRUZCNkI4OUY2NjlBMjY0NzQ3RDM2Q0M/1Q0IwM0UyRUVDQTE5MzA5MUM1QjM3NTU0NjZFMTY1RkY5NzE4MzQzLmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/carpaccio/p42480",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpd7448c99d1a543f1909044fc7ac5b65b.png",
+     "url": "https://www.lidl.nl/p/carpaccio/p11558792",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Casselerrib",
@@ -3166,6 +3495,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/O-WHckBeEeSN9r9nT8XNRV5GkzCtZCSaz3SKvSXPf9o/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzRGNjIzQTE0QTcyQzBEREZGN0ZEQzdGME/I5NzYxRjVCNDJCRTkzQzE0MTJFMUUxRUVGNDBFMjM0ODdENjZEMzAucG5n.png",
      "url": "https://www.lidl.nl/p/gebraden-kipfilet/p10002135",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Gehakt cordon bleu",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp4f3efbfc31e44f989901c765050e093a.png",
+     "url": "https://www.lidl.nl/p/gehakt-cordon-bleu/p11558696",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Gehakt cordonbleus",
@@ -3371,11 +3707,39 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Gerookte zalm",
+     "brand": "Nautica",
+     "image": "https://www.lidl.nl/assets/gcpac8d77be5fdb4071bef12483ce104851.png",
+     "url": "https://www.lidl.nl/p/nautica-gerookte-zalm/p11150509",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Gestoofd vlees in pot",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/zXqXQjLRb-lhvE4rbCVJ7-2wi8PVMm5PryGGcEf_jt8/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJDNTAwNkIwQ0MwNkNCNjYyRDlGNTJEMz/NCRDE1MThFMDI4QUQ4QzFERjI1RjI4NEVCMkUwMERCREJDNjlGNzcucG5n.png",
      "url": "https://www.lidl.nl/p/gestoofd-vlees-in-pot/p10014707",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Gourmetmini knoflookgarnalen",
+     "brand": "Deluxe",
+     "image": "https://www.lidl.nl/assets/gcp1a94bafbd48648d496f38cc7bb966131.png",
+     "url": "https://www.lidl.nl/p/gourmetmini-knoflookgarnalen/p11309649",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Gourmetmini varkenshaas gemarineerd",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp5bd7ab478fec40bd951534190d5a0215.png",
+     "url": "https://www.lidl.nl/p/gourmetmini-varkenshaas-gemarineerd/p11699558",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Gourmetmini vlees",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp536bad1697564b2e9ab55dc3ce586217.png",
+     "url": "https://www.lidl.nl/p/gourmetmini-vlees/p11698981",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Grillburgers",
@@ -3576,9 +3940,9 @@
     {
      "name": "Kipfilet",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/kipfilet/p11318025",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/FAWGMK9ecneMgivLGLx8wj_G9oRku5hmilfkZ4_duZs/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GMjA0N0Q1MzQyRjM2RURBMDg0QkM5M0I/xMjRBQjc5NkQ0Mzk5MjhCOEU3RkJBRkUzM0RCNkVERkRGQjI1RUI0LmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/kipfilet/p125741",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Kipfilet à la minute",
@@ -3632,9 +3996,9 @@
     {
      "name": "Kipfiletblokjes",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/FmMq7paqcQuEVTcWt5g0h53-8-v9dxVvtVOO_fTAA34/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9DMTIxMzVFQkNDQUY0REZFQTE2NDgzRkE/5NkM2NzQzNEQ0NUZEM0JFMUI0MTk4Q0QwQkUzQzAyQzIyMjU5RDg5LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/kipfiletblokjes/p125743",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcpdd6dadcb7283434d8c32e041128f12a5.png",
+     "url": "https://www.lidl.nl/p/kipfiletblokjes/p11353743",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Kipfiletblokjes grootverpakking",
@@ -3847,18 +4211,39 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Mini chipolataworstjes",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2d4cbd44e3e84bcdbf297b0d62838371.png",
+     "url": "https://www.lidl.nl/p/mini-chipolataworstjes/p11318050",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini hamburgers",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp224a7910e19c43bdb0430e757cf0c69d.png",
+     "url": "https://www.lidl.nl/p/mini-hamburgers/p11318053",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini kipkrokant schnitzel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp762a9e965d1744f38d603fdfad3614da.png",
+     "url": "https://www.lidl.nl/p/mini-kipkrokant-schnitzel/p11317792",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Mini slavinken",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp5029e518e0db455ab7cb1111b8c9ba44.png",
+     "url": "https://www.lidl.nl/p/mini-slavinken/p11318051",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Noordzee garnalen",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/Eh_9wDDlH0ZynNbrX2BNb5P9f1AlmWmUvOcAq32_m00/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9EMDM4NDgyREUyMTdFNENGMzExNjQ1Mzd/DOEQwMkE4Q0U4NUZFRkEzRDY0ODg5MTRGMDEyMUM1N0M4NUVGMTYwLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/noordzee-garnalen/p136916",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Ocean sea gerookte zalm",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/ocean-sea-gerookte-zalm/p11001517",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Ontbijtspek",
@@ -4169,18 +4554,11 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Rundvlees hamburgers",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/rundvlees-hamburgers/p11317916",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Rundvleeshamburgers",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/rNyxGoN_yNObhzkiKvZKQWbOvTAiWUyztkgO7SIMLkI/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82OTEzNTU4MTExNEY3NzFCOUE2NzgyNjg/1MjM1RDQyRkM1QzUyNzI4RkIyMTE3QkM1MzQ5OTA0MTc1NkVCMUM0LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/rundvleeshamburgers/p44809",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpc24246d348504b65ad16f5a6ee49b682.png",
+     "url": "https://www.lidl.nl/p/rundvleeshamburgers/p11558237",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Saladereepjes kip",
@@ -4276,16 +4654,16 @@
     {
      "name": "Schouderkarbonade",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/schouderkarbonade/p11317683",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/azq1ZNlzQ3eCmSCW5QdTgL0g3CaIfpveqfXpUdOR_hE/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GMUVBOUE1NjNBNDI3QzNDOTQwQzlEREV/EQkM0NEZDOTE3RUZEOUE5QTQ4OTczQTQ1MTI3MTExMUVCOTVBRTExLmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/schouderkarbonade/p2076",
+     "firstSeen": "2026-11-02"
     },
     {
-     "name": "Slavink hybride",
+     "name": "Shoarma",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/slavink-hybride/p11322576",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcp67e052505faf46778932eb7fd580128a.png",
+     "url": "https://www.lidl.nl/p/shoarma/p11558736",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Slavinken",
@@ -4318,9 +4696,9 @@
     {
      "name": "Speklapjes",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/speklapjes/p11317877",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/7CN5t7oi47GiyS3e6osoUa60ML9mNrjJd-fmmjf-ELM/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0IyNUMxOUUxMUUxM0UzNzQ2ODFENjY3Mj/A2OUEzRDA2QjBDODM4Njk2NjA1NjNFMjJGMEVDRTkwQkRDRTEyODMucG5n.png",
+     "url": "https://www.lidl.nl/p/speklapjes/p2109",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Spekreepjes",
@@ -4575,13 +4953,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Zigeunergehaktschnitzel",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/zigeunergehaktschnitzel/p11317655",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Zigeunerschnitzels",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/w-gCpP477EocTAsoUDWCeQnSIyjnDQeYI022hR34Ohg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wMDNCMDBDN0UyRTM0MzRCQzY0MzVBRTR/DNThENDAzMTlCQzcxOUJBNEU4QTIyN0U0ODA3RDI1NjgxRTkyNkQ2LmpwZw.jpg",
@@ -4608,13 +4979,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/FLBhR5cqZd7pEj8ONET6PTonuocYNFNyy9oJj4BjvJs/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wNzA5QUI3RkZBNDY5RTg0NTUxNTM1RjQ/xMkJEM0ZDOEM3MUQ3OUM5NzNENTUwQTQyOTY3MjM3ODhCMTUyQzFELmpwZw.jpg",
      "url": "https://www.lidl.nl/p/zuid-amerikaanse-ribeye/p44820",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Zwagerman verse rookworst",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/zwagerman-verse-rookworst/p11322143",
-     "firstSeen": "2026-10-26"
     }
    ]
   },
@@ -4691,13 +5055,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/S03MUB-SD5MPDSlw-95Ryk3ST37tspMKXGBKH2mLwBs/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzEzRDU3NTNDODdFMDBBN0E0NzI2NUNERT/M5MjI5RDdGMjkxRjUxM0ExM0REM0MzNjA2MkNCRDRGQTc5QjcxQkUucG5n.png",
      "url": "https://www.lidl.nl/p/beenham-flinterdun/p10017280",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Belbake schenkstroop",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/belbake-schenkstroop/p11317678",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Berliner leverworst",
@@ -5099,13 +5456,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Heinz de ruijter hagelslag",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/heinz-de-ruijter-hagelslag/p11316282",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Jamon Iberico",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/40kjmaTGpp5D1klKtxg6aisH5nKVm_3q3Zk1jSHfhw8/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS85QjI2MjVGRUY1OUE0OTA0NkUxQUE3OEU/0QTgyRkZCQzI0NEE2RTlEMUY1ODE1ODEwNzI3RUI3RTAzMkYwQ0E1LmpwZw.jpg",
@@ -5157,9 +5507,9 @@
     {
      "name": "Nutella",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/nutella/p11322505",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/R9Ib2TiaC0xZq3fcEBqrFbiVC_AUVB7I2REXdBP7tu0/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9DNkM0NjhENkFBNTA1MkQwRkRFQ0M4RkY/wRkY5Q0Y5QkNEQTAzQkRDNDIyRTVDRjVGM0JBQTc2MzI2M0Y4M0ZDLmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/nutella/p6610908",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Ossenworst",
@@ -5316,6 +5666,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Slagersachterham",
+     "brand": "Zwagerman",
+     "image": "https://www.lidl.nl/assets/gcp87bb163fc14e476fb81a7f613af1a1c0.png",
+     "url": "https://www.lidl.nl/p/zwagerman-slagersachterham/p11322224",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Slagersham",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/UvgQ2xlzbF8ezUoWMuMCMz7u4IAVvWryY1LDnt66tNI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9FRTNGNUUyMUYzQjlBRjY4Qjc2ODEyREY/zOTI3MDc1RkYwNzMzOTY2QjUyNjgzMUE2NEMzQzY1NjdCNEQxNjZDLmpwZw.jpg",
@@ -5372,6 +5729,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Walnoten honing broodje",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp1e24a1e4c80a4fcdbf20d496530d8410.png",
+     "url": "https://www.lidl.nl/p/walnoten-honing-broodje/p11000155",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Woudhoning",
      "brand": "Maribel",
      "image": "https://imgproxy-retcat.assets.schwarz/9JmnoRZ4lzYBkvF-PGr5aUddfMcaRQDPEcqI4qGlHfs/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS85NzJBNjU0NUIzNTA4REY1MUI5NTg3NTI/3NUZDMkFENUQ2M0M0MUM0QjIwREU1NkI4REFGMzg1ODVERTFDNzMyLmpwZw.jpg",
@@ -5419,20 +5783,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/2_DnxA6-DYpLZI0LFLyVVuBnE0gw4EevIZ24AQsWyPI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82QzE0REQ0Q0NCMEU5Q0Y4MTdCNkUxMzg/4MUVGMDg0RUI3RUQ0OTBFRUI1MTM4RjJCQzY2RkYxNTRFOTUxNzdDLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/zuivelspread-light/p1378543",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Zwagerman achterham",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/zwagerman-achterham/p11317728",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Zwagerman runderrookvlees",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/zwagerman-runderrookvlees/p11558847",
-     "firstSeen": "2026-10-26"
     }
    ]
   },
@@ -5775,6 +6125,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/4KvEszQbcviSvVnnLZTGNLsZZUs9M4pCd2jM1Eurcjs/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80RkMxQkQyNDkxNzQzOTU5RjU2QTBFMkE/yOThEOTIxRDNBMDI5OTQ0MjYyMEQ4N0JGOUMwQ0M3M0FDQzhGOUY0LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/geitenkaasschijfjes-honing/p66029362",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Geraspte Goudse kaas jong belegen 48+",
+     "brand": "Milbona",
+     "image": "https://www.lidl.nl/assets/gcp200174695a0946f6a64476ec051f5027.png",
+     "url": "https://www.lidl.nl/p/milbona-geraspte-goudse-kaas-jong-belegen-48/p11348843",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Geraspte kaas",
@@ -6260,6 +6617,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Kaas-ui broodje",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpcf58ebbc0d724e409a81d27de6ca04c9.png",
+     "url": "https://www.lidl.nl/p/kaas-ui-broodje/p11403144",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Kaasblokjes",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/rwoHV5YWCH7uahsbxB6d9mWL0a1EDNqPqFIi3X8vMTQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0Q1RUMwRjAwRTU2NzZEQzdFRDA1MzU0OD/E2NDVCOEZFRTlGOUQyQjA4QjM3MkZFMUMyRjAxMEU3MDUyQjcyNzgucG5n.png",
@@ -6407,6 +6771,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Lay's Sensations cheddar",
+     "brand": "PEPSI",
+     "image": "https://www.lidl.nl/assets/gcp12222f1514ef47d881511ee99e2875de.png",
+     "url": "https://www.lidl.nl/p/pepsi-lay-s-sensations-cheddar/p11688709",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Leverkaas",
      "brand": "Zwagerman",
      "image": "https://imgproxy-retcat.assets.schwarz/iY-Jy1c18j-zeEx4B6H2lQmdUdlSgO5_HonE-Lc5nvQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS81RDk0QTdEM0IxMTU3NzUzMTk2MDg4OTY/5RTA0MDM0OUQ3NjNEQTJDMTdDRjYwM0VDNUYyQTBEMzYzOTBEMDUwLmpwZw.jpg",
@@ -6454,13 +6825,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/KSZ8nBJm5lbEsiwD52RvO5gSAC8gLRhwK7NEyX-TjDI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BREI1MUEzQzMzODU4RTZEQjBDMDBBNUZ/FMDdGNjczNzUzNDJCQTZDMDA3OTgxRjIwODE5OUFDRkYwREY2OTczLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/mascarpone-chilidip/p6608297",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Milbona plakken goudse jong belegen kaas",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/milbona-plakken-goudse-jong-belegen-kaas/p11323338",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Mini mozzarella",
@@ -6566,6 +6930,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/XKiZGpqwu136MwOztYCoiH10KPUIrYbJEg36TWR5vNg/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9EQTBDRUZBM0U1OTJFQUM5QzJEMDY0ODl/GNzY5QUE1RTQ3QUQ4MzJEQzNFMTYyMDI4OTQzMTk0MkRGMTQwQTFELmpwZw.jpg",
      "url": "https://www.lidl.nl/p/pecorino-romano/p6611396",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Pinsa mozzarella & pesto",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpcf1fd7fac9bb44daa0d547fff0aea40f.png",
+     "url": "https://www.lidl.nl/p/pinsa-mozzarella-pesto/p11254928",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Plakken belegen goudse kaas",
@@ -7946,6 +8317,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Skyr naturel",
+     "brand": "Milbona",
+     "image": "https://www.lidl.nl/assets/gcp453c4e1975f04072819710c56cbf5cac.png",
+     "url": "https://www.lidl.nl/p/milbona-skyr-naturel/p11007752",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Skyr to go",
      "brand": "Milbona",
      "image": "https://imgproxy-retcat.assets.schwarz/hNxmXAYw1WlLgptqRtDm1noUbza5mWUnAsjsufwiTQU/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9EMUFBOTZGNURGNTM5ODZEMTY1QUZGRTV/FMzgwMjNEQTJFRDRFMzJFOTJCQ0QzMUUyOTg4RDJCRUJGRjY3MjE2LmpwZw.jpg",
@@ -8393,39 +8771,18 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Chef select fijngesneden boerenkool",
+     "name": "Brood- en toastsalade ei",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/chef-select-fijngesneden-boerenkool/p11308114",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcp06806ab689f0494db0eb239fe941e639.png",
+     "url": "https://www.lidl.nl/p/brood-en-toastsalade-ei/p11563466",
+     "firstSeen": "2026-11-02"
     },
     {
-     "name": "Chef select hutspot",
+     "name": "Brood- en toastsalade kip kerrie",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/chef-select-hutspot/p11308118",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Chef select kapsalon",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/chef-select-kapsalon/p11560831",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Chef select stamppotaardappelen",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/chef-select-stamppotaardappelen/p11322150",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Chef select you andijvie",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/chef-select-you-andijvie/p11558675",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpf5da41090fc548d8914aca843eb87408.png",
+     "url": "https://www.lidl.nl/p/brood-en-toastsalade-kip-kerrie/p11563408",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Chicken wings",
@@ -8624,6 +8981,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Kipgourmetschotel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpb71670f590c64bc9bf3666c1d7bf9d06.png",
+     "url": "https://www.lidl.nl/p/kipgourmetschotel/p11317917",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Knorr Wereldgerechten Chinese kantonese kip XL",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/Tjp_T5a1LS_naTseS8zvA8ewH4Twgqsra_XfWVOIA-o/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BNjVERDExMjZBMTQwNjAyN0JGRTYzNjg/4QjNBOTg2OEJCMkVDMjYzODcyNzQwMTQwN0YyRTY4ODUwQzEzRUY2LmpwZw.jpg",
@@ -8664,6 +9028,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/eep7PfsHGynqxarOrJjTc2qs1QcIb3WAXB5-vU_B3Y8/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzYyQUU2RkU1NkUzRDFDN0JEQkM5NUZBOU/E0NTczOTMwQkMwREUwRTUzRjQ3QzZCQjc0M0MzNkZBNDNBN0FFMTUucG5n.png",
      "url": "https://www.lidl.nl/p/kania-lasagnesausmix/p10013613",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Luxe gourmetschotel",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpd8c23ade68be4e30a827b1c32defbff2.png",
+     "url": "https://www.lidl.nl/p/deluxe-luxe-gourmetschotel/p11317754",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Maaltijdmix lasagne of lasagnette",
@@ -9016,6 +9387,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Stamppotaardappelen",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp6e4336150e954ba5bac29fbdc3d2db31.png",
+     "url": "https://www.lidl.nl/p/stamppotaardappelen/p11322150",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Stamppotaardappels",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/Z-KnX5lFPFdJ-5YfSNFHJzl3OjyuFo7TEdm9cJZ2ndM/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0Y3QkY0QzE1NUI0MUQwQUI4OUM2OEY4MU/IyQTQwQ0MxQjMwM0MxRDlDNDFCNDU0QzYxREY3RjhCNjdBRjA2NTAucG5n.png",
@@ -9224,6 +9602,20 @@
      "image": "https://www.lidl.nl/assets/gcpc4e80524690c4bc78e09e307512f4776.png",
      "url": "https://www.lidl.nl/p/verspakket-ovenschotel-prei-kerrie/p11316568",
      "firstSeen": "2026-10-26"
+    },
+    {
+     "name": "Vleesgourmetschotel",
+     "brand": "Deluxe",
+     "image": "https://www.lidl.nl/assets/gcp985ba0320da14096804bfa6110743a7b.png",
+     "url": "https://www.lidl.nl/p/deluxe-vleesgourmetschotel/p11562253",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Wienerschitzels",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcpa932154ae52949fb8cc9438366b55585.png",
+     "url": "https://www.lidl.nl/p/chef-select-wienerschitzels/p11329471",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Wokgemak Italiaans",
@@ -9482,6 +9874,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/sFG_5yRbtB5krMcqNapC0yBVuk1ZgRVFNBADbY1b9pI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS81Qjc4NTQ3OEE1REMxNDA5QTk5RTNCQUE/1Nzc1RTYxNDkwQTExODU5OTE3MTMzNzRCOUMwQTk3NjlFRUNFRDA5LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/mienestjes/p5201588",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Mini krieltjes Indian curry",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp9f591fea8a774e9dbbebfd91baf44881.png",
+     "url": "https://www.lidl.nl/p/chef-select-mini-krieltjes-indian-curry/p11515081",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Mini loempia‘s",
@@ -9749,6 +10148,20 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Bio basilicum in pot",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpb5769aee25c74f7b9b75289f6e57cb0b.png",
+     "url": "https://www.lidl.nl/p/bio-basilicum-in-pot/p11151272",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Bio tijm in pot",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp6b0deb3387944ca2b254c463c88904d2.png",
+     "url": "https://www.lidl.nl/p/bio-tijm-in-pot/p11214317",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Biologische basilicum in pot",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/hap3_M10npf9Q-ES0ILX5dEDX4LtjTtjBDer3Fdq_0E/sm:1/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzBFRDE5QjRBQkU4Q0UyMUJFMUY2REM3MT/FCMjg5MTY3RTdEN0IzQjkwRjRCNDk3NEM4RTQyM0JERDAyQkMzRTQucG5n.png",
@@ -9814,9 +10227,9 @@
     {
      "name": "Fritessaus",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/fritessaus/p11323945",
-     "firstSeen": "2026-10-26"
+     "image": "https://imgproxy-retcat.assets.schwarz/jMdm7qGtwXy3OFnk20SplWTBz9DEgy5GndzbcB1wUzA/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzU0MTY0M0ExNDU1REQ0OEMxREE4RTk4NE/E0QkE3MzU3QUUzREZDRDZERDlBNDE3Q0QxM0Q3NzFGQTJCMzE3RjAucG5n.png",
+     "url": "https://www.lidl.nl/p/fritessaus/p6622",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Fritessaus halfvol",
@@ -10036,6 +10449,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Olijfolie classico",
+     "brand": "Primadonna",
+     "image": "https://www.lidl.nl/assets/gcp8d80645b432348c6bbd4db6ae7fc70d8.png",
+     "url": "https://www.lidl.nl/p/primadonna-olijfolie-classico/p11214278",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Olijfolie mild",
      "brand": "Primadonna",
      "image": "https://imgproxy-retcat.assets.schwarz/vGQ3uLOxHjzmRS4WQ6YBRt0IcoNzGKM9Ml43it1q0CQ/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8zRDEzQkE3QThCNTA3MDQwQTlCRTcxNTc/1RUU4MDZBMkQ5N0FGRUUxRUI4N0UxMjI5NUU2NUUyOUJFMzc1M0Q2LmpwZw.jpg",
@@ -10069,13 +10489,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/kuysyuxNtuvFSf8lqdMeDmo-D-TCPM4Jku4dlrI-Jug/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GMUQwMkE5NjY1MjY4Q0YzOUZGNEEzMTI/1RjI4M0QxMzZCNTk3QjdFQkVFRjZDMDNGODFGQjI2RDcxRDMyOTVBLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/pittige-kant-en-klare-satesaus/p10007956",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Primadonna olijfolie",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/primadonna-olijfolie/p11252724",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Proteïne poeder aardbei",
@@ -11090,27 +11503,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Bellarom espresso koffiebonen",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/bellarom-espresso-koffiebonen/p11208742",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Bellarom koffiebonen creme aroma",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/bellarom-koffiebonen-creme-aroma/p11208741",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Bellarom koffiebonen rood xxl",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/bellarom-koffiebonen-rood-xxl/p11209001",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Biologische gemalen koffie",
      "brand": "Fairglobe",
      "image": "https://imgproxy-retcat.assets.schwarz/qpq3-i7uHXH8dnej2GG6dlOxCufJjQ2sR9l1Z-RW2QE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wQzk4QUJBREIyNjE2NkEwMEU3NDE1RTV/GOUVDQTFBN0Y0MzA2NTFBQzlGOTNGMkE4NTY1RjI1QjVGOUVFNjhFLmpwZw.jpg",
@@ -11396,6 +11788,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/MsgvF1H6QHzTmOmSKh9GKprXU-KH_Ir-rbCL1m9Vuzo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzU3RDRFRkIzRDc3QzlFMkQ2Q0RCRjczNj/UwMzI2REFBQjAwNTRGMzU3NEVFOEIxQTJDQzc5REVFRkFENjNGODMucG5n.png",
      "url": "https://www.lidl.nl/p/l-or-koffiecups/p10017273",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Koffiecups",
+     "brand": "Bellarom",
+     "image": "https://www.lidl.nl/assets/gcpc2ba7991456c485a81331f86c0800268.png",
+     "url": "https://www.lidl.nl/p/bellarom-koffiecups/p11003639",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Koffiecups Bella Caffé café au lait",
@@ -12502,18 +12901,18 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "ALESTO",
-     "brand": "Alesto",
-     "image": "https://www.lidl.nl/assets/gcpd094e868bd58443884a745f51a3e1ac4.png",
-     "url": "https://www.lidl.nl/p/alesto/p11004957",
-     "firstSeen": "2026-10-26"
+     "name": "Alesto cashewnoten",
+     "brand": null,
+     "image": null,
+     "url": "https://www.lidl.nl/p/alesto-cashewnoten/p11002438",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Amandelen",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/WhGp9RyVHhdUcb7IX3RdagGy1Ozv2T0XyyJf-gFek64/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xQ0VFQ0NFNzkzNUNDRjgyREQ3MTFBMDc/4QjNFQzEyQzA0NkUwMkJBMjM5NTM4RUEyRjgzOUNENkVBMDg4OUE2LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/amandelen/p123652",
-     "firstSeen": "2026-04-13"
+     "image": "https://www.lidl.nl/assets/gcp3cd258ac1682415193c9e4838ad36776.png",
+     "url": "https://www.lidl.nl/p/alesto-amandelen/p11004055",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Amandelen ongezouten",
@@ -12521,6 +12920,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/jzYlYz2cXY774feDfqECuRGSqv-rqtE3rVtqPa_0vJ8/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82MUExRDE2RDY0RkFENzI1NkNEM0Q3MTI/4NUE5NDkzMDUwNTdEQTNBNDk4QjM2MEExRjZGQkM0RUJFQjgwMzhFLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/amandelen-ongezouten/p172897",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Appel noten pencee",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp5fa1c57550d84affa1f588fc4cf0ca54.png",
+     "url": "https://www.lidl.nl/p/appel-noten-pencee/p11559906",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Aziatische rijstzoutjes",
@@ -13720,6 +14126,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Pinza bodem",
+     "brand": "Tastino",
+     "image": "https://www.lidl.nl/assets/gcpfcb2b708b7394817903f22285935f18d.png",
+     "url": "https://www.lidl.nl/p/certossa-pinza-bodem/p11147498",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Pistachemix",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/STbuwBu_iZLkGGAxJE_q3ZY05_IfJRGZzzYjAFh-g3o/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS83Mzg2MkE3N0QxQkM0Q0JDNDY5MjRCOUM/3QzU3ODlDODgyQ0YxOUQzQTQzRjlENzBBOTY2MTBGQkVDRTBBNUIwLmpwZw.jpg",
@@ -13979,20 +14392,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Scharrelkipdrumsticks",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/scharrelkipdrumsticks/p11354646",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Scharrelkipdrumsticks gekruid",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/scharrelkipdrumsticks-gekruid/p11355030",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Snackmix",
      "brand": "Snack Day",
      "image": "https://imgproxy-retcat.assets.schwarz/24sevYu88SKHRVR3d-zSsBNKvJFmGFRcf4cvylrgxVI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wMUUyNTMwOEJCQ0Y1NkUxRUM2MDgwNkI/xQjNFMTVCOEEwMEQ3MUFEQjFBNzM2NEUzMTU1QzQ1MjIyODcxRTE2LmpwZw.jpg",
@@ -14103,13 +14502,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/V4et7d0pKtQeKyOWvXMcHK-95FRAcir43a-EMdwmxHM/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS85MzI0RTYzQzREQUI5MUNDM0I1QTIzRDQ/2M0Q1OTkwRDkzNTBEODYzMkI4ODIzQ0I5NDFDRjlFQzA2NjJFRkI3LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/suikerwafels/p7400013",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Sultana",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/sultana/p11561473",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Sultana bosvruchten 7-pack",
@@ -14398,6 +14790,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Coca-cola",
+     "brand": "COCA-COLA",
+     "image": "https://www.lidl.nl/assets/gcp825dad98a49844238affd5f2f9b33d61.png",
+     "url": "https://www.lidl.nl/p/coca-cola/p11006912",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Cola",
      "brand": "Freeway",
      "image": "https://imgproxy-retcat.assets.schwarz/xQp5-fUVYN4w3K-sCENavWuBsLq16eu0d4Juvbc2M8Q/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzhBMEQ0MEQ5Q0I3RUM2RjRDMTQ2NTE3MD/QwNENDRTc0NERBRDhGQTdGRDFBMzVDNUE2OTRFMUNGMDhBRjJBQjEucG5n.png",
@@ -14496,27 +14895,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Dubbelfrisss boost",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dubbelfrisss-boost/p11560478",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Dubbelfrisss boost ananas mango",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dubbelfrisss-boost-ananas-mango/p11559810",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Dubbelfrisss boost framboos cranberry",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dubbelfrisss-boost-framboos-cranberry/p11309580",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Energy drink",
      "brand": "Kong Strong",
      "image": "https://imgproxy-retcat.assets.schwarz/WFdqMWnqmwHI96FMIrH7DrytgJNo9EcQxdysjN0No8I/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BRUVBRTRBMThGQkI4NzgxMEMxNzcwRTU/2QkU3NUREMDNBQzE2RDdBNDIzRkQ1NUU5MzAxNjQ0MEMyMkZGNjUxLmpwZw.jpg",
@@ -14550,6 +14928,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/yT_Jxbu59ick1NJy3fz0ORGTed_M24qtWrt6bvB8xU0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS83MTQ0QzFEMTdERDQyMzU5NEVGMjNGOTQ/0QjFFQ0E2OTMxRTRFOEU0QjY4RjY0OEZGNzkxMTcwOUU2ODI4QzYzLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/fanta-orange-zero-sugar/p10012449",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Flashing shots",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp4754fbb7578d49cb9b02afa7ad093937.png",
+     "url": "https://www.lidl.nl/p/flashing-shots/p12220838",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Framboos siroop 0% suiker",
@@ -14734,13 +15119,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Katja alpaca cola",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/katja-alpaca-cola/p11560514",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Koolzuurvrij water met appel/peer smaak",
      "brand": "Saskia",
      "image": "https://imgproxy-retcat.assets.schwarz/Unx0QtjiLcrVcFII2acHjgFUuW_umZn2_piLLAGh51Y/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9GNDNDNDg1NzBFRjY0QjhEMkYzMDE2NjV/GQ0Y4QjgwQzU3RDZENDA2OEQxRjhCQkM0QzE5NTdFMTQ1MjIyQkIwLmpwZw.jpg",
@@ -14760,13 +15138,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/BlhCGsoJayz0yI-L5L9IykP6ppyqjKr6EfQzxKHZW9g/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8zOUUzODk2MjI1NjgzN0ExOUJBMDUxRjd/CRDlCNDNFRDU3QUNFNjgwNUE4QzFFMzYwMUNGREE1NDk5REU0REYzLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/limoensap/p1399177",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Lipton ice tea",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/lipton-ice-tea/p11323792",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Lipton Ice Tea Original Sparkling",
@@ -14846,13 +15217,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Oasis orange",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/oasis-orange/p11560286",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Orange",
      "brand": "Freeway",
      "image": "https://imgproxy-retcat.assets.schwarz/VY6NZPqZg4C8j-dTdnh_-yoyL_UblGx8FB3P1wEzIMI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9CMUM0RjM1QjhCODEwQ0ZERDE3NEU2RTI/4RUU4MUY5OEFGOEVDNzFCRTBGN0VCRTFDN0I0MDU1ODIzNDg2MjY3LmpwZw.jpg",
@@ -14930,11 +15294,32 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Schweppes",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp7608f9083c29410397d694675956a85e.png",
+     "url": "https://www.lidl.nl/p/schweppes/p11559821",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Schweppes lemon",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpd19678633dc541e2b3145b1bb8016172.png",
+     "url": "https://www.lidl.nl/p/schweppes-lemon/p11562588",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Shots",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/bSX-oLHPAcV-O222GSkj8AhTBBuk-uaOq0bfUM4lUWo/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9BOTZBRjlCMUNFRkJGMzFERDU1MjM4NTQ/xNjMwRTgyQkU5QTYwNDRGOUVDNkQxRERGQzI0REYwODk1NTg0MTc1LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/shots/p6608467",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Sinaasappelsap",
+     "brand": null,
+     "image": "https://imgproxy-retcat.assets.schwarz/ka5J2aeMmM-K9ko9SqXa7Rxi2zw93YzDpEmtQacp69w/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8xNEE5MzU1MThBMjY2QkVFNTYyRDlCNzF/GRDJGNzVERTFFRjY2REMyRkI3MzdGMEY0M0VBMTlDQzREQkY3OEY4LmpwZw.jpg",
+     "url": "https://www.lidl.nl/p/sinaasappelsap/p187568",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Sinaasappelsap",
@@ -15159,6 +15544,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/y8u2c3R6F01Xg1uZxWLiuFeTRObbTiz6NICBX-BmP_s/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82MzkwNkM4NzJFN0VGNzVDRUNCNzhGODk/0MTNDMzdCOTMyM0Q2RkZGOURFQ0E2Mjg4RjJGRjkzRkUwQUVBRTZDLmpwZw.jpg",
      "url": "https://www.lidl.nl/p/vers-sap-sinaasappel-kiwi/p6607103",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Vers sinaasappelsap",
+     "brand": "Solevita",
+     "image": "https://www.lidl.nl/assets/gcpa3bc2a69ffa74666966e8bd2c7c8527f.png",
+     "url": "https://www.lidl.nl/p/solevita-vers-sinaasappelsap/p11306027",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Verse sap ananaskomkommer",
@@ -15503,13 +15895,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Cimarosa aus chardonnay",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/cimarosa-aus-chardonnay/p11265836",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Corte Mura Chianti Reserva",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/S2laGY9t3FNI4nbwjl-yKdK42ZkXfQoWHrz6rpijVzE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzNDQ0UxMjk3NkFGRDBBQ0I0N0Y2MzcyMj/I1RkNCMkZFOTA4OEM5MUFFMDAzOUU3RjNFQTE5QzI2MTFBNEI3RjcucG5n.png",
@@ -15615,20 +16000,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Gerardus bier",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/gerardus-bier/p11557061",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Gerardus bier blond",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/gerardus-bier-blond/p11323712",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Ginger Ale",
      "brand": "Freeway",
      "image": "https://imgproxy-retcat.assets.schwarz/BTmHArCpqfCupxYJmZGPfQaHjcy6jjbtkC2-tpMQNYc/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84NzFBOTc4RDQyQkE1NEM5MEJCQTNDRTM/yQUE4MTdFNDM1NEQ0RTEyQkFGMTFCN0YxNzg1NDE1ODlDN0YyNTI0LmpwZw.jpg",
@@ -15715,16 +16086,9 @@
     {
      "name": "Hertog Jan",
      "brand": null,
-     "image": "https://imgproxy-retcat.assets.schwarz/MZLi4Kd1byN6tD0JH-Zy8MWT3T5hDlwHxyCl7u2Lok0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9FQjYxOTA0OEMzQjk5OUM2RENGM0FFMTY/xN0IxNTI5RkMzRkJFNURFMjZDQTM2MEIzRDM5QzkwM0NGQkZBNDQ5LmpwZw.jpg",
-     "url": "https://www.lidl.nl/p/hertog-jan/p6610204",
-     "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Hertog jan weizener",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/hertog-jan-weizener/p11316547",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpa88f4c1dc9ea4f95bf4873fa97429948.png",
+     "url": "https://www.lidl.nl/p/hertog-jan/p11323996",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Hertog-Jan 4-pack",
@@ -15799,9 +16163,9 @@
     {
      "name": "Leffe blond",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/leffe-blond/p11316543",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpaa1e50e2538c49f786fc9149ec1bc3dd.png",
+     "url": "https://www.lidl.nl/p/leffe-blond/p11323940",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Leffe Tripel",
@@ -15951,6 +16315,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Pinot Noir Vin de France",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpb01f42fca4774fb59c3b70497071740a.png",
+     "url": "https://www.lidl.nl/p/pinot-noir-vin-de-france/p11254686",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Portugese rosé",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/ce1nMe4UWT_D4iUDto2tz6MEIYPLlLAa_75v9CRIYPU/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0MzRkFEMUFCQTg2QzlGMDM1NEU3RDZGNj/NBQTZDMEI0QTYzNzA0N0Y1ODMzMDRENkZCNzlERDVDNDY5QTBFMkIucG5n.png",
@@ -15984,13 +16355,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/wQ8maPy06delJgvHRfHxlZ7qXb1J59wT8K3HZuJIuyE/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJFMTEwOTY5MENDQ0UxNkZFMTUxMjY1NU/UyNkJDMEJCOTBEQTNCNDUyNjRCQTYzNUE5NjVDQzA2NDUyMEEyMjEucG5n.png",
      "url": "https://www.lidl.nl/p/primitivo-di-manduria/p10004802",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Primitivo di manduria doc",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/primitivo-di-manduria-doc/p11062402",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Primitivo Merlot Puglia halbtrocken",
@@ -16384,13 +16748,6 @@
      "firstSeen": "2026-04-13"
     },
     {
-     "name": "Aardappelschijfjes",
-     "brand": "SALADINETTES",
-     "image": "https://www.lidl.nl/assets/gcp29ee090bd17346a091d0331f62942c0b.png",
-     "url": "https://www.lidl.nl/p/saladinettes-aardappelschijfjes/p11317763",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Bio vanille roomijs",
      "brand": "Gelatelli",
      "image": "https://imgproxy-retcat.assets.schwarz/kY9qQt_GBVBymE8B9Q7Gq_6mkkvtfXWLhBnr8OFym0c/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzM1MTgxMDk2MDY1REY2MTM5RDFCOTBDQk/IxRjM5RjExM0YwODdFNTZGRjNDN0ZBQjcwOTUyREI4OUE1QkFGNjAucG5n.png",
@@ -16403,13 +16760,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/lRL--wLKzvyDtoDXIecQLYkufooRufZ6y740DhFiKi0/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzhBRjI3QUQ0RTJFRjcyOEJDNDkzOEFDOD/E2QjBEQjJCQTc4MjRBNjJERjk0NERGOUIxQjA0NkZBMkFFNTE1ODQucG5n.png",
      "url": "https://www.lidl.nl/p/boerenfriet/p10015060",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Broodje kroket",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/broodje-kroket/p11304738",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "Chickenwings bucket",
@@ -16487,13 +16837,6 @@
      "image": "https://imgproxy-retcat.assets.schwarz/UwuwD5BHL_a69R3j_vtJZoNH5qjQNGsEltSEaKQqIoc/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzdBQTU3MTc0M0M0NjZGNzYyNTM4Qzk5Mk/E1NUY5QTZFMkYyNTNGNDRCN0Y3QkUzODEwNDBGQUE2N0M5MTQzQUIucG5n.png",
      "url": "https://www.lidl.nl/p/gebroken-diepvriessperziebonen/p10001211",
      "firstSeen": "2026-04-13"
-    },
-    {
-     "name": "Harvest basket kreukelfriet",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/harvest-basket-kreukelfriet/p11352228",
-     "firstSeen": "2026-10-26"
     },
     {
      "name": "IJsbeker",
@@ -16727,6 +17070,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Verse boerenfriet",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp96a234c49a7a413b89e940e92aa161e3.png",
+     "url": "https://www.lidl.nl/p/verse-boerenfriet/p11308111",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Verse rösti",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/KdSGV_bDKC_d-nmT4bSVmCqi9xHTHMBNAGGZeGEVRng/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9FRkY0NzQ2MjU1MDkyREEwNTk0RjI0NDE/yQUVDN0M0RUIxN0YwNjRFMDg3NkU5RDc1MDgyMTc1NTI5NzJFRkE2LmpwZw.jpg",
@@ -16746,6 +17096,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/CXEeyrIiZzTL_vFT4Xz5qH_lxbdGQgsmx4s5pKZQieA/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS84RTYwOTVCNDgyRDE0MDg1MzJBQjU3QzU/4MTZGOTFBNzFDOERGMkRFMjMyNTFDMkY4MDQ0QTE2ODA3OEJFRkI5LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/vlaamse-friet/p119192",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Voorgebakken verse friet",
+     "brand": "Chef Select",
+     "image": "https://www.lidl.nl/assets/gcp7f6b9863fb2740c182a01f438af9983d.png",
+     "url": "https://www.lidl.nl/p/voorgebakken-verse-friet/p11323576",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Waterijsmix",
@@ -17249,6 +17606,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/YT_7uIzAwd0Y1B7Z_V-qiaqZ2QTuLeC52xaNbUrYx44/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzQ3NENCQTdFQzg3NkIyREVEODAwNjUxRk/RGREYyRTgzQ0FFOTVDNEFFNjZBMEJBMzlFQzQwRDIxOTg4NkQ1QUYucG5n.png",
      "url": "https://www.lidl.nl/p/toiletpapier/p152566",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Toiletpapier 3-laags",
+     "brand": "Floralys",
+     "image": "https://www.lidl.nl/assets/gcp1fb534725d75473caa3721d2a32a9941.png",
+     "url": "https://www.lidl.nl/p/floralys-toiletpapier-3-laags/p11006049",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Toiletreinigingstabletten",
@@ -18560,22 +18924,8 @@
      "name": "Chrysant",
      "brand": null,
      "image": null,
-     "url": "https://www.lidl.nl/p/chrysant/p11041106",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Orchidee 2 taks",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/orchidee-2-taks/p11150146",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Rozen",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/rozen/p11150384",
-     "firstSeen": "2026-10-26"
+     "url": "https://www.lidl.nl/p/chrysant/p11119625",
+     "firstSeen": "2026-11-02"
     }
    ]
   },
@@ -18584,11 +18934,11 @@
    "emoji": "📦",
    "products": [
     {
-     "name": "12 pack",
+     "name": "12 o'clock fireworks",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/12-pack/p11323947",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpddba1c87b33f4e208c1d93c4d9354c7e.png",
+     "url": "https://www.lidl.nl/p/12-o-clock-fireworks/p12205747",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "1272 Spätburgunder",
@@ -18598,11 +18948,11 @@
      "firstSeen": "2026-10-26"
     },
     {
-     "name": "Afrikaanse melkboom",
+     "name": "Aansteeklonten",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/afrikaanse-melkboom/p11151421",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpa9bc3344c6dd4512821558b5c25237ce.png",
+     "url": "https://www.lidl.nl/p/aansteeklonten/p12227782",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Apple",
@@ -18633,20 +18983,6 @@
      "firstSeen": "2026-10-26"
     },
     {
-     "name": "Boerenbruin heel",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/boerenbruin-heel/p11309710",
-     "firstSeen": "2026-10-26"
-    },
-    {
-     "name": "Calluna vulgaris",
-     "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/calluna-vulgaris/p11151377",
-     "firstSeen": "2026-10-26"
-    },
-    {
      "name": "Casa del Fattore Toscana Bianco IGT",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/J0uUrqKiqbffP9b1H5pJeSpIXFs607Gl-MFADVnRkQg/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50L0Y4OUNBRTg2NjA2OURCNkVBNDA5ODdBM0/MwM0UyMjUyM0U2MEIwNzQ0M0Q5M0I1OTkzMDAyRjM5OUNENzgxQzEucG5n.png",
@@ -18661,18 +18997,25 @@
      "firstSeen": "2026-10-26"
     },
     {
-     "name": "Cookie red velvet",
+     "name": "Crackling Orcs",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/cookie-red-velvet/p11304741",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpb4808440a4fd4a8da801f8279915ce0d.png",
+     "url": "https://www.lidl.nl/p/crackling-orcs/p11070386",
+     "firstSeen": "2026-11-02"
     },
     {
-     "name": "Dummymarke bonsai in keramiek",
+     "name": "Crackling specials",
      "brand": null,
-     "image": null,
-     "url": "https://www.lidl.nl/p/dummymarke-bonsai-in-keramiek/p11151469",
-     "firstSeen": "2026-10-26"
+     "image": "https://www.lidl.nl/assets/gcpb7a40e0f9b754bdaa89f9a14dda77543.png",
+     "url": "https://www.lidl.nl/p/crackling-specials/p12232560",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Cruffin",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp7dda8cddd65d49ce8094bace9acd8cf0.png",
+     "url": "https://www.lidl.nl/p/cruffin/p11329203",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Elitehaver",
@@ -18680,6 +19023,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/Hq658lHU2lvU9UvHeq_lz1rE2mfP8LDTwqK8LKjYraI/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzEzRkE4NkQyNzFBNjgwQzIwOTc1MDAwNT/MzMjg4QjcwOEIwQUM5NjVBNjE3RkM0RjkzRDQ0NDczRUQ5NENDNzAucG5n.png",
      "url": "https://www.lidl.nl/p/elitehaver/p29819",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Fireworks mania",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp2759f28f18314460872945ea9603fa10.png",
+     "url": "https://www.lidl.nl/p/fireworks-mania/p12223662",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Fleur Rouge",
@@ -18696,6 +19046,13 @@
      "firstSeen": "2026-10-26"
     },
     {
+     "name": "Golden Sparklers XXL",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp4f94e4a5bbbb47f98851f262aa376c19.png",
+     "url": "https://www.lidl.nl/p/golden-sparklers-xxl/p12232561",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Google Play",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/ZxLypy0DtPrYgmYakuYeOXIF-9HtyeEk7q6FvmI3Ck8/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS8wNDAxQkJCRTk1QkZDRTFENDg4NUUyODV/FQ0NFNDU3NEJBMTZERDYyRjVCMTE1NTJBMTZBODIxRkY0NUE0ODU3LmpwZw.jpg",
@@ -18708,6 +19065,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/KvMvtaGKBvXCdr9wr8k-TVu2fbqqORHlhfca38a2M1g/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS82N0M4RDBERDZEQkU1NDE1MTdGMzFEODF/BQTI2NjREMTQxMEI0RUREODM4NjBCNUExODdCMzNCNkM5QUFFRUQ5LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/hg-kalkweg-schuimspray/p6610102",
      "firstSeen": "2026-10-26"
+    },
+    {
+     "name": "Intens of Reine",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp5cc6c2301200499099c87ab0e530ff7f.png",
+     "url": "https://www.lidl.nl/p/intens-of-reine/p11563455",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "IT DdS Appassimento Puglia Rosso",
@@ -18794,6 +19158,13 @@
      "firstSeen": "2026-10-26"
     },
     {
+     "name": "Magical torch",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp91af94bd7e5b43b9a0f12b21d73d203e.png",
+     "url": "https://www.lidl.nl/p/magical-torch/p12227785",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Marcaire",
      "brand": null,
      "image": "https://imgproxy-retcat.assets.schwarz/CjDpbrrwHdb84FC10iQcGTinLY-nizMao7eghccw5Ck/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS9DQkREQzg2QTFCRUZFRkQ2Q0Y2MjVFMDA/0RTRGRkJDMzM4NTEzMUJDNEExQjNBNDFFM0NDRTY0QzlCQ0IwRTlGLmpwZw.jpg",
@@ -18815,6 +19186,13 @@
      "firstSeen": "2026-04-13"
     },
     {
+     "name": "Rattle snakes",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp9cf3712ad55248a3bd9bca7c73782efc.png",
+     "url": "https://www.lidl.nl/p/rattle-snakes/p12232562",
+     "firstSeen": "2026-11-02"
+    },
+    {
      "name": "Rustiek meergranen desem",
      "brand": null,
      "image": "https://www.lidl.nl/assets/gcp875cf76695b94d2d88088a9df1ad3821.png",
@@ -18834,6 +19212,13 @@
      "image": "https://imgproxy-retcat.assets.schwarz/6GbIWR5D6bCcTDMPKr-syJVQyvuhI-E74yje6m1LrhA/sm:0/exar:1:ce/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvaW50LzJFRTY1NEI1MEU3RUZCMzQwM0UzNjNGNT/FCMTFFMDRGRUM0NkI5OEVGODA5RDIxRDBCMDc1NTMyODI1Qjc0QjMucG5n.png",
      "url": "https://www.lidl.nl/p/selone-rosso-puglia/p10033497",
      "firstSeen": "2026-10-26"
+    },
+    {
+     "name": "Sugarsnaps",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpb5098b27eab745cfafbc27d13ff35cf2.png",
+     "url": "https://www.lidl.nl/p/sugarsnaps/p11268262",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "Superfoods",
@@ -18883,6 +19268,20 @@
      "image": "https://imgproxy-retcat.assets.schwarz/2-k9fFpMrNSuWpTjU6l6inKy69zBXjPTweQBAGktAes/sm:1/w:1278/h:959/cz/M6Ly9wcm9kLWNhd/GFsb2ctbWVkaWEvbmwvMS80MTFBQTk5MDRBNDU2QjI5NDNBOEIyMUE/xMTYzNEE4QzJBQjRGRkVDMzlDRDlERDZENkJDMDY1MTdGQkZGNjU2LmpwZw.jpg",
      "url": "https://www.lidl.nl/p/vlugge-japie/p6608525",
      "firstSeen": "2026-04-13"
+    },
+    {
+     "name": "Volcano Pack 2.0",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcpfcf14e32fc8c4833bbc0f13b77967ebb.png",
+     "url": "https://www.lidl.nl/p/volcano-pack-2-0/p12230523",
+     "firstSeen": "2026-11-02"
+    },
+    {
+     "name": "Vuurwerkbril",
+     "brand": null,
+     "image": "https://www.lidl.nl/assets/gcp7ea4705ccf1346c381dce5628de28905.png",
+     "url": "https://www.lidl.nl/p/vuurwerkbril/p12232563",
+     "firstSeen": "2026-11-02"
     },
     {
      "name": "VVV",
